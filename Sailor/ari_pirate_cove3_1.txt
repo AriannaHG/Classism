@@ -1,0 +1,299 @@
+[Zone]  ID=ari_pirate_cove3_1; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=166; darkG=166; darkB=197; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=ocean; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pYellow4; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pGrey2; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=pebbles2; q=1; r=360; x=6; y=30;
+[Item] ID=rocks1; q=1; r=360; x=6; y=31;
+[Item] ID=rocks1; q=1; r=-360; x=7; y=26;
+[Item] ID=pebbles1; q=1; x=7; y=31;
+[Item] ID=rockEdge1_overhang; q=1; r=180; x=8; y=7;
+[Item] ID=rockEdge1_overhang2; q=1; r=360; x=8; y=8;
+[Item] ID=rocks1; q=4; r=-360; x=8; y=30;
+[Item] ID=rocks1; q=1; r=-360; x=8; y=31;
+[Item] ID=rocks1; q=2; r=360; x=8; y=33;
+[Item] ID=rocks1; q=1; r=360; x=8; y=34;
+[Item] ID=dirt_sandy2; q=1; r=180; x=9; y=8;
+[Item] ID=dirt_sandy2; q=2; r=180; x=9; y=12;
+[Item] ID=pebbles2; q=1; r=-360; x=9; y=26;
+[Item] ID=rubble; q=1; x=9; y=27;
+[Item] ID=pebbles2; q=1; r=360; x=9; y=31;
+[Item] ID=rocks1; q=4; r=360; x=9; y=33;
+[Item] ID=pebbles1; q=1; r=360; x=9; y=34;
+[Item] ID=pebbles2; q=1; r=-360; x=10; y=9;
+[Item] ID=debris; q=1; x=10; y=16;
+[Item] ID=pebbles2; q=1; r=360; x=10; y=16;
+[Item] ID=box_med; q=1; bu=True; x=10; y=16; containerID=0;
+[Item] ID=loot_gp_much; q=1; containedIn=0; cSlot=1;
+[Item] ID=loot_gp3; q=1; containedIn=0; cSlot=4;
+[Item] ID=loot_gp_much; q=1; containedIn=0; cSlot=6;
+[Item] ID=loot_gp3; q=1; containedIn=0; cSlot=9;
+[Item] ID=loot_gp3; q=1; containedIn=0; cSlot=10;
+[Item] ID=loot_gp3; q=1; containedIn=0; cSlot=12;
+[Item] ID=rubble; q=1; r=360; x=10; y=17;
+[Item] ID=rockEdge1_overhang2; q=1; x=10; y=19;
+[Item] ID=debris; q=1; x=10; y=32;
+[Item] ID=crate_small_damaged; q=1; bu=True; x=10; y=32; containerID=1;
+[Item] ID=gp; q=1; containedIn=1; cSlot=0;
+[Item] ID=gp; q=1; containedIn=1; cSlot=4;
+[Item] ID=barrel_broken; q=1; r=-360; x=10; y=33; containerID=2;
+[Item] ID=rubble; q=1; x=10; y=34;
+[Item] ID=rubble; q=1; r=360; x=11; y=8;
+[Item] ID=rubble; q=1; r=-360; x=11; y=16;
+[Item] ID=rockEdge1_S_overhang_wall; q=1; r=90; x=11; y=19;
+[Item] ID=shoreEdge1; q=1; r=-360; x=11; y=20;
+[Item] ID=cliffEdge1_NW; q=1; r=-360; x=11; y=22;
+[Item] ID=rocks1; q=2; x=11; y=25;
+[Item] ID=pebbles2; q=1; x=11; y=26;
+[Item] ID=crate_small_damaged; q=1; r=-360; x=11; y=28; containerID=3;
+[Item] ID=pebbles1; q=1; r=-360; x=11; y=33;
+[Item] ID=pebbles2; q=1; r=360; x=11; y=35;
+[Item] ID=rocks1; q=2; x=12; y=9;
+[Item] ID=dirt_sandy2; q=1; r=360; x=12; y=10;
+[Item] ID=dirt_sandy2; q=1; r=360; x=12; y=11;
+[Item] ID=rocks1; q=1; r=360; x=12; y=17;
+[Item] ID=rubble; q=1; x=12; y=25;
+[Item] ID=crate_small_damaged; q=1; x=12; y=27; containerID=4;
+[Item] ID=pebbles1; q=1; x=13; y=7;
+[Item] ID=pebbles2; q=1; r=360; x=13; y=7;
+[Item] ID=dirt_sandy2; q=2; x=13; y=9;
+[Item] ID=dirt_sandy2; q=1; x=13; y=12;
+[Item] ID=dirt_sandy2; q=1; r=180; x=13; y=14;
+[Item] ID=dirt_sandy2; q=2; r=180; x=13; y=15;
+[Item] ID=rockEdge1_overhang2; q=1; x=13; y=21;
+[Item] ID=rocks1; q=6; r=360; x=13; y=42;
+[Item] ID=rocks1; q=1; r=-360; x=14; y=6;
+[Item] ID=rubble; q=1; x=14; y=14;
+[Item] ID=dirt_sandy2; q=2; r=180; x=14; y=18;
+[Item] ID=rocks1; q=5; r=-360; x=14; y=22;
+[Item] ID=rocks1; q=1; x=14; y=23;
+[Item] ID=stair3; q=1; x=14; y=28;
+[Item] ID=pebbles1; q=1; r=360; x=14; y=40;
+[Item] ID=rubble; q=1; r=-360; x=14; y=41;
+[Item] ID=dirt_sandy2; q=1; r=180; x=15; y=9;
+[Item] ID=dirt_sandy2; q=1; r=180; x=15; y=12;
+[Item] ID=pebbles2; q=1; r=360; x=15; y=15;
+[Item] ID=rocks1; q=4; r=-360; x=15; y=18;
+[Item] ID=dirt_sandy2; q=2; x=15; y=22;
+[Item] ID=dirt_sandy2; q=1; x=15; y=23;
+[Item] ID=rocks1; q=4; r=-360; x=15; y=24;
+[Item] ID=dirt_sandy2; q=2; r=360; x=15; y=27;
+[Item] ID=rubble; q=1; r=-360; x=15; y=31;
+[Item] ID=barrel_broken; q=1; r=-360; x=15; y=41; containerID=5;
+[Item] ID=dirt_sandy2; q=2; r=180; x=16; y=10;
+[Item] ID=dirt_sandy2; q=1; r=180; x=16; y=11;
+[Item] ID=dirt_sandy2; q=2; r=360; x=16; y=13;
+[Item] ID=rocks1; q=1; r=-360; x=16; y=24;
+[Item] ID=pebbles2; q=1; r=-360; x=16; y=41;
+[Item] ID=pebbles1; q=1; r=-360; x=17; y=12;
+[Item] ID=chest_wood1_open; q=1; x=17; y=14; containerID=6;
+[Item] ID=gp; q=1; containedIn=6; cSlot=5;
+[Item] ID=dirt_sandy2; q=1; r=180; x=17; y=22;
+[Item] ID=dirt_sandy2; q=2; r=180; x=17; y=23;
+[Item] ID=dirt_sandy2; q=1; r=180; x=17; y=27;
+[Item] ID=pebbles1; q=1; r=360; x=17; y=31;
+[Item] ID=pebbles2; q=1; r=360; x=18; y=11;
+[Item] ID=rubble; q=1; r=-360; x=18; y=18;
+[Item] ID=pebbles2; q=1; r=-360; x=18; y=22;
+[Item] ID=pebbles1; q=1; r=-360; x=19; y=11;
+[Item] ID=stair3; q=1; x=19; y=19;
+[Item] ID=stair3; q=1; x=19; y=20;
+[Item] ID=stair3; q=1; x=19; y=21;
+[Item] ID=pebbles1; q=1; r=-360; x=19; y=23;
+[Item] ID=rocks1; q=2; r=-360; x=19; y=27;
+[Item] ID=pebbles1; q=1; r=-360; x=19; y=39;
+[Item] ID=rocks1; q=4; r=-360; x=20; y=10;
+[Item] ID=rubble; q=1; r=-360; x=20; y=12;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=18;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=22;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=23;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=27;
+[Item] ID=rubble; q=1; r=-360; x=20; y=29;
+[Item] ID=rocks1; q=2; r=-360; x=20; y=38;
+[Item] ID=barrel_broken; q=1; r=-360; x=20; y=40; containerID=7;
+[Item] ID=debris; q=1; x=21; y=7;
+[Item] ID=rocks1; q=6; x=21; y=7;
+[Item] ID=box_med; q=1; bu=True; x=21; y=7; containerID=8;
+[Item] ID=loot_gp3; q=1; containedIn=8; cSlot=0;
+[Item] ID=loot_gp3; q=1; containedIn=8; cSlot=5;
+[Item] ID=rocks1; q=1; r=360; x=21; y=9;
+[Item] ID=dirt_sandy2; q=2; r=360; x=21; y=10;
+[Item] ID=dirt_sandy2; q=1; r=360; x=21; y=11;
+[Item] ID=dirt_sandy2; q=1; r=360; x=21; y=12;
+[Item] ID=boulder3; q=1; r=-360; x=21; y=12;
+[Item] ID=dirt_sandy2; q=1; r=180; x=21; y=13;
+[Item] ID=pebbles1; q=1; x=21; y=24;
+[Item] ID=barrel_broken; q=1; r=360; x=21; y=38; containerID=9;
+[Item] ID=debris; q=1; r=-360; x=21; y=39;
+[Item] ID=chest_wood2_open; q=1; bu=True; x=21; y=39; containerID=10;
+[Item] ID=dirt_sandy2; q=1; r=360; x=22; y=9;
+[Item] ID=pebbles2; q=1; r=-360; x=22; y=14;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=22;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=23;
+[Item] ID=barrel_broken; q=1; r=-360; x=22; y=24; containerID=11;
+[Item] ID=pebbles2; q=1; x=22; y=25;
+[Item] ID=rocks1; q=1; x=22; y=25;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=27;
+[Item] ID=rubble; q=1; r=-360; x=22; y=32;
+[Item] ID=pebbles1; q=1; r=360; x=22; y=38;
+[Item] ID=rocks1; q=4; x=22; y=40;
+[Item] ID=caveDark_wide; q=1; x=23; y=12;
+[Item] ID=travelPoint_1; q=1; r=90; x=23; y=14;
+[Item] ID=dirt_sandy2; q=1; r=360; x=23; y=15;
+[Item] ID=dirt_sandy2; q=1; r=360; x=23; y=16;
+[Item] ID=rubble; q=1; r=-360; x=23; y=17;
+[Item] ID=debris; q=1; r=-360; x=23; y=17;
+[Item] ID=box_med; q=1; bu=True; x=23; y=17; containerID=12;
+[Item] ID=gp; q=1; containedIn=12; cSlot=0;
+[Item] ID=gp; q=1; containedIn=12; cSlot=2;
+[Item] ID=gp; q=1; containedIn=12; cSlot=5;
+[Item] ID=gp; q=2; containedIn=12; cSlot=9;
+[Item] ID=gp; q=2; containedIn=12; cSlot=10;
+[Item] ID=loot_gp3; q=1; containedIn=12; cSlot=12;
+[Item] ID=crate_small_damaged; q=1; r=-360; x=23; y=25; containerID=13;
+[Item] ID=pebbles1; q=1; r=360; x=23; y=26;
+[Item] ID=pebbles1; q=1; r=-360; x=23; y=29;
+[Item] ID=dirt_sandy2; q=1; r=180; x=24; y=9;
+[Item] ID=rocks1; q=1; r=-360; x=24; y=13;
+[Item] ID=rubble; q=1; r=-360; x=24; y=14;
+[Item] ID=rockEdge1_overhang; q=1; x=24; y=21;
+[Item] ID=rubble; q=1; r=360; x=24; y=29;
+[Item] ID=dirt_sandy2; q=1; r=180; x=25; y=10;
+[Item] ID=dirt_sandy2; q=2; r=180; x=25; y=11;
+[Item] ID=dirt_sandy2; q=1; r=180; x=25; y=12;
+[Item] ID=boulder2; q=1; x=25; y=12;
+[Item] ID=dirt_sandy2; q=1; r=360; x=25; y=13;
+[Item] ID=pebbles1; q=1; r=360; x=25; y=27;
+[Item] ID=pebbles2; q=1; r=360; x=26; y=12;
+[Item] ID=dirt_sandy2; q=1; r=180; x=26; y=13;
+[Item] ID=rockEdge1_S_overhang_wall; q=1; r=180; x=26; y=19;
+[Item] ID=rocks1; q=1; r=-360; x=26; y=29;
+[Item] ID=rocks1; q=2; x=26; y=30;
+[Item] ID=rocks1; q=3; r=-360; x=26; y=32;
+[Item] ID=rocks1; q=2; r=360; x=27; y=8;
+[Item] ID=rockEdge1_overhang; q=1; x=27; y=19;
+[Item] ID=rubble; q=1; r=360; x=27; y=27;
+[Item] ID=barrel_broken; q=1; r=360; x=27; y=29; containerID=14;
+[Item] ID=pebbles1; q=1; r=-360; x=27; y=30;
+[Item] ID=pebbles2; q=1; x=27; y=30;
+[Item] ID=dirt_sandy2; q=1; r=360; x=28; y=10;
+[Item] ID=dirt_sandy2; q=1; r=360; x=28; y=16;
+[Item] ID=rocks1; q=6; r=360; x=28; y=28;
+[Item] ID=pebbles2; q=1; r=-360; x=28; y=29;
+[Item] ID=rubble; q=1; r=-360; x=28; y=30;
+[Item] ID=rockEdge1_overhang2; q=1; r=180; x=29; y=7;
+[Item] ID=rockEdge1_overhang; q=1; x=29; y=8;
+[Item] ID=rocks1; q=1; r=-360; x=29; y=31;
+[Item] ID=shoreEdge1; q=1; x=34; y=45;
+[Item] ID=travelPoint_0; q=1; r=270; x=37; y=44;
+[Item] ID=shoreEdge1; q=1; r=-360; x=41; y=47;
+
+
+[Actor]ID=scurio_ari_pirate_cove3_1_; name=Uve;
+actorTypeID=scurio; sprite=; actorClass=sailor; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=13,13; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pGreen; skinPalette=pScur2; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=none; aggressiveness=0.55; bravery=0.45; intelligence=0.5; honor=0.55; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=scur_head2; faceSprite=scur_face_meh; legsSprite=scur_legs_boots; armLSprite=sailor_arm; armRSprite=sailor_arm; torsoSprite=sailor_torso; shoulderLSprite=sailor_shoulder; shoulderRSprite=sailor_shoulder; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; Sai_rope=1; sailor_XP=0; Sai_steady=1; 
+numRanksBought=Sai_rope=1; 
+numRanksBought=Sai_steady=1; 
+chosenAbilityOfEachClass=sailor=Sai_heave; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=dagger_bone; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=actTime; sourceAVAffecter=av_scuri1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fist; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_bone; cSlot=0; containerID=0;
+
+
+[Actor]ID=scurio_ari_pirate_cove3_1_0; name=Stine;
+actorTypeID=scurio; sprite=; actorClass=sailor; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=19,10; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pGreen; skinPalette=pOrange; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=none; aggressiveness=0.55; bravery=0.45; intelligence=0.5; honor=0.55; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=scur_head2; faceSprite=scur_face_meh; legsSprite=scur_legs_boots; armLSprite=sailor_arm; armRSprite=sailor_arm; torsoSprite=sailor_torso; shoulderLSprite=sailor_shoulder; shoulderRSprite=sailor_shoulder; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; Sai_swagger=2; sailor_XP=0; 
+numRanksBought=Sai_swagger=2; 
+chosenAbilityOfEachClass=sailor=Sai_heave; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=xbow_bone; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=actTime; sourceAVAffecter=av_scuri1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fist; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=xbow_bone; cSlot=0; containerID=0;
+
+
+
+[Trigger] numID=0; aliasID=leaveTo_worldmap;
+topX=33;topY=46;btmX=43;btmY=48;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_leaveLocation; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=leaveTo_pirateCove3;
+topX=23;topY=12;btmX=23;btmY=12;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=travel_point; sValue=ari_pirate_cove3_2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

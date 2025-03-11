@@ -1,0 +1,957 @@
+[ActorValue]
+ID=ari_classism_cooldown;
+name=Cooldown;
+icon=;
+bubbleIcon=;
+minimum=0;
+maximum=20;
+description=Cooling down.;
+defaultValue = 0;
+
+harmfulMagnitude = -1;
+
+
+animationOnHarmful = ;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Orange;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+
+
+[ActorValueEffect]
+ID=pd_combo;
+actorValue=skill_Dagger; magnitude=1; duration=-1; 
+[ActorValueEffect]
+ID=pd_combo;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+	
+[ActorValue]
+ID=pd_combo;
+name=Combo;
+icon=Combo;
+bubbleIcon=comboStatus;
+minimum=0;
+maximum=1;
+description=You gain +1 <icon=skill_Dagger> and <icon=PhysAtk>.;
+defaultValue = 0;
+
+harmfulMagnitude = -1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Orange;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueEffect]
+ID=pd_combo;
+actorValue=skill_Dagger; magnitude=1; duration=-1; 
+[ActorValueEffect]
+ID=pd_combo;
+actorValue=PhysAtk; magnitude=1; duration=-1;
+
+
+
+
+[ActorValue]
+ID=pd_deflect;
+name=Deflect;
+icon=Deflect;
+bubbleIcon=deflectStatus;
+minimum=0;
+maximum=3;
+description=You gain +25<icon=PhysEva>.;
+defaultValue = 0;
+
+harmfulMagnitude = -1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Orange;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueEffect]
+ID=pd_deflect;
+actorValue=PhysEva; magnitude=25; duration=-1;
+
+
+
+
+[ActorValue]
+ID=pd_bomb;
+name=Bomb;
+icon=Bomb;
+bubbleIcon=necrobombStatus;
+minimum=0;
+maximum=3;
+description=Any units who are incapacitated while afflicted with the Bomb status will explode, dealing 10% of their max HP to adjacent tiles.;
+defaultValue = 0;
+
+harmfulMagnitude = 1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=false;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Green;
+damageNumberColor_Negative = Green;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+
+[ActorValueReaction]
+ID=pd_bomb;
+element=incapped; action=pd_necrobomb_act;
+
+
+[Action] ID=pd_necrobomb_act; 	
+	harmful=false;
+	--special=usableWithoutACaster;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	FXOnCaster=whiteExplosionSmall_rand_many_more;
+[ActionAoE] 
+	ID=pd_necrobomb_act;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=pd_necrobomb_act;
+	visibleMiss=false;
+	actorValue=HP;
+	harmful=true;
+	magnitude=-c:HPMax * 0.1;
+	duration=-2;
+	chance=100;
+	FXOnTile=upwardLines_many;
+	FXOnTileColor=DarkGreen;
+	FXOnTile=shroudExplode;
+	FXOnTileColor=DarkGreen;
+	FXOnHit=whiteExplosionSmall_rand;
+	element=magic;
+[AvAffecterAoE]
+	ID=pd_necrobomb_act;
+	needsLoS=false;
+	needsLoE=false;
+	arc=true;
+	airborne=true;
+	occupyAll=true;
+	bypassAll=true;
+	canSelectAllies=true;
+	cloneFrom=adjacent;
+
+
+[ActorValue]
+ID=pd_empathy;
+name=Empathy;
+icon=Empathy;
+bubbleIcon=empathyStatus;
+minimum=0;
+maximum=3;
+description=Units who make attacks while under the effects of Empathy lose 33% of their current HP.;
+defaultValue = 0;
+
+harmfulMagnitude = 1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=false;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Purple;
+damageNumberColor_Negative = Purple;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+
+[ActorValueReaction]
+ID=pd_empathy;
+element=weaponBuff; element=usedMeleeWeaponAtk; action=pd_empathy_act; 
+
+
+[Action] ID=pd_empathy_act; 	
+	harmful=true;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=pd_empathy_act;
+	cloneFrom=adjacentAndSelf;
+	maxRange=12;
+[AvAffecter]
+	ID=pd_empathy_act; 
+	actorValue=HP;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	--harmful=false;
+	magnitude=-c:HP * 0.33;
+	duration=-2;
+	chance=100;
+	element=HPbased;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Purple;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Pink;
+	FXOnHit=spark;
+	FXOnHitColor=Black;
+[AvAffecterAoE]
+	ID=pd_empathy_act;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+
+
+
+
+[ActorValue]
+ID=prom_drowsy;
+name=Drowsy;
+icon=Drowsy;
+bubbleIcon=promdrowsyStatus;
+minimum=0;
+maximum=1;
+description=You will fall asleep when your turn ends.;
+defaultValue = 0;
+
+harmfulMagnitude = 1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=false;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Orange;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueReaction]
+ID=prom_drowsy; element=endTurn; action=prom_drowsy_act;
+
+[Action] ID=prom_drowsy_act; 	
+	--harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	FXOnCaster=darken;
+[ActionAoE] 
+	ID=prom_drowsy_act;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=prom_drowsy_act; 
+	actorValue=sleep;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	--harmful=false;
+	magnitude=1;
+	duration=50;
+	chance=100;
+	FXOnHit=sfx_promsleep;
+[AvAffecterAoE]
+	ID=prom_drowsy_act;
+	cloneFrom=oneTile;
+
+
+
+[ActorValue]
+ID=prom_double;
+name=Double;
+icon=Double;
+bubbleIcon=promdoubleStatus;
+minimum=0;
+maximum=1;
+description=You will gain another turn when your current turn ends.;
+defaultValue = 0;
+
+harmfulMagnitude = -1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Orange;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueReaction]
+ID=prom_double; element=endTurn; action=prom_double_act;
+
+[Action] ID=prom_double_act; 	
+	harmful=false;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	FXOnCaster=darken;
+	FXOnCasterColor=White;
+	FXOnCasterColor=Purple;
+	FXOnCaster=chargeSpiralFast;
+	FXOnCaster=woosh;
+	FXOnTarget=sidewardLines_screen;
+	FXOnTargetColor=Purple;
+[ActionAoE] 
+	ID=prom_double_act;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=prom_double_act; 
+	actorValue=actTimer;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=m:tActTimerLeft;
+	duration=-2;
+	chance=100;
+	FXOnHit=delay_minor;
+	FXOnHit=egg_fade;
+	FXOnHit=sfx_schwee;
+[AvAffecterAoE]
+	ID=prom_double_act;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=prom_double_act; 
+	visibleEvaluations=false;
+	affectIntangible=true; 
+	--harmful=false;
+	actorValue=prom_double;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * c:prom_double;
+	FXOnTile=vertLines;
+[AvAffecterAoE]
+	ID=prom_double_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+
+
+[ActorValue]
+ID=prom_cure_dispel;
+name=Cure Dispel;
+icon=;
+bubbleIcon=;
+minimum=0;
+maximum=1;
+removedByNegativeMagnitude=true;
+--description=;
+defaultValue = 0;
+harmfulMagnitude = -1;
+bonusesMultiplier = 1;
+animationOnHarmful = pain;
+affectsActors = true;
+canAffectIncapped = true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Purple;
+damageNumberColor_Negative = Purple;
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+elementReactionModifiesDuration = false;
+canBeRemovedByNonspecificAVEffectRemoval = false;
+recordInActorData = true;
+showEvaluationInfo = true;
+allowDecimalValues = false;
+percentage = false;
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueReaction]
+ID=prom_cure_dispel; actorValues=cure; action=prom_cure_dispel_act;
+
+
+[Action] ID=prom_cure_dispel_act; 	
+	harmful=true;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=prom_cure_dispel_act;
+	cloneFrom=adjacentAndSelf;
+	maxRange=12;
+[AvAffecter]
+	ID=prom_cure_dispel_act; 
+	actorValue=dispel;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	--harmful=false;
+	magnitude=100;
+	duration=-2;
+	chance=100;
+	element=HPbased;
+[AvAffecterAoE]
+	ID=prom_cure_dispel_act;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+
+
+
+[ActorValue]
+ID=prom_wildfire;
+name=Wildfire;
+icon=Wildfire;
+bubbleIcon=wildfireStatus;
+minimum=0;
+maximum=1;
+description=Units with Wildfire deal 10 fire damage to themselves and adjacent units at the end of their turn, losing the Wildfire but spreading it to those hit.;
+defaultValue = 0;
+
+harmfulMagnitude = 1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Red;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+
+[ActorValueReaction]
+ID=prom_wildfire;
+element=endTurn;  action=prom_wildfire_act; 
+[ActorValueReaction]
+ID=prom_wildfire;
+element=ice; element=water; newID=X;
+
+
+[Action] ID=prom_wildfire_act; 	
+	icon=icon_wildfire;
+	--harmful=true;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=prom_wildfire_act;
+	cloneFrom=adjacentAndSelf;
+	maxRange=12;
+[AvAffecter]
+	ID=prom_wildfire_act; 
+	actorValue=HP;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	magnitude=-9 + t:skill_Fire * 0.5 + t:MagDef * 0.33;
+	duration=-2;
+	chance=100 - 200 * tsa:forge_heat_acclimation;
+	element=fire;
+	element=magic;
+	FXOnHit=flamethrower_still;
+	FXOnHit=DramaticNyeaow;
+	FXOnTile=fireburst;
+[AvAffecterAoE]
+	ID=prom_wildfire_act;
+	cloneFrom=adjacentAndSelf;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=prom_wildfire_act; 
+	actorValue=prom_wildfire;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	--harmful=false;
+	magnitude=1;
+	duration=40;
+	chance=100 - 200 * t:iceSpikes - 200 * tsa:forge_heat_acclimation;
+	element=fire;
+	FXOnHit=burn;
+[AvAffecterAoE]
+	ID=prom_wildfire_act;
+	cloneFrom=adjacent;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=prom_wildfire_act; 
+	visibleEvaluations=false;
+	affectIntangible=true; 
+	harmful=false;
+	actorValue=prom_wildfire;
+	magnitude=-1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=prom_wildfire_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+
+
+
+[ActorValue]
+ID=ra_soothing;
+name=Soothing;
+icon=Soothing;
+bubbleIcon=soothingStatus;
+minimum=0;
+maximum=3;
+description=Incoming HP and MP restoration is increased by 25%.;
+defaultValue = 0;
+
+harmfulMagnitude = -1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Blue;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueReaction]
+ID=ra_soothing;
+actorValues=HP; healMultiplier=1.25;
+[ActorValueReaction]
+ID=ra_soothing;
+actorValues=MP; healMultiplier=1.25;
+
+
+
+
+
+
+[ActorValue]
+ID=pd_deathmark;
+name=Deathmark;
+icon=Deathmark;
+bubbleIcon=deathmarkStatus;
+minimum=0;
+maximum=3;
+description=Prevent incoming healing and many defensive buffs.;
+defaultValue = 0;
+
+harmfulMagnitude = 1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Purple;
+damageNumberColor_Negative = Blue;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueReaction]
+ID=pd_deathmark;
+actorValues=HP; actorValues=guard; actorValues=ward; actorValues=negate; actorValues=aegis; actorValues=pd_deflect; actorValues=preserve; actorValues=ra_soothing; healMultiplier=0;
+
+
+
+[ActorValue]
+ID=pd_wetwork;
+name=Wetwork;
+icon=Wetwork;
+bubbleIcon=wetworkStatus;
+minimum=0;
+maximum=1;
+description=You gain +4 <icon=skill_Dagger> and <icon=PhysAtk>, but you lose this bonus when you KO a foe during your turn.;
+defaultValue = 0;
+
+harmfulMagnitude = -1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=true;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Orange;
+damageNumberColor_Negative = Red;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueEffect]
+ID=pd_wetwork;
+actorValue=skill_Dagger; magnitude=4; duration=-1; 
+[ActorValueEffect]
+ID=pd_wetwork;
+actorValue=PhysAtk; magnitude=4; duration=-1;
+
+[ActorValueReaction]
+ID=pd_wetwork;
+element=enemyKOd; newID=X;
+
+
+
+
+[ActorValue]
+ID=ra_contagious;
+name=Contagious;
+icon=Contagious;
+bubbleIcon=contagiousStatus;
+minimum=0;
+maximum=3;
+description=Any units who are incapacitated while afflicted with the Contagious status will spread any ailments on them to adjacent units.;
+defaultValue = 0;
+
+harmfulMagnitude = 1;
+
+
+animationOnHarmful = pain;
+
+affectsActors = true;
+
+canAffectIncapped = true;
+
+removedByNegativeMagnitude=false;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Green;
+damageNumberColor_Negative = Green;
+
+
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+
+elementReactionModifiesDuration = false;
+
+canBeRemovedByNonspecificAVEffectRemoval = true;
+
+recordInActorData = true;
+showEvaluationInfo = true;
+
+allowDecimalValues = false;
+percentage = false;
+
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+
+[ActorValueReaction]
+ID=ra_contagious;
+element=incapped; action=ra_contagious_act;
+
+
+[Action] ID=ra_contagious_act; 	
+	harmful=false;
+	--special=usableWithoutACaster;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	FXOnCaster=blackCloud;
+	FXOnCaster=shroudExplode;
+	FXOnCasterColor=Black;
+[ActionAoE] 
+	ID=ra_contagious_act;
+	cloneFrom=oneTile;
+	canSelectStackedActors=false;
+[AvAffecter]
+	ID=ra_contagious_act;
+	visibleMiss=false;
+	actorValue=transfer;
+	harmful=true;
+	magnitude=1;
+	duration=-2;
+	chance=100* m:cCurable * m:targetExists - 999 * m:incapped;
+	FXOnHit=ringsDownward;
+	FXOnHitColor=DarkGreen;
+	FXOnHit=Debuff_lowPitch;
+[AvAffecterAoE]
+	ID=ra_contagious_act;
+	needsLoS=false;
+	needsLoE=false;
+	arc=true;
+	airborne=true;
+	occupyAll=true;
+	bypassAll=true;
+	canSelectAllies=true;
+	cloneFrom=adjacent;

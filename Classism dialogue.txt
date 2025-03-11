@@ -1,0 +1,1261 @@
+[GlobalTrigger] aliasID=ari_elite_passive_unlock_trigger;
+[GlobalTriggerEffect] ID=ari_elite_passive_unlock_trigger; effectID=textOverlay; sValue=Elite Passive unlocked!; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+[GlobalTriggerEffect] ID=ari_elite_passive_unlock_trigger; effectID=textOverlay; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=2; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+---------------------------------------------------------------SAILOR dialogue
+[DialogNode] ID=ari_ep_pirate_cove2_battle_1;
+animations=angry;
+statements=Hey! Who the heck are you? Attack!;
+nextNodeID=enemyInitiateCombat;
+
+[DialogNode] ID=ari_ep_blackbrow_battle_1;
+animations=stern;
+statements=Yaaaargh! Ye shouldn't be in here! Hand over all yer valuables or we'll gut ya!;
+nextNodeID=enemyInitiateCombat;
+
+[DialogNode] ID=ari_ep_redhand_battle_1;
+animations=happy;
+animations=meh;
+statements=Ya ha ha! If you were after the treasure, too bad! We've already moved it!;
+statements=And if you weren't after the treasure, well... You're about to be looted. Get 'em, boys!;
+nextNodeID=enemyInitiateCombat;
+
+[DialogNode] ID=ari_classism_sailor_trainer_greeting_0;
+animations=;
+statements=Again?! Give me a break, I just-;
+statements=Oh. It's someone I haven't seen before.;
+
+--g:D_ari_ep_blackbrow_escape1
+
+[DialogNode] ID=ari_classism_sailor_trainer_greeting_1;
+animations=;
+statements=Hey there. I plan on leaving here shortly. I'm headed for <Town>, so feel free to find me there if you ever need anything.;
+
+
+
+
+[DialogNode] ID=ari_ep_redhand_escape1;
+animations=angry;
+statements=You'll never find the cove and you'll never catch me!;
+specialEffect=setGlobalVar_math,classism_sailor_quest,g:classism_sailor_quest + 1;
+[DialogOption] text=...;
+nodeToConnectTo=escapeGate;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_blackbrow_escape1;
+animations=angry;
+statements=I didn't steal nothin' from no one good! Leave me outta this and don't go lookin' for the cove!;
+specialEffect=setGlobalVar_math,classism_sailor_quest,g:classism_sailor_quest + 1;
+[DialogOption] text=...;
+nodeToConnectTo=escapeGate;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_cove_battle_1;
+animations=happy;
+animations=handupPose;
+statements=Well well! Look at who decided to show up, brother!;
+statements=What say we give this troublemaker a bit of payback?<p> After 'em!;
+nextNodeID=enemyInitiateCombat;
+
+[DialogNode] ID=ari_ep_sailor_victory1;
+animations=sly;
+animations=;
+animations=sleep;
+statements=Urgh, you've defeated my brother and I. You may've learned some new tricks from our battle, but you'll never...;
+statements=Find the...;
+statements=Uuuuugh...;
+nextNodeID=ari_ep_sailor_victory_receipt;
+
+
+[DialogNode] ID=ari_ep_sailor_victory_receipt;
+specialEffect=fx,blackenScreen;
+specialEffect=ari_elite_passive_unlock_trigger;
+specialEffect=setGlobalVar,class_sailor_elite_unlock,1;
+nextNodeID=;
+
+---------------------------------------------------------------Quest start dialogue
+[DialogNode] ID=ari_coastal_village_ruin_entrance;
+animations=surprise;
+statements=Whoa, what happened here? Maybe I should take a quick look around.;
+specialEffect=setGlobalVar,classism_initiate_quest,1;
+
+[DialogNode] ID=ari_coastal_village_ruin_goblin_dead;
+animations=;
+statements=It looks like those Goblins had pillaged and destroyed this village. From what I've heard, they're normally holed up inside caverns or otherwise remote spots.;
+statements=I should probably let someone of importance know about this.;
+specialEffect=setGlobalVar,classism_initiate_quest,2;
+
+[DialogOption] ID=royal_questgiver; text=I ran across a village that had been pillaged by Goblins;
+formulaReq=is:2:g:classism_initiate_quest;
+--specialEffect=setDialogWindowSizeY,200;
+--specialEffect=setPCDialogWindowSizeY,300;
+newLineOfOptions=false;
+nodeToConnectTo=royal_questgiver_goblin_pillage;
+
+[DialogNode] ID=royal_questgiver_goblin_pillage;
+animations=;
+statements=Thank you for your report.;
+statements=We are aware of this but we simply do not have the hands necessary to defend each and every locale.;
+statements=If you are looking to be of further assistance, please speak with our associate outside the gate.;
+specialEffect=setGlobalVar,classism_initiate_quest,3;
+[DialogOption] text=I understand.;
+nodeToConnectTo=royal_questgiver;
+
+---------------------------------------------------------------WARRIOR
+[FormulaGlobal] ID=classism_warrior_quest_check;
+formula=moreThan:0:g:classism_scout_quest + moreThan:0:g:classism_scholar_quest;
+
+
+[DialogNode] ID=ari_searth_scout_greeting_0;
+animations=;
+statements=<finalTextIf=If only we had more help...=moreThan:2:g:classism_initiate_quest * d:classism_warrior_quest_check>Hello, how are you on such a magnificent day?;
+[DialogOption] text=I was told to speak with you if I wanted to help.;
+formulaReq=moreThan:2:g:classism_initiate_quest * lessThan:1:d:classism_warrior_quest_check;
+nodeToConnectTo=ari_searth_scout_0;
+[DialogOption] text=Goodbye.;
+formulaReq=moreThan:2:g:classism_initiate_quest * lessThan:1:d:classism_warrior_quest_check;
+nodeToConnectTo=;
+[DialogOption] text=I could help, if you'd like.;
+formulaReq=moreThan:2:g:classism_initiate_quest * d:classism_warrior_quest_check;
+nodeToConnectTo=ari_searth_scout_0;
+[DialogOption] text=I hope you find the help you're looking for.;
+formulaReq=moreThan:2:g:classism_initiate_quest * d:classism_warrior_quest_check;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_searth_scout_0;
+animations=happy;
+animations=;
+statements=Ah, excellent! I was just looking for some additional hands. It sounds like there's been quite a ruckus going on in a port to the west of here, otherwise known as Tidehaven.;
+statements=Would you be willing to investigate?;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,classism_warrior_quest,1;
+[DialogOption] text=I'll take a look and report back.;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_tidehaven_goblin_view;
+animations=surprise;
+animations=stern;
+statements=I've never heard of goblins so organized nor seen so many outside of their caves!;
+statements=I should report back quickly.;
+
+[DialogNode] ID=ari_searth_scout_greeting_1;
+animations=;
+statements=Hello there! Have you have any reports to make?;
+[DialogOption] text=I've returned from Tidehaven. <n=>Goblins appear to be planning an assault on the town.;
+formulaReq=moreThan:1:g:classism_warrior_quest;
+nodeToConnectTo=ari_searth_warrior_start;
+[DialogOption] text=None yet.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_searth_warrior_start;
+animations=stern;
+statements=Excellent, thank you for the report. With that, we've gathered enough information to strike at the heart of this Goblin force, but we'll need to act fast.;
+[DialogOption] text=I'm ready to help however possible.;
+nodeToConnectTo=ari_searth_warrior_attack1;
+
+[DialogNode] ID=ari_searth_warrior_attack1;
+animations=stern;
+statements=Excellent. Join me at the rally point just outside of Tidehaven. I'll prepare any troops available and make sure everyone is ready for the fight.;
+statements=I'll assemble whoever is available and we can launch an assault to split apart these vile forces and restore peace to the region.;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,classism_warrior_quest,3;
+[DialogOption] text=Goodbye.;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_searth_scout_greeting_2;
+nextNodeID=class_WarriorIntro;
+nextNodeID_fReq=moreThan:5:g:classism_warrior_quest;
+nextNodeID=ari_searth_scout_greeting_goblin_assault;
+
+[DialogNode] ID=class_WarriorIntro;
+animations=;
+statements=Well hello. Thanks again for assisting us at Tidehaven. Your prowess in battle was splendid.;
+statements=While you're here, is there anything I can do for you?;
+[DialogOption] text=Goodbye;
+newLineOfOptions=true;
+bottomOption=true;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_searth_scout_greeting_goblin_assault;
+animations=;
+statements=Meet me back in Tidehaven so that we can prepare for an attack on the monsters. I want to save as many as possible.;
+
+[DialogNode] ID=ari_dialog_tidehaven_orpheschatter;
+animations=;
+statements=<finalTextIf=Wow, thanks for saving Tidehaven!=moreThan:5:g:classism_warrior_quest><rand=Oh man, I'm hearing about monsters getting dangerously close to this place./Do I leave Tidehaven? But I grew up here...>;
+nodeToConnectTo=;
+[DialogNode] ID=ari_dialog_tidehaven_nedchatter;
+animations=;
+statements=<finalTextIf=I knew Seartial would send reinforcements.=moreThan:5:g:classism_warrior_quest><rand=If Seartial doesn't send reinforcement, so help me!/They'd better send reinforcements soon!>;
+nodeToConnectTo=;
+[DialogNode] ID=ari_dialog_tidehaven_inisechatter;
+animations=;
+statements=<finalTextIf=I'll never forget that battle! We did it! We saved Tidehaven!=moreThan:5:g:classism_warrior_quest><rand=I'm way too scared to check out what's over here./I keep hearing rumors about a swarm of monsters closing in but I'm too scared to actually look!>;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_citizen_goblin_assault_noquest;
+animations=;
+animations=scared;
+animations=sad;
+animations=sigh;
+statements=Hey!;
+statements=I wouldn't go that way if I were you! It looks like there's a pretty big pack of uglies.;
+statements=In fact, they might be getting ready to attack us...;
+statements=Oh no, what should I do?!;
+
+[DialogNode] ID=ari_tidehaven_battle_preparation;
+animations=scared;
+animations=stern;
+animations=sigh;
+statements=Whoa, hold on!;
+statements=I won't stop you, but I can hear the clamoring of a battle from here. If I were you, I'd be prepared to fight if you jump over there!;
+statements=As for me, well, Tidehaven's all I've got. I'll just have to hope that Seartial's troops can handle themselves in a fight.;
+
+[DialogNode] ID=ari_searth_scout_goblin_preparation;
+animations=stern;
+animations=stern;
+statements=At the ready! Before us lie a squad of goblins. For the sake of Tidehaven and the safety of its splendid citizens, let us wipe these vermin from Eral!;
+statements=Are you prepared?;
+specialEffect=incDefaultNode;
+--specialEffect=setGlobalVar,classism_warrior_quest,4;
+[DialogOption] text=I'm ready.;
+nodeToConnectTo=ari_searth_goblin_attack;
+--[DialogOption] text=Not yet.;
+--nodeToConnectTo=ari_searth_goblin_attack_wait;
+
+[DialogNode] ID=ari_searth_scout_goblin_preparation1;
+animations=stern;
+statements=Are you prepared to assault the Goblins?;
+[DialogOption] text=I'm ready.;
+nodeToConnectTo=ari_searth_goblin_attack;
+[DialogOption] text=Not yet.;
+nodeToConnectTo=ari_searth_goblin_attack_wait;
+
+[DialogNode] ID=ari_searth_goblin_attack_wait;
+animations=stern;
+animations=stern;
+statements=Make it quick, before the Goblins have had a chance to rally!;
+statements=Talk to me again when you've prepared yourself.;
+
+
+[DialogNode] ID=ari_searth_goblin_attack;
+animations=stern;
+statements=Then let us commence our attack!;
+specialEffect=setGlobalVar,classism_warrior_quest,5;
+[DialogOption] text=Begin assault*;
+specialEffect=travel_point,ari_tidehaven_goblin_2a,0;
+specialEffect=fx,blackenScreen;
+nodeToConnectTo=;
+
+
+[DialogNode] ID=ari_searth_goblin_attack_advice;
+animations=stern;
+animations=stern;
+animations=stern;
+animations=stern;
+statements=Keep your wits about you!;
+statements=We managed to install catapults to assist in wiping the Goblins out. Just make sure to stay out of their line of fire!;
+statements=We did not have the time to imbue our siege weapons with magic, and so they will inflict harm!;
+statements=Here they come!;
+nextNodeID=ari_searth_goblin_attack_attack;
+
+[DialogNode] ID=ari_searth_goblin_attack_attack;
+specialEffect=enterCombat,@ATalker,@X31,@Y17;
+nextNodeID=;
+
+
+[DialogNode] ID=ari_searth_goblin_battle_won;
+animations=stern;
+animations=stern;
+statements=We have succeeded in routing the vermin!;
+statements=The Goblins falter and flee before us! Finish off any remnants and report back to me!;
+specialEffect=setGlobalVar,classism_warrior_quest,6;
+nextNodeID=ari_searth_goblin_battle_won_receipt;
+
+[DialogNode] ID=ari_searth_goblin_battle_won_receipt;
+specialEffect=fx,blackenScreen;
+specialEffect=ari_elite_passive_unlock_trigger;
+specialEffect=setGlobalVar,class_warrior_elite_unlock,1;
+nextNodeID=;
+
+[DialogNode] ID=ari_searth_goblin_battle_won_report;
+animations=happy;
+animations=happy;
+animations=;
+animations=happy;
+statements=Magnificent! Much obliged for your help, comrade!;
+statements=In support of such a splendid display, I shall see to it that Tidehaven is properly invested in on your behalf.;
+statements=Additionally, I am certain that you've learned a thing or two from such an intense battle.;
+statements=I shall return to Searth. Feel free to drop by as you please. Perhaps there is more that I can teach you.;
+
+
+
+
+---------------------------------------------------------------SCOUT dialogue
+[FormulaGlobal] ID=classism_scout_quest_check;
+formula=moreThan:0:g:classism_warrior_quest + moreThan:0:g:classism_scholar_quest;
+ 
+[DialogNode] ID=ari_jasci_scout_greeting_0;
+animations=;
+statements=<finalTextIf=*Mumbles* I really need help finding that scout party...=moreThan:2:g:classism_initiate_quest * d:classism_scout_quest_check>Hello, how's it going?;
+[DialogOption] text=I was told to speak with you if I wanted to help.;
+formulaReq=moreThan:2:g:classism_initiate_quest * lessThan:1:d:classism_scout_quest_check;
+nodeToConnectTo=ari_jasci_scout_0;
+[DialogOption] text=Goodbye.;
+formulaReq=moreThan:2:g:classism_initiate_quest * lessThan:1:d:classism_scout_quest_check;
+nodeToConnectTo=;
+[DialogOption] text=I could help, if you'd like.;
+formulaReq=moreThan:2:g:classism_initiate_quest * d:classism_scout_quest_check;
+nodeToConnectTo=ari_jasci_scout_0;
+[DialogOption] text=I hope you find that scouting party.;
+formulaReq=moreThan:2:g:classism_initiate_quest * d:classism_scout_quest_check;
+nodeToConnectTo=;
+
+
+[DialogNode] ID=ari_jasci_scout_0;
+animations=happy;
+animations=;
+animations=sigh;
+statements=Aha! Just what I was looking for- an intrepid adventurer seeking out those in need. What impeccable timing!;
+statements=I've happened upon quite a dilemma where a scout of ours has just recently gone missing.;
+statements=I don't have anyone available to take a look for them around their last known location. Can you handle it?;
+[DialogOption] text=Where was this scout's last known location?;
+nodeToConnectTo=ari_jasci_scout_1;
+[DialogOption] text=Not right now.;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_jasci_scout_1;
+animations=happy;
+animations=;
+statements=I always knew that I was good at picking out the reliable ones.;
+statements=The scout- Nary's goal was to determine the safety of a particular cave. I bet you can locate them to the west of Jascias if you do a little spelunking.; 
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,classism_scout_quest,1;
+[DialogOption] text=I'll be back with any findings.;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_lostcave_darkness;
+animations=scared;
+statements=It looks quite dark in there. I'd better make sure I have some kind of light source with me!;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_below;
+animations=;
+statements=Hello?! Is someone there?;
+statements=I've fallen quite a distance and could use some help!;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_distance;
+animations=;
+statements=Hey! Over here! Just a bit further!;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_greeting_0;
+animations=;
+statements=Thank goodness you're not a spide!;
+statements=I jumped a bit too far when using some Airjax and fell! I've been down here for a day and was beginning to lose hope.;
+statements=Could you help me out and bandage up my leg?;
+statements=There should be some bandages around here somewhere, but you'll have to watch out for those nasty spides.;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,classism_scout_quest,2;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_greeting_1;
+nextNodeID=ari_jasci_lost_cavern_scout_bandaged_thanks;
+nextNodeID_fReq=moreThan:3:g:classism_scout_quest;
+nextNodeID=ari_jasci_lost_cavern_scout_unbandaged;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_unbandaged;
+animations=;
+statements=I really hurt my leg.;
+statements=If you've got any bandages on you, please use one on me.;
+
+[SupportAbility]
+ID=ari_nary_injured_passive;
+name=Injured;
+icon=;
+tooltip=It looks like they're injured. Perhaps healing them would help?;
+
+[SupportAbilityReaction]
+ID=ari_nary_injured_passive;
+element=any; action=ari_nary_injured_passive_act;
+
+[Action] ID=ari_nary_injured_passive_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=ari_nary_injured_passive_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_nary_injured_passive_act;
+	harmful=false;
+	affectIntangible=true;
+    visibleEvaluations=false;
+	hideAllEffects=true;
+	visibleMiss=false;
+    actorValue=trigger;
+    magnitude=ari_nary_healcheck_trigger;
+    duration=-2;
+    chance=100 * moreThan:0:m:tLastDmgHealed;
+[AvAffecterAoE]
+	ID=ari_nary_injured_passive_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+
+[GlobalTrigger] aliasID=ari_nary_healcheck_trigger;
+[GlobalTriggerEffect] ID=ari_nary_healcheck_trigger; effectID=talk; sValue=; sValue2=ari_jasci_lost_cavern_scout_bandaged; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_bandaged;
+animations=;
+statements=You're a real lifesaver!;
+statements=Just let me rest for a bit and I should be good to get back to Jascias on my own again.;
+statements=If you could just let <name> know that I'll report back shortly, it would help me out a lot!;
+specialEffect=setGlobalVar,classism_scout_quest,4;
+nextNodeID=ari_jasci_lost_cavern_scout_lasso;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_lasso;
+statements=Oh, here!;
+statements=Before you go, I've got an extra <itemBig=pt_lasso>Grappling Lasso I want you to have. You might need it to get out of here.;
+specialEffect=giveItem,pt_lasso,1;
+
+[DialogNode] ID=ari_jasci_lost_cavern_scout_bandaged_thanks;
+animations=;
+statements=Thanks for that.;
+statements=Just let me rest for a bit and I should be good to get back to Jascias on my own again.;
+statements=If you could just let <name> know that I'll report back shortly, it would help me out a lot!;
+
+
+
+[DialogNode] ID=ari_jasci_scout_greeting_1;
+animations=;
+statements=Hey, any news?;
+[DialogOption] text=I've found our scout, but they're hurt and need some bandages.;
+formulaReq=is:2:g:classism_scout_quest;
+nodeToConnectTo=ari_jasci_scout_bandages;
+[DialogOption] text=I managed to find and help your scout in the Caverns of the Lost.;
+formulaReq=moreThan:3:g:classism_scout_quest;
+nodeToConnectTo=ari_jasci_scout_return;
+[DialogOption] text=Nothing yet.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_jasci_scout_bandages;
+animations=;
+statements=Ah! That is some terrible news.;
+statements=Scouting is quite a dangerous job, but it always pains me to hear of things going wrong.;
+statements=You're the only one that knows Nary's exact location, and time may be of the essence if they're in danger.;
+statements=Please, take these bandages and help Nary recover. Any report they've made would be quite the boon to us.;
+specialEffect=giveItem,bandage,2;
+specialEffect=setGlobalVar,classism_scout_quest,3;
+[DialogOption] text=I'll go help them get back on their feet.;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_jasci_scout_return;
+animations=;
+statements=Outstanding. With any luck, we'll be able to do a deeper delve with Nary's report.;
+statements=I'll have you know that I was a scout for Jasci before climbing up the ranks.;
+statements=As thanks, I'll show you something you should be able to take advantage of...;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,classism_scout_quest,5;
+nextNodeID=ari_jasci_scout_passive_unlock;
+
+[DialogNode] ID=ari_jasci_scout_passive_unlock;
+specialEffect=fx,blackenScreen;
+specialEffect=ari_elite_passive_unlock_trigger;
+specialEffect=setGlobalVar,class_scout_elite_unlock,1;
+nextNodeID=;
+
+[DialogNode] ID=ari_jasci_scout_greeting_2;
+animations=;
+statements=Hey! You did some good scouting work. I wonder if you're a natural.;
+statements=If there's anything I can do to help, let me know.;
+[DialogOption] text=Goodbye;
+newLineOfOptions=true;
+bottomOption=true;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_jasci_nary_greeting_0;
+animations=;
+statements=It's you! Thank you so much for helping me out of there.;
+statements=I managed to get my report back to <name> and we're setting out for another deeper delve soon.;
+statements=It's all thanks to you. I'm not sure how I can repay you. I could have died all alone.;
+[DialogOption] text=Goodbye;
+newLineOfOptions=true;
+bottomOption=true;
+nodeToConnectTo=;
+
+
+
+
+
+---------------------------------------------------------------IGNIS KNIGHT dialogue
+[DialogNode] ID=ari_dialog_slipchatter;
+animations=;
+statements=<rand=Hey, did you notice anything sticking out of the ground near Arianna's house?/This place is pretty creepy at night.>;
+nodeToConnectTo=;
+
+[DialogNode] ID=ari_dialog_zombchatter;
+animations=stern;
+statements=<rand=Be careful at night around here./Don't stray too close to the graveyard up north./We don't normally get visitors here...>;
+nodeToConnectTo=;
+
+
+[DialogNode] ID=ari_ep_ignis_marti_greeting;
+animations=;
+animations=sad;
+animations=sigh;
+statements=Hello...;
+statements=I'm sorry, we're typically more hospitable than this.;
+statements=We've just run into some personal troubles.;
+[DialogOption] text=Is there anything I can help with?;
+nodeToConnectTo=ari_ep_ignis_marti_ring_intro0;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_ignis_marti_ring_intro0;
+animations=;
+animations=;
+animations=angry;
+animations=sigh;
+animations=;
+statements=Well, we were planning our marriage and I had just proposed.;
+statements=We were planning on sightseeing on Mount Ignis and were making our way into the fields when we were attacked by a pack of wolves.;
+statements=With no time to think, my partner hurled the ring away from us in an attempt to attract the wolves so that we could run away.;
+statements=It worked and we managed to escape, but we can't afford another ring!;
+statements=If you happen to come across our ring, could we have it back?;
+specialEffect=incDefaultNode;
+[DialogOption] text=Certainly.;
+nodeToConnectTo=ari_ep_ignis_marti_ring_intro1;
+[DialogOption] text=For free? I'm not so sure...;
+nodeToConnectTo=ari_ep_ignis_marti_ring_intro2;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_ignis_marti_ring_intro1;
+animations=;
+statements=Thanks stranger. I won't hold my breath, but the more eyes we have looking, the more likely it is we get our ring back.;
+[DialogOption] text=Hopefully we find it.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_ignis_marti_ring_intro2;
+animations=;
+statements=Well, we don't have much to give in return, but I'd offer whatever we could.;
+[DialogOption] text=We'll see what happens.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_ignis_marti_greeting1;
+animations=sigh;
+statements=Hey stranger. Did you find anything shiny lately?;
+[DialogOption] text=I think I found your ring.<n=>Here you go.;
+nodeToConnectTo=ari_ep_ignis_marti_ring_found0;
+formulaReq=moreThan:0:partyItem:ari_ignis_wedding_ring;
+[DialogOption] text=I haven't found anything, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_ignis_marti_ring_found0;
+animations=happy;
+statements=Oh, wow! This is it! Where'd you find it?!<n=>We can finally hold a wedding!;
+[DialogOption] text=It was in a wolf den. I'm happy for you.;
+nodeToConnectTo=ari_ep_ignis_marti_ring_found1;
+
+[DialogNode] ID=ari_ep_ignis_marti_ring_found1;
+animations=happy;
+animations=happy;
+animations=happy;
+statements=Thank you so much, stranger! It's not much, but please, feel free to help yourself to anything we have left in our jewelry chest!;
+statements=We were going to pawn off what we have to afford another ring, but now that you've found it we don't need to!;
+statements=Again, thank you so much!;
+specialEffect=incDefaultNode;
+[DialogOption] text=Have a great wedding. Bye.;
+nodeToConnectTo=ari_ep_ignis_marti_ring_receipt;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_ignis_marti_greeting2;
+animations=sigh;
+statements=Hey friend! I hope the world's treating you properly! Feel free to rest up here whenever you need it, we'll always help you!;
+[DialogOption] text=Thank you.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_ignis_marti_ring_receipt;
+specialEffect=removeItemFromParty,ari_ignis_wedding_ring,1;
+specialEffect=setGlobalVar,marti_chest_access,1;
+nextNodeID=;
+
+
+
+
+
+
+
+---------------------------------------------------------------BAT HANDLER dialogue
+[DialogNode] ID=ari_ep_bathandler_statue_greeting0;
+animations=surprise;
+animations=;
+animations=;
+statements=Ooooooh...? A wingless approaches.;
+statements=What is it that you desire, wingless?;
+
+[DialogOption] text=Who are you?;
+formulaReq=1 - g:bathandler_statue_who0;
+nodeToConnectTo=ari_ep_bathandler_statue_who0;
+
+[DialogOption] text=What are you?;
+formulaReq=1 - g:bathandler_statue_what0;
+nodeToConnectTo=ari_ep_bathandler_statue_what0;
+
+[DialogOption] text=Why are you down here?;
+formulaReq=1 - g:bathandler_statue_why0;
+nodeToConnectTo=ari_ep_bathandler_statue_why0;
+
+[DialogOption] text=You look familiar...;
+formulaReq=moreThan:1:g:bathandler_statues_found;
+nodeToConnectTo=ari_ep_bathandler_statue_seenbefore;
+
+[DialogOption] text=Nope, not interested, bye.;
+nextNodeID=;
+bottomOption=true;
+
+
+[DialogNode] ID=ari_ep_bathandler_statue_seenbefore;
+animations=angry;
+statements=Indeed, wingless, you have been in my presence before. Why have you not approached me?;
+
+[DialogOption] text=I'm sorry, I hadn't noticed.;
+nodeToConnectTo=ari_ep_bathandler_notseen;
+
+
+[DialogNode] ID=ari_ep_bathandler_notseen;
+animations=sigh;
+statements=It matters not. You stand before me, now. What is it that you desire, wingless?;
+
+[DialogOption] text=Who are you?;
+formulaReq=1 - g:bathandler_statue_who0;
+nodeToConnectTo=ari_ep_bathandler_statue_who0;
+
+[DialogOption] text=What are you?;
+formulaReq=1 - g:bathandler_statue_what0;
+nodeToConnectTo=ari_ep_bathandler_statue_what0;
+
+[DialogOption] text=Why are you down here?;
+formulaReq=1 - g:bathandler_statue_why0;
+nodeToConnectTo=ari_ep_bathandler_statue_why0;
+
+
+[DialogNode] ID=ari_ep_bathandler_statue_who0;
+animations=sly;
+animations=;
+animations=;
+animations=sly;
+statements=The wingless wishes to know who I am?;
+statements=Very well. I am but a creature once revered and admired, flitting about within the dark recesses of primitive abodes.;
+statements=The wingless had learned to tame my kin, and you too can learn.;
+statements=Seek similar places of worship and your own kin will become strong, like those of old.;
+specialEffect=setGlobalVar,bathandler_statue_who0,1;
+specialEffect=setGlobalVar,bathandler_statues_greeted,1;
+[DialogOption] text=What are you?;
+formulaReq=1 - g:bathandler_statue_what0;
+nodeToConnectTo=ari_ep_bathandler_statue_what0;
+
+[DialogOption] text=Why are you down here?;
+formulaReq=1 - g:bathandler_statue_why0;
+nodeToConnectTo=ari_ep_bathandler_statue_why0;
+
+[DialogOption] text=Interesting. I'll seek out these other statues.;
+nextNodeID=;
+bottomOption=true;
+
+
+[DialogNode] ID=ari_ep_bathandler_statue_what0;
+animations=sly;
+statements=Keeeekee! That will be revealed in due time, wingless.;
+specialEffect=setGlobalVar,bathandler_statue_what0,1;
+
+[DialogOption] text=Who are you?;
+formulaReq=1 - g:bathandler_statue_who0;
+nodeToConnectTo=ari_ep_bathandler_statue_who0;
+
+[DialogOption] text=Why are you down here?;
+formulaReq=1 - g:bathandler_statue_why0;
+nodeToConnectTo=ari_ep_bathandler_statue_why0;
+
+[DialogOption] text=Interesting. I'll seek out these other statues.;
+formulaReq=g:bathandler_statue_who0;
+nextNodeID=;
+bottomOption=true;
+
+
+[DialogNode] ID=ari_ep_bathandler_statue_why0;
+animations=happy;
+animations=;
+statements=The wingless wishes to know why I am here, the wingless wishes to know!;
+statements=Perhaps in time, wingless, you will understand.;
+specialEffect=setGlobalVar,bathandler_statue_why0,1;
+
+[DialogOption] text=What are you?;
+formulaReq=1 - g:bathandler_statue_what0;
+nodeToConnectTo=ari_ep_bathandler_statue_what0;
+
+[DialogOption] text=Who are you?;
+formulaReq=1 - g:bathandler_statue_who0;
+nodeToConnectTo=ari_ep_bathandler_statue_who0;
+
+[DialogOption] text=Interesting. I'll seek out these other statues.;
+formulaReq=g:bathandler_statue_who0;
+nextNodeID=;
+bottomOption=true;
+
+
+[DialogNode] ID=ari_ep_bathandler_statue_greeting1;
+animations=surprise;
+animations=;
+statements=The wingless returns!;
+statements=What is it that you desire, wingless?;
+
+[DialogOption] text=Why are you down here?;
+formulaReq=1 * is:2:g:bathandler_statues_found;
+nodeToConnectTo=ari_ep_bathandler_statue_why1;
+
+[DialogOption] text=What are you?;
+formulaReq=1 * is:2:g:bathandler_statues_found;
+nodeToConnectTo=ari_ep_bathandler_statue_what1;
+
+[DialogOption] text=I will seek out those other statues, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_bathandler_statue_why1;
+animations=;
+animations=angry;
+animations=;
+statements=I was once worshipped. Revered! This cave was not desolate as it is now.;
+statements=The wingless worshippers have since moved on, leaving me. They have forgotten my offerings. My teachings.;
+statements=There is yet another statue at which I was praised. Find me, wingless.;
+specialEffect=setGlobalVar,bathandler_statue_why1,1;
+specialEffect=setGlobalVar,bathandler_statues_greeted,2;
+
+[DialogOption] text=What are you?;
+formulaReq=1 - g:bathandler_statue_what1;
+nodeToConnectTo=ari_ep_bathandler_statue_what1;
+
+[DialogOption] text=I will seek out the final statue, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_bathandler_statue_what1;
+animations=sly;
+statements=It is too early yet, wingless.;
+specialEffect=setGlobalVar,bathandler_statue_what1,1;
+
+[DialogOption] text=Why are you down here?;
+formulaReq=1 - g:bathandler_statue_why1;
+nodeToConnectTo=ari_ep_bathandler_statue_why1;
+
+[DialogOption] text=I will seek out the final statue.;
+formulaReq=g:bathandler_statue_why1;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_bathandler_statue_greeting2;
+animations=surprise;
+animations=;
+statements=At last! The wingless one has found me.;
+statements=Is this what you desire, wingless?;
+
+[DialogOption] text=What are you?;
+formulaReq=1 - is:3:g:bathandler_statues_found;
+nodeToConnectTo=ari_ep_bathandler_statue_what2;
+
+[DialogOption] text=Goodbye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_bathandler_statue_what2;
+animations=;
+animations=happy;
+animations=;
+statements=I am your power now, wingless. I am you.;
+statements=Take solace in the power of your winged brethren, for they will become as powerful as days long past.;
+statements=They will assist you in your travels, wingless one. Fear not the dark any longer.;
+specialEffect=setGlobalVar,class_bathandler_elite_unlock,1;
+specialEffect=setGlobalVar,bathandler_statues_greeted,3;
+[DialogOption] text=I will use your power to fulfill my goals.;
+nodeToConnectTo=ari_ep_bathandler_statue_receipt;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_bathandler_statue_receipt;
+specialEffect=tTextOverlayPopup_classUnlocked;
+nextNodeID=;
+
+[DialogNode] ID=ari_ep_bathandler_statue_greeting3;
+animations=;
+statements=Welcome, wingless. I hope my brethren have been of use.;
+
+[DialogOption] text=Goodbye.;
+nextNodeID=;
+bottomOption=true;
+
+
+---------------------------------------------------------------GUARDIAN dialogue
+[DialogNode] ID=ari_ep_guardian_guard_greeting0;
+animations=stern;
+animations=stern;
+statements=Halt!;
+statements=The entrance to Guardian's Keep is closed as of right now. You won't be able to enter.;
+[DialogOption] text=Why can't I get in?;
+nodeToConnectTo=ari_ep_guardian_guard_goblinproblem0;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_guard_goblinproblem0;
+animations=stern;
+animations=stern;
+animations=stern;
+statements=It's closed to everyone that is not a resident.;
+statements=We were informed that a band of Goblins were taking residence nearby and have increased security until the issue has been dealt with.;
+statements=And until the issue has been dealt with, no entrances will be permitted.;
+[DialogOption] text=I could handle those goblins.;
+nodeToConnectTo=ari_ep_guardian_guard_goblinproblem1;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_guard_goblinproblem1;
+animations=stern;
+animations=stern;
+animations=stern;
+animations=stern;
+statements=That would be of great assistance to Guardian's Keep.;
+statements=Our last intel had the Goblins located shortly south of here.;
+statements=If you're able to bring back four clippings of the Goblins, we'll presume that they have been taken care of and entrance will be restored.;
+statements=Best of luck, traveller.;
+specialEffect=incDefaultNode;
+specialEffect=setGlobalVar,ari_guardians_keep_goblins_accessible,1;
+[DialogOption] text=Goodbye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_guard_greeting1;
+animations=stern;
+animations=stern;
+statements=Halt!;
+statements=The entrance to Guardian's Keep is closed as of right now. You won't be able to enter.;
+[DialogOption] text=Why can't I get in?;
+nodeToConnectTo=ari_ep_guardian_guard_goblinprobleminterim;
+[DialogOption] text=I've taken care of the Goblins.;
+nodeToConnectTo=ari_ep_guardian_guard_goblinproblem_complete;
+formulaReq=moreThan:3:partyItem:ari_guardian_goblin_clippings;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_guard_goblinprobleminterim;
+animations=stern;
+animations=stern;
+animations=stern;
+statements=It's closed to everyone that is not a resident.;
+statements=We were informed that a band of Goblins were taking residence nearby and have increased security until the issue has been dealt with.;
+statements=And until the issue has been dealt with, no entrances will be permitted.;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_guard_goblinproblem_complete;
+animations=stern;
+animations=stern;
+statements=Great work, traveller!;
+statements=We'll restore entry to Guardian's Keep. You are free to pass.;
+specialEffect=incDefaultNode;
+[DialogOption] text=OK, bye.;
+nodeToConnectTo=ari_ep_guardian_guard_goblinproblem_receipt;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_guard_goblinproblem_receipt;
+specialEffect=removeItemFromParty,ari_guardian_goblin_clippings,4;
+specialEffect=setGlobalVar,ari_guardians_keep_accessible,1;
+nextNodeID=;
+
+[DialogNode] ID=ari_ep_guardian_guard_greeting2;
+animations=stern;
+animations=stern;
+statements=How goes it, traveller?;
+statements=I hope everything is well.;
+[DialogOption] text=Goodbye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_ryxae_greeting0;
+animations=sigh;
+statements=So very busy...;
+[DialogOption] text=Hello. I was told you had expertise as a Guardian?;
+nodeToConnectTo=ari_ep_guardian_ryxae_guardian0;
+formulaReq=g:class_guardian;
+[DialogOption] text=Sorry to interrupt, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_ryxae_guardian0;
+animations=;
+animations=;
+animations=happy;
+statements=Ah! Now that's a face I haven't seen before.;
+statements=I certainly do have a few tricks up my sleeve. My door is always open to fellow Guardians.;
+statements=Would you like me to teach you?;
+specialEffect=incDefaultNode;
+[DialogOption] text=I would be indebted.;
+nodeToConnectTo=ari_ep_guardian_ryxae_guardian1;
+formulaReq=g:class_guardian;
+[DialogOption] text=Not right now, thanks. Bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_ryxae_greeting1;
+animations=;
+animations=;
+statements=Well hello!;
+statements=Have you come to learn a few tricks?;
+[DialogOption] text=I would be indebted.;
+nodeToConnectTo=ari_ep_guardian_ryxae_guardian1;
+formulaReq=g:class_guardian;
+[DialogOption] text=Not right now, thanks. Bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_ryxae_guardian1;
+animations=happy;
+animations=;
+statements=Fantastic! We can start first thing in the morning.;
+statements=Rest up for now- we have plenty of beds available.;
+specialEffect=incDefaultNode;
+[DialogOption] text=Thank you, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_guardian_ryxae_greeting2;
+animations=happy;
+animations=;
+animations=stern;
+animations=stern;
+animations=angry;
+statements=What a beautiful day. Thank you for checking in with me!;
+statements=We'll get started in just one seco-;
+--Play shake FX and Guard coming in
+statements=Ryxae! Goblins are at the front gate! They've laid siege to Guardian's Keep!;
+statements=The encampment must have been a forward party...;
+statements=These Goblins are furious!;
+
+specialEffect=setGlobalVar,ari_guardians_keep_goblin_siege,1;
+[DialogOption] text=The deaths of those Goblins were because of me.<n=>I'll help defend Guardian's Keep!;
+nextNodeID=;
+[DialogOption] text=Not right now, thanks. Bye.;
+nextNodeID=;
+bottomOption=true;
+
+
+[DialogNode] ID=ari_ep_guardian_goblinsiege_combatwon;
+animations=happy;
+animations=sly;
+animations=;
+statements=We did it! We've pushed the Goblins back!;
+statements=Now to take care of the cave... I doubt Goblins are smart enough to dig themselves out of a collapsed cavern.;
+statements=I'll just rig some explosives up here... And here...;
+statements=Alright, stand back.;
+--play shake FX and explosion stuff
+statements=Now that that's been taken care of, I would head back and chat with Ryxae.;
+statements=Thanks for your help, adventurer.;
+[DialogOption] text=Glad to have taken care of that. Bye.;
+nextNodeID=;
+bottomOption=true;
+
+
+---------------------------------------------------------------SCHOLAR dialogue
+[DialogNode] ID=ari_ep_scholar_NPC1_greeting;
+animations=;
+statements=Hey there, welcome to the institute of scholarly ways.;
+[DialogOption] text=What is this place?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whatisit;
+[DialogOption] text=What do you do here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whatdoing;
+[DialogOption] text=Can I learn here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_learn;
+[DialogOption] text=Is there anything to do around here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whattodo;
+[DialogOption] text=Bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_whatisit;
+animations=happy;
+animations=;
+animations=;
+animations=;
+animations=happy;
+statements=Like I said- this is the institute of scholarly ways!;
+statements=We've got a whole host of individuals from across all of <world> here. Everyone is doing their best to research their particular field.;
+statements=For example, we've got <NPC2> that teaches all about the element of fire.;
+statements=We've got <NPC3> that does research revolving around ruin.;
+statements=There's food for thought for just about anyone that has an interest in the arcane.;
+[DialogOption] text=What do you do here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whatdoing;
+[DialogOption] text=Can I learn here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_learn;
+[DialogOption] text=Is there anything to do around here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whattodo;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_whatdoing;
+animations=;
+animations=;
+animations=;
+statements=Typically we have members researching specific facets of the arcane.;
+statements=Nearly everyone has their own niche area they do best in. The arts are quite the enveloping field, after all.;
+statements=We also host a number of events that you may want to stick around for and participate in.;
+[DialogOption] text=What is this place?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whatisit;
+[DialogOption] text=Can I learn here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_learn;
+[DialogOption] text=Is there anything to do around here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whattodo;
+[DialogOption] text=What type of events?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whattodo;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_learn;
+animations=happy;
+animations=;
+animations=;
+statements=Ah, a true Scholar!;
+statements=Absolutely. That is our primary function, after all.;
+statements=Feel free to sit in on some of the classes going on.;
+statements=Although I don't think anything's going on right now...;
+[DialogOption] text=What is this place?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whatisit;
+[DialogOption] text=What do you do here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whatdoing;
+[DialogOption] text=Is there anything to do around here?;
+nodeToConnectTo=ari_ep_scholar_NPC1_whattodo;
+[DialogOption] text=Are the classes not running?
+--Is there anything for me to do around here in the meantime?;
+nodeToConnectTo=ari_ep_scholar_NPC1_help;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_whattodo;
+animations=;
+statements=Well, that depends. What're you trying to do at the institute?;
+[DialogOption] text=I want to get stronger.;
+nodeToConnectTo= ;
+[DialogOption] text=I want to learn more about magic.;
+nodeToConnectTo= ;
+[DialogOption] text=I want to <something>.;
+nodeToConnectTo= ;
+[DialogOption] text=Bye.;
+nextNodeID=;
+bottomOption=true;
+
+
+
+---------------------------------------------------------------SORCERER dialogue
+
+
+
+
+
+---------------------------------------------------------------ELEMENTALIST dialogue
+--Make lone mage tower, elementalist is trying to harness elements, tower in middle of ocean would create wind/electric pylon, search fire and ice caves for fire/ice pylon
+[DialogNode] ID=ari_ep_elementalist_NPC1_greeting;
+animations=angry;
+animations=angry;
+statements=Dang 'nabbit! I go out into the middle of nowhere to be left alone and what do I get?;
+statements=Visitors! Insanity! Now leave me to my work!;
+[DialogOption] text=What are you doing out here?;
+nodeToConnectTo=ari_ep_elementalist_NPC1_whatdo;
+[DialogOption] text=Bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_whatdo;
+animations=angry;
+animations=angry;
+statements=Not quite understanding, are we? A bit daft, perhaps?;
+statements=Won't you people just go away?!;
+[DialogOption] text=I'm just curious...;
+nodeToConnectTo=ari_ep_scholar_NPC1_curious;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_curious;
+animations=angry;
+animations=stern;
+animations=stern;
+animations=sigh;
+statements=Fine! If you must know, I'm researching the behavior of the elements.;
+statements=By assembling elemental pylons together I'm hoping to glean some insights from them.;
+statements=This purposefully lonesome tower out in the middle of nowhere that I was hoping wouldn't attract visitors should allow me to create both a wind and electrical pylon.;
+statements=I've just got to harness the weather. Been waiting on a storm for that.;
+statements=That just leaves the fire and ice pylons.;
+specialEffect=incDefaultNode;
+[DialogOption] text=How are you going to get those?;
+nodeToConnectTo=ari_ep_scholar_NPC1_fireice;
+[DialogOption] text=OK, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_fireice;
+animations=sigh;
+animations=;
+animations=sigh;
+animations=;
+animations=sly;
+statements=I haven't quite figured that out just yet.;
+statements=But my research so far indicates that both should be found fairly deep within caves of their respective climates.;
+statements=However, I'm not exactly an adventurer so I'll have to find some way to get at them.;
+statements=Pylons are also notoriously fragile and must be handled with extreme care. Your average delver won't be able to handle them.;
+statements=And I'm not quite sure you're up to the task either, if that's what you're thinking.;
+[DialogOption] text=As an Elementalist, I think I could handle those pylons for you.;
+nodeToConnectTo=ari_ep_scholar_NPC1_fireice_accept;
+formulaReq=g:class_elementalist;
+[DialogOption] text=I see. Best of luck then, bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_fireice_accept;
+animations=surprise;
+animations=;
+animations=sly;
+statements=An Elementalist, you say?;
+statements=Well, I guess you're not quite the average delver after all.;
+statements=I'll tell you what. If you happen to find both a fire and ice pylon and bring them back here, I'll teach you some of the things I've researched.;
+specialEffect=incDefaultNode;
+[DialogOption] text=You mean these two pylons?;
+nodeToConnectTo=ari_ep_elementalist_NPC1_fireicepylon_early;
+formulaReq=moreThan:0:partyItem:ari_elementalist_icepylon * moreThan:0:partyItem:ari_elementalist_firepylon;
+[DialogOption] text=Sounds good.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_greeting1;
+animations=angry;
+statements=Oh come on, why would you come back here? I'm very busy!;
+[DialogOption] text=About those pylons...;
+nodeToConnectTo=ari_ep_scholar_NPC1_fireice_curious2;
+[DialogOption] text=Bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_scholar_NPC1_fireice_curious2;
+animations=stern;
+animations=stern;
+animations=sigh;
+statements=Yes yes, I'll be able to whip up my own wind and electrical pylon.;
+statements=But the fire and ice pylons are going to give me a bit more trouble.;
+statements=I'm pretty sure I could find them deep within caves of their corresponding temperatures, but they're fragile and unwieldy. It takes a certain finesse to handle these sorts of things.;
+[DialogOption] text=As an Elementalist, I think I could handle those pylons for you.;
+nodeToConnectTo=ari_ep_scholar_NPC1_fireice_accept;
+formulaReq=g:class_elementalist;
+[DialogOption] text=I see. Bye.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_greeting2;
+animations=;
+statements=The only one I'll accept as a visitor. Have you found any pylons?;
+[DialogOption] text=I've got a fire pylon here.;
+nodeToConnectTo=ari_ep_elementalist_NPC1_firepylon_complete;
+formulaReq=lessThan:1:partyItem:ari_elementalist_icepylon * moreThan:0:partyItem:ari_elementalist_firepylon * 1 - g:ari_pylon1;
+[DialogOption] text=I've got an ice pylon here.;
+nodeToConnectTo=ari_ep_elementalist_NPC1_icepylon_complete;
+formulaReq=moreThan:0:partyItem:ari_elementalist_icepylon * lessThan:1:partyItem:ari_elementalist_firepylon * 1 - g:ari_pylon1;
+[DialogOption] text=I've got a fire pylon here.;
+nodeToConnectTo=ari_ep_elementalist_NPC1_firepylon_complete2;
+formulaReq=lessThan:1:partyItem:ari_elementalist_icepylon * moreThan:0:partyItem:ari_elementalist_firepylon * g:ari_pylon1;
+[DialogOption] text=I've got an ice pylon here.;
+nodeToConnectTo=ari_ep_elementalist_NPC1_icepylon_complete2;
+formulaReq=moreThan:0:partyItem:ari_elementalist_icepylon * lessThan:1:partyItem:ari_elementalist_firepylon * g:ari_pylon1;
+[DialogOption] text=I've got both of them here.;
+nodeToConnectTo=ari_ep_elementalist_NPC1_fireicepylon_complete;
+formulaReq=moreThan:0:partyItem:ari_elementalist_icepylon * moreThan:0:partyItem:ari_elementalist_firepylon;
+[DialogOption] text=Nothing yet.;
+nextNodeID=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_fireicepylon_early;
+animations=surprise;
+statements=Whoa! You are most assuredly not a normal individual. Those are definitely them.;
+[DialogOption] text=About those teachings...;
+nodeToConnectTo=ari_ep_elementalist_NPC1_fireicepylon_teach;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_firepylon_complete;
+animations=surprise;
+animations=;
+statements=That is certainly a fire pylon. I'll just very carefully take that off of you.;
+statements=Looks like I can count on you. Let me know when you've found the ice pylon.;
+specialEffect=setGlobalVar,ari_pylon1,1
+[DialogOption] text=I'll keep an eye out for the ice pylon.;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_icepylon_complete;
+animations=surprise;
+animations=;
+statements=That is certainly an ice pylon. I'll just very carefully take that off of you.;
+statements=Looks like I can count on you. Let me know when you've found the fire pylon.;
+specialEffect=setGlobalVar,ari_pylon1,1
+[DialogOption] text=I'll keep an eye out for the fire pylon.;
+nodeToConnectTo=;
+bottomOption=true;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_firepylon_complete2;
+animations=happy;
+statements=Fantastic! You've found both of them. Let me just very carefully take that from you.;
+[DialogOption] text=About those teachings...;
+nodeToConnectTo=ari_ep_elementalist_NPC1_fireicepylon_teach;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_icepylon_complete2;
+animations=happy;
+statements=Fantastic! You've found both of them. Let me just very carefully take that from you.;
+[DialogOption] text=About those teachings...;
+nodeToConnectTo=ari_ep_elementalist_NPC1_fireicepylon_teach;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_fireicepylon_complete;
+animations=surprise;
+statements=That is definitely both of them. You really did it. Fantastic, let me just very carefully take both of those.;
+[DialogOption] text=About those teachings...;
+nodeToConnectTo=ari_ep_elementalist_NPC1_fireicepylon_teach;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_fireicepylon_teach;
+animations=;
+statements=A deal's a deal. Let me impart you with some of what I've learned- hopefully you find it useful.;
+specialEffect=incDefaultNode;
+[DialogOption] text=Thank you.;
+nextNodeID=ari_ep_elementalist_NPC1_fireicepylon_receipt;
+bottomOption=true;
+
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_fireicepylon_receipt;
+specialEffect=removeItemFromParty,ari_elementalist_firepylon,1;
+specialEffect=removeItemFromParty,ari_elementalist_icepylon,1;
+specialEffect=setGlobalVar,class_elementalist_elite_unlock,1
+specialEffect=tTextOverlayPopup_classUnlocked;
+nextNodeID=;
+
+[DialogNode] ID=ari_ep_elementalist_NPC1_greeting3;
+animations=;
+statements=While I truly appreciate your help, I'm still a very busy person. So if you would...;
+[DialogOption] text=Sorry to bother. Bye.;
+nextNodeID=;
+bottomOption=true;

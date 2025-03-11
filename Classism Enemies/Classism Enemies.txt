@@ -1,0 +1,3322 @@
+----------------------------------------------------------------Kraken
+--------------------------------------------Kraken Tentacle
+[ActorValue]
+ID=ari_kraken_tentacle_av;
+name=Kraken Tentacle;
+icon=;
+bubbleIcon=;
+maximum=1;
+removedByNegativeMagnitude=false;
+defaultValue = 0; AIValue = 0;
+harmfulMagnitude = -1; bonusesMultiplier = 1;
+animationOnHarmful = ;
+affectsActors = true;
+canAffectIncapped = false;
+showDamageNumbers = true; showDamageNumbersMagnitude = true; showDamageNumbersSign = false; showDamageNumbersIcon = true; showDamageNumbersElements = true; showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Green; damageNumberColor_Negative = Green; actorPaletteOverride =; actorPaletteOverrideDuration = 0.27;
+elementReactionModifiesDuration = true;
+canBeRemovedByNonspecificAVEffectRemoval = false;
+recordInActorData = true; showEvaluationInfo = false;
+allowDecimalValues = false; percentage = false;
+XPCostBase = 0; XPCostIncrement = 0; XPCostMultiplier = 1; XPCostFloorToNearest = 0;
+
+[ActorType] ID=ari_kraken_tentacle;
+name=Kraken Tentacle;
+journalID=ari_journal_kraken_tentacle;
+bodyStructure=single;
+movementSpeed = 7;
+movementType = diving;
+unarmedPower = 7;
+humanoid = false;
+unrevivable=true;
+canUseItems=false;
+disappearOnDeath=true;
+fearless=true;
+
+defaultCombatTeam=kraken;
+defaultFaction=kraken;
+
+defaultAI=idle_hideAnim;
+
+defaultValues=HP = 50;
+defaultValues=HPMax = 50;
+defaultValues=TrueHPMax = 50;
+defaultValues=MP = 7;
+defaultValues=MPMax = 7;
+defaultValues=TrueMPMax = 7;
+defaultValues=PhysAtk = 5;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva = 15;
+defaultValues=MagAtk = 3;
+defaultValues=MagDef = 1;
+defaultValues=MagEva = 15;
+defaultValues=moveDistance = 5;
+defaultValues=jumpDistance = 4;
+defaultValues=actTime = 30;
+defaultValues=skill_Fist = 3;
+defaultValues=ari_kraken_tentacle_av=1;
+
+specialAnim_prefix = ari_tentacle_kraken;
+
+ruinModeSupportAbility=defensive;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0.2;
+
+baseSpriteExtraHeight = 16;
+baseSpriteExtraWidth = 16;
+adjustSpriteX = 0;
+adjustSpriteY = -8;
+
+defaultSprite = ari_tentacle_kraken;
+previewSprite = ari_tentacle_kraken;
+unarmedAction = simplestMonsterAttack;
+innateActions = ari_kraken_tentacle_bind;
+innateActions = ari_kraken_tentacle_pull_close;
+innateActions = ari_kraken_tentacle_pull_medium;
+innateActions = ari_kraken_tentacle_pull_far;
+
+skinPalette=pCBlueD;
+clothPalette=p29;
+armorPalette=zoneWater;
+
+defaultFaction = enemy;
+
+fxSpeech = sfx_lowMurmur;
+fxOnPhysicalHPDmg = enemyBloodSpray;
+fxOnDeath = enemyBloodSpray;
+fxOnDeath = sfx_lowMurmurLouder;
+fxOnDeath = splash;
+fxOnDeath = ThudShotBigger;
+
+idleAnim = s_0121loop_slow;
+walkAnim = s_0121loop_serpent_water;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+frozenAnim = s_idle;
+deadAnim = s_die_serpent_water;
+
+randomNames=Kraken Tentacle;
+
+[ActorTypeDetectAoE]
+ID=ari_kraken_tentacle;
+needsLoE=false;
+needsLoS=true;
+minRange=1;
+maxRange=7;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorTypeReaction]
+ID=ari_kraken_tentacle;
+actorValues=blind;
+actorValues=morale;
+actorValues=immob;
+actorValues=wet;
+actorValues=sleep;
+actorValues=burn;
+damageMultiplier=0; healMultiplier=1;
+[ActorTypeReaction]
+ID=ari_kraken_tentacle;
+actorValues=drowning; damageMultiplier=0; healMultiplier=0;
+
+[JournalEntry]
+ID=ari_journal_kraken_tentacle;
+category=creature; halfPage=true; rarity=1;
+title=Kraken Tentacle;
+text=<actorBig=ari_kraken_tentacle><title=Kraken Tentacle><brAdj=>The mighty Kraken has a multitude of appendages. These appendages are typically used to capture its prey so that the Kraken can either squeeze the life out of its meal, or pin it down and begin feasting while its prey is still alive.;
+
+[ActorTypeReaction]
+ID=ari_kraken_tentacle;
+element=incapacitated;
+action=ari_kraken_tentacle_death;
+
+[Action] ID=ari_kraken_tentacle_death; 
+    special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+    ID=ari_kraken_tentacle_death;
+    cloneFrom=oneTile;
+
+[AvAffecter]
+	ID=ari_kraken_tentacle_death; 
+	visibleEvaluations=false;
+	harmful=true;
+	actorValue=HP;
+	magnitude=-25;
+	duration=-2;
+	chance=100 * t:ari_kraken_av;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_death; shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=true;
+	canSelectEnemies=true;
+
+
+--------------------------------------------Kraken Tentacle Attacks
+--------------------------------------------Kraken Tentacle Bind
+[Action] ID=ari_kraken_tentacle_bind; 
+	name=Binding Grasp;
+	icon=;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	cooldown=40;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Grab the target and crush them in your grasp.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+	
+[ActionAoE] 
+	ID=ari_kraken_tentacle_bind;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=ari_kraken_tentacle_bind;
+	harmful=true;
+	actorValue=HP;
+	magnitude=d:fistDmg * 0.8;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnTile=pop;
+	element=melee;
+	element=physical;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_bind;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_tentacle_bind; 
+	actorValue=stun;
+	magnitude=1;
+	duration=15;
+	chance=d:fistAcc;
+	FXOnHit=largePing;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_bind;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_tentacle_bind; 
+	actorValue=stun;
+	magnitude=1;
+	duration=15;
+	chance=d:fistAcc;
+	FXOnHit=largePing;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_bind;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+	
+--------------------------------------------Kraken Tentacle Pull Close
+[Action] ID=ari_kraken_tentacle_pull_close; 
+	name=Tentacle Pull;
+	icon=;
+	mpCost=0 * d:mpCostMult + d:mpCostMod;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Grab the target from nearby and pull them towards you.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+	
+	fReq=geo1:earth;
+	
+[ActionAoE] 
+	ID=ari_kraken_tentacle_pull_close;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	shape=2;
+	cloneFrom=adjacent+1;
+	minRange = 2;
+	maxRange = 4;
+[AvAffecter]
+	ID=ari_kraken_tentacle_pull_close;
+	harmful=true;
+	actorValue=HP;
+	magnitude=d:fistDmg * 0.1;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnTile=pop;
+	element=melee;
+	element=physical;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_pull_close;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_tentacle_pull_close; 
+	actorValue=pull;
+	magnitude=1;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnHit=largePing;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_pull_close;
+	cloneFrom=oneTile;
+--------------------------------------------Kraken Tentacle Pull Medium
+[Action] ID=ari_kraken_tentacle_pull_medium; 
+	name=Pull From the Deep;
+	icon=;
+	mpCost=0 * d:mpCostMult + d:mpCostMod;
+	cooldown=20;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Grab the target from a distance and pull them towards you.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+	fReq=geo1:water;
+	
+[ActionAoE] 
+	ID=ari_kraken_tentacle_pull_medium;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	shape=2;
+	cloneFrom=adjacent+2;
+	minRange = 3;
+	maxRange = 6;
+[AvAffecter]
+	ID=ari_kraken_tentacle_pull_medium;
+	harmful=true;
+	actorValue=HP;
+	magnitude=d:fistDmg * 0.1;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnTile=pop;
+	element=melee;
+	element=physical;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_pull_medium;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_tentacle_pull_medium; 
+	actorValue=pull;
+	magnitude=2;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnHit=largePing;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_pull_medium;
+	cloneFrom=oneTile;
+--------------------------------------------Kraken Tentacle Pull Far
+[Action] ID=ari_kraken_tentacle_pull_far; 
+	name=Pull From the Depths;
+	icon=;
+	mpCost=0 * d:mpCostMult + d:mpCostMod;
+	cooldown=25;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Snatch your target from afar and pull them towards you.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+	fReq=geo1:earth;
+	
+[ActionAoE] 
+	ID=ari_kraken_tentacle_pull_far;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	shape=2;
+	cloneFrom=adjacent+3;
+	minRange = 4;
+	maxRange = 9;
+[AvAffecter]
+	ID=ari_kraken_tentacle_pull_far;
+	actorValue=stun;
+	magnitude=1;
+	duration=10;
+	chance=d:fistAcc;
+	FXOnHit=largePing;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_pull_far;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_tentacle_pull_far;
+	harmful=true;
+	actorValue=HP;
+	magnitude=d:fistDmg * 0.1;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnTile=pop;
+	element=melee;
+	element=physical;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_pull_far;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_tentacle_pull_far; 
+	actorValue=pull;
+	magnitude=3;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnHit=largePing;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_pull_far;
+	cloneFrom=oneTile;
+
+--------------------------------------------Kraken
+[ActorValue]
+ID=ari_kraken_av;
+name=Kraken;
+icon=;
+bubbleIcon=;
+maximum=1;
+removedByNegativeMagnitude=false;
+defaultValue = 0; AIValue = 0;
+harmfulMagnitude = -1; bonusesMultiplier = 1;
+animationOnHarmful = ;
+affectsActors = true;
+canAffectIncapped = false;
+showDamageNumbers = true; showDamageNumbersMagnitude = true; showDamageNumbersSign = false; showDamageNumbersIcon = true; showDamageNumbersElements = true; showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Green; damageNumberColor_Negative = Green; actorPaletteOverride =; actorPaletteOverrideDuration = 0.27;
+elementReactionModifiesDuration = true;
+canBeRemovedByNonspecificAVEffectRemoval = false;
+recordInActorData = true; showEvaluationInfo = true;
+allowDecimalValues = false; percentage = false;
+XPCostBase = 0; XPCostIncrement = 0; XPCostMultiplier = 1; XPCostFloorToNearest = 0;
+
+[ActorValue]
+ID=ari_kraken_noescape_cooldown;
+name=No Escape Cooldown;
+icon=;
+bubbleIcon=;
+maximum=1;
+removedByNegativeMagnitude=true;
+defaultValue = 0; AIValue = 0;
+harmfulMagnitude = -1; bonusesMultiplier = 1;
+animationOnHarmful = ;
+affectsActors = true;
+canAffectIncapped = false;
+showDamageNumbers = true; showDamageNumbersMagnitude = true; showDamageNumbersSign = false; showDamageNumbersIcon = true; showDamageNumbersElements = true; showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Green; damageNumberColor_Negative = Green; actorPaletteOverride =; actorPaletteOverrideDuration = 0.27;
+elementReactionModifiesDuration = true;
+canBeRemovedByNonspecificAVEffectRemoval = false;
+recordInActorData = true; showEvaluationInfo = true;
+allowDecimalValues = false; percentage = false;
+XPCostBase = 0; XPCostIncrement = 0; XPCostMultiplier = 1; XPCostFloorToNearest = 0;
+
+[ActorType] ID=ari_kraken;
+name=Kraken;
+journalID=journal_ari_kraken;
+bodyStructure=single;
+movementSpeed = 5;
+movementType = diving;
+unarmedPower = 15;
+humanoid = false;
+unrevivable=true;
+canUseItems=false;
+disappearOnDeath=true;
+fearless=true;
+
+defaultAI=idle_hideAnim;
+
+defaultValues=HP = 200;
+defaultValues=HPMax = 200;
+defaultValues=TrueHPMax = 200;
+defaultValues=MP = 5;
+defaultValues=MPMax = 5;
+defaultValues=TrueMPMax = 5;
+defaultValues=PhysAtk = 10;
+defaultValues=PhysDef = 5;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 3;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 3;
+defaultValues=jumpDistance = 4;
+defaultValues=actTime = 30;
+defaultValues=skill_Fist = 2;
+defaultValues=skill_ice = 2;
+defaultValues=ari_kraken_av=1;
+defaultValues=ari_classism_cooldown=1;
+
+specialAnim_prefix = ari_kraken;
+
+ruinModeSupportAbility=;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0;
+intelligence = 0.2;
+
+baseSpriteExtraHeight = 48;
+baseSpriteExtraWidth = 48;
+adjustSpriteX = 0;
+adjustSpriteY = -24;
+
+defaultSprite = ari_kraken;
+previewSprite = ari_kraken;
+unarmedAction = simplestMonsterAttack;
+innateActions = ari_kraken_waterjet;
+innateActions = ari_kraken_tentacle_summon;
+defaultSupportAbilities=bulwark;
+defaultSupportAbilities=ari_kraken_passive_no_escape;
+defaultSupportAbilities=ari_kraken_passive_tentacle;
+
+skinPalette=pCBlueD;
+clothPalette=p29;
+armorPalette=p7;
+
+defaultFaction = enemy;
+
+fxSpeech = sfx_lowMurmur;
+fxOnPhysicalHPDmg = enemyBloodSpray;
+fxOnDeath = enemyBloodSpray;
+fxOnDeath = sfx_lowMurmurLouder;
+fxOnDeath = splash;
+fxOnDeath = ThudShotBigger;
+
+idleAnim = s_0121loop_slow;
+walkAnim = s_0121loop_serpent_water;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+frozenAnim = s_idle;
+deadAnim = s_die_serpent_water;
+
+randomNames=Kraken;
+
+[ActorTypeDetectAoE]
+ID=ari_kraken;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=7;
+arc=true;
+airborne=true;
+occupyAll=true;
+
+[ActorTypeReaction]
+ID=ari_kraken;
+actorValues=blind;
+actorValues=morale;
+actorValues=immob;
+actorValues=wet;
+actorValues=sleep;
+actorValues=burn;
+damageMultiplier=0; healMultiplier=1;
+[ActorTypeReaction]
+ID=ari_kraken;
+actorValues=drowning; actorValues=push; actorValues=pull; damageMultiplier=0; healMultiplier=0;
+
+[JournalEntry]
+ID=journal_ari_kraken;
+category=creature; halfPage=true; rarity=2;
+title=Kraken;
+text=<actorBig=ari_kraken><title=Kraken><brAdj=>A colossal leviathan, ruler of the deep, feared and revered by all who dare to sail the open waters. Sailors speak in hushed tones of this monstrous terror, an ancient force that can rip through armadas as if they were mere driftwood. On rare occasions, when a ship returns to harbor their Sailors may discover immense, jagged scars etched into the hull- evidence of a close brush with the dreaded Kraken.;
+
+
+--React on death to get rid of remaining tentacles
+[ActorTypeReaction]
+ID=ari_kraken;
+element=incapacitated;
+action=setDeadKrakenGVar;
+
+[ActorTypeReaction]
+ID=ari_kraken;
+element=incapacitated;
+action=ari_kraken_eliminate_tentacles;
+
+
+[Action] ID=setDeadKrakenGVar; 
+    special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+    ID=setDeadKrakenGVar;
+    cloneFrom=oneTile;
+[AvAffecter]
+    ID=setDeadKrakenGVar; 
+    harmful=false; affectIntangible=true; useSeparateChanceRoll=true;
+    visibleEvaluations=false; hideAllEffects=true; visibleMiss=false;
+    actorValue=trigger;
+    magnitude=ari_dead_kraken_trigger;
+    duration=-2;
+    chance=100;
+[AvAffecterAoE]
+    ID=setDeadKrakenGVar;
+    cloneFrom=oneTile;
+	
+
+[Action] ID=ari_kraken_eliminate_tentacles; 
+    special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+    ID=ari_kraken_eliminate_tentacles;
+    cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_eliminate_tentacles; 
+	visibleEvaluations=false;
+	harmful=true;
+	actorValue=HP;
+	magnitude=t:TrueHPMax;
+	duration=-2;
+	chance=100 * t:ari_kraken_tentacle_av;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=ari_kraken_eliminate_tentacles; shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=30;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=true;
+	canSelectEnemies=true;
+	
+
+--------------------------------------------Kraken Passives
+--------------------------------------------Kraken Tentacle indicator passive
+[SupportAbility]
+ID=ari_kraken_passive_tentacle;
+name=Appendages From the Deep;
+icon=ari_appendages_from_deep;
+tooltip=The Kraken's Tentacles will attack enemies, but the Kraken will incur harm when one of its Tentacles is destroyed.;
+
+--------------------------------------------Kraken No Escape passive
+[SupportAbility]
+ID=ari_kraken_passive_no_escape;
+name=No Escape;
+icon=ari_no_escape;
+tooltip=Beginning on the Kraken's second turn, if the Kraken has no targets close by at the start of its turn, it will inhale, pulling foes towards it.;
+
+[SupportAbilityReaction]
+ID=ari_kraken_passive_no_escape;
+element=timerUp; action=ari_kraken_passive_no_escape_act;
+
+[Action] ID=ari_kraken_passive_no_escape_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=ari_kraken_passive_no_escape_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_kraken_passive_no_escape_act;
+	fReq=geo1:earth * 1 - c:ari_classism_cooldown - m:numEnemiesWithinX(3);
+	visibleEvaluations=true;
+	visibleMiss=true;
+	harmful=false;
+	actorValue=pull;
+	magnitude=3;
+	duration=-2;
+	chance=d:windAcc;
+	element=wind;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=ari_kraken_passive_no_escape_act;
+	shape=17;
+	coneAngle=120;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	minRange = 3;
+	maxRange = 12;
+	bypassAll=true;
+	occupyAll=true;
+	aoeCasterAsOrigin=true;
+	canSelectEnemies=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=ari_kraken_passive_no_escape_act;
+	actorValue=ari_classism_cooldown;
+	visibleEvaluations=false;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=-1;
+	duration=-2;
+	chance=100
+[AvAffecterAoE]
+	ID=ari_kraken_passive_no_escape_act;
+	cloneFrom=oneTile;
+    aoeCasterAsOrigin=true;
+	canSelectAllies=true;
+
+--------------------------------------------Kraken Abilities	
+--------------------------------------------Kraken Water Jet
+[Action] ID=ari_kraken_waterjet; 
+	name=Waterjet;
+	icon=ari_kraken_waterjet;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	cooldown=40;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Blast all targets in a line with a concentrated beam of water, dealing <icon=skill_Ice><math=4>.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+	
+[ActionAoE] 
+	ID=ari_kraken_waterjet;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	cloneFrom=adjacent;
+	
+[AvAffecter]
+	ID=ari_kraken_waterjet;
+	harmful=true;
+	actorValue=HP;
+	magnitude=d:fistDmg * 0.8;
+	duration=-2;
+	chance=d:iceAcc;
+	FXOnTile=chargeSpiralFast_big;
+	FXOnTileColor=Blue;
+	element=ranged;
+	element=magic;
+	element=physical;
+[AvAffecterAoE]
+	ID=ari_kraken_waterjet;
+	shape=2;
+	coneAngle=1;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	minRange = 1;
+	maxRange = 9;
+	bypassAll=false;
+	occupyAll=true;
+	aoeCasterAsOrigin=true;
+[AvAffecter] --Trick AI into using ability
+	ID=ari_kraken_waterjet;
+	visibleEvaluations=false;
+	harmful=false; 
+	actorValue=ari_ai_skill_useage_multi;
+	visibleMiss=false;
+	magnitude=3;
+	duration=-6;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_kraken_waterjet;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+
+--------------------------------------------Kraken Tentacle Summon
+[Action] ID=ari_kraken_tentacle_summon; 
+	name=Tentacle Nightmare;
+	icon=;
+	mpCost=0 * d:mpCostMult + d:mpCostMod;
+	cooldown=40;
+	harmful=false;
+	attractAttention=false;
+	tooltip=Tentacles burst forth from the water to assist you.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	numTargets=2;
+	maxDistanceBetweenTargets=4;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+
+--Target near you only
+[ActionAoE] 
+	ID=ari_kraken_tentacle_summon;
+	cloneFrom=adjacent+2;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	canSelectActors=false;
+	occupyAll=true;
+	fReq=lessThan:1:actorsOfType:ari_kraken_tentacle * numRxnsTile:actorFall;
+	
+[AvAffecter]
+	ID=ari_kraken_tentacle_summon; 
+	harmful=false;
+	actorValue=summonActor_temp;
+	magnitude=ari_kraken_tentacle;
+	chance=100;
+	duration=-2;
+	FXOnTile=tinyShakeHoriz;
+	FXOnTile=Splash;
+	FXOnTileColor=Blue;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_summon;
+	cloneFrom=oneTile;
+[AvAffecter] --Trick AI into using ability
+	ID=ari_kraken_tentacle_summon;
+	visibleEvaluations=false;
+	harmful=false; 
+	actorValue=ari_ai_skill_useage_multi;
+	visibleMiss=false;
+	magnitude=5;
+	duration=-6;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_kraken_tentacle_summon;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+	
+
+----------------------------------------------------------------Wolf
+--------------------------------------------standard Wolf	
+[ActorValue]
+ID=ari_wolf_av;
+name=Wolf;
+icon=;
+bubbleIcon=;
+maximum=1;
+removedByNegativeMagnitude=false;
+defaultValue = 0; AIValue = 0;
+harmfulMagnitude = -1; bonusesMultiplier = 1;
+animationOnHarmful = ;
+affectsActors = true;
+canAffectIncapped = false;
+showDamageNumbers = true; showDamageNumbersMagnitude = true; showDamageNumbersSign = false; showDamageNumbersIcon = true; showDamageNumbersElements = true; showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = Green; damageNumberColor_Negative = Green; actorPaletteOverride =; actorPaletteOverrideDuration = 0.27;
+elementReactionModifiesDuration = true;
+canBeRemovedByNonspecificAVEffectRemoval = false;
+recordInActorData = true; showEvaluationInfo = false;
+allowDecimalValues = false; percentage = false;
+XPCostBase = 0; XPCostIncrement = 0; XPCostMultiplier = 1; XPCostFloorToNearest = 0;
+
+[ActorType] ID=ari_wolf;
+name=Wolf;
+journalID=ari_journal_wolf;
+bodyStructure=single;
+movementSpeed = 6;
+unarmedPower = 5;
+humanoid = false;
+unrevivable=false;
+tameable=true;
+canUseItems=false;
+
+defaultValues=HP = 25;
+defaultValues=HPMax = 25;
+defaultValues=TrueHPMax = 25;
+defaultValues=MP = 0;
+defaultValues=MPMax = 0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 25;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 10;
+defaultValues=moveDistance = 5;
+defaultValues=jumpDistance = 2;
+defaultValues=actTime = 25;
+defaultValues=skill_Fist = 1;
+defaultValues=ari_wolf_av = 1;
+
+aggressiveness = 1;
+bravery = 0.9;
+honor = 0;
+intelligence = 0.3;
+
+defaultAI=wander_leash5_slow;
+
+defaultSprite = ari_wolf;
+
+unarmedAction = simplestMonsterAttack;
+
+defaultSupportAbilities = ari_pack_mentality;
+
+skinPalette=p12;
+clothPalette=pB;
+armorPalette=p40;
+defaultFaction = enemy;
+
+fxSpeech = sfx_bleepyGrowl;
+fxOnPhysicalHPDmg = bleepyGrowl_quiet;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = beastDeath;
+rotatedCorpse=false;
+
+
+baseSpriteExtraHeight = 8;
+baseSpriteExtraWidth = 8;
+adjustSpriteX = 0;
+adjustSpriteY = -2;
+
+idleAnim = s_idle;
+walkAnim = s_0102loop_slow;
+jumpAnim = s_jump_51;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+deadAnim = s_die;
+
+randomNames=Wolf;
+
+[ActorTypeReaction]
+ID=ari_wolf; actorValues=drowning; action=drown;
+
+[JournalEntry]
+ID=ari_journal_wolf;
+category=creature; halfPage=true; rarity=1;
+title=Wolf;
+text=<actorBig=ari_wolf><title=Wolf><brAdj=>        Feral beasts normally found in fields or plains where they can chase down prey. Not overly threatening as an individual, but dangerous in packs.;
+
+--------------------------------------------Wolf Pack Mentality passive
+[SupportAbility]
+ID=ari_pack_mentality;
+name=Pack Mentality;
+icon=ari_pack_mentality;
+tooltip=Wolves hunt in packs. At the start of their turn, adjacent Wolves will gain 3<icon=time>.;
+
+[SupportAbilityReaction]
+ID=ari_pack_mentality;
+element=timerUp; action=ari_pack_mentality_act;
+
+[Action] ID=ari_pack_mentality_act; 
+    special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+    ID=ari_pack_mentality_act;
+    cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_pack_mentality_act; 
+	visibleEvaluations=true;
+	harmful=false;
+	actorValue=actTimer;
+	magnitude=3;
+	duration=-2;
+	chance=100 * t:ari_wolf_av;
+	visibleMiss=false;
+[AvAffecterAoE]
+	ID=ari_pack_mentality_act;
+	cloneFrom=adjacent;
+	minRange=1;
+	canSelectAllies=true;
+	canSelectEnemies=false;
+
+
+--------------------------------------------Dire Wolf
+[ActorType]ID=ari_dire_wolf; name=Dire Wolf;
+cloneFrom=ari_wolf;
+journalID=ari_journal_wolf;
+defaultValues=HP=45;
+defaultValues=HPMax = 45;
+defaultValues=TrueHPMax = 45;
+defaultValues=PhysAtk = 7;
+defaultValues=MP = 5;
+defaultValues=MPMax = 5;
+defaultValues=TrueMPMax = 5;
+skinPalette=p38;
+aiScript=wander_leash1_slow;
+randomNames=Dire Wolf;
+innateActions = ari_wolf_rending_bite;
+
+[ActorPrefab]ID=ari_alpha_wolf; name=Alpha Wolf;
+actorTypeID=ari_wolf;
+actorClass=; secondaryClass=; actorClass3=; actorClass4=; 
+mountedOn=; mountedBy=; movementType=; position=21,32; destination=-1,-1; facingRot=1170; actualRot=0; 
+incapacitated=False; alreadyKOdOnce=False; timesKOd=0; unkillable=False; damageTaken=0; canDespawn=False; canSwap=False;
+totalXP=0; givesXP=True; canAttractAttention=True; canEditAppearance=True; canLootCorpse=False; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; canManipCorpse=True; 
+idleAnimOverride=; combatMusicOverride=; statementPrefix=; 
+hostile=True; factionBoss=False; faction=enemy; combatTeam=;
+aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; 
+aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0;
+canApplyDifficultyMods=False; difficultyModeSupportAbilAdded=False; 
+dialogNodeID=; 
+aggressiveness=0.9; bravery=0.5; intelligence=0.3; honor=0.2; fearless=False; favoredHand=0; male=True;
+skinPalette=p38;
+HP=45; HPMax=45; TrueHPMax=45; 
+MP=5; MPMax=5; TrueMPMax=5;
+PhysAtk=7;
+
+[Action] ID=ari_wolf_rending_bite; 
+	name=Rending Bite;
+	icon=ari_rending_bite;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	cooldown=40;
+	harmful=true;
+	tooltip=Viciously gnash at your target, dealing damage and making them bleed.;
+	casterAnimation=s_simplestAttack;
+	FXOnTarget=tinyShakeHoriz;
+	applyWeaponBuffs=true;
+[ActionAoE] 
+	ID=ari_wolf_rending_bite;
+	cloneFrom=adjacent;
+[AvAffecter]
+	ID=ari_wolf_rending_bite; 
+	actorValue=HP;
+	magnitude=d:fistDmg * 1.2;
+	duration=-2;
+	chance=d:fistAcc;
+	element=physical;
+	element=melee;
+	element=smash;
+	FXOnTile=pop;
+	FXOnTile=slash;
+[AvAffecterAoE]
+	ID=ari_wolf_rending_bite;
+	cloneFrom=oneTile;	
+[AvAffecter]
+	ID=ari_wolf_rending_bite; 
+	actorValue=mafe_bleeding1;
+	magnitude=6;
+	duration=60;
+	chance=d:fistAcc;
+	FXOnHit=largePing;
+[AvAffecterAoE]
+	ID=ari_wolf_rending_bite;
+	cloneFrom=oneTile;
+
+
+----------------------------------------------------------------Mount Ignis mobs
+--------------------------------------------Pebblet
+[ActorType] ID=ari_pebblet;
+name=Pebblet;
+journalID=ari_journal_pebblet;
+bodyStructure=single;
+movementSpeed = 3;
+unarmedPower = 3;
+humanoid = false;
+unrevivable=false;
+tameable=false;
+canUseItems=false;
+
+defaultValues=HP = 20;
+defaultValues=HPMax = 20;
+defaultValues=TrueHPMax = 20;
+defaultValues=MP = 1;
+defaultValues=MPMax =10;
+defaultValues=TrueMPMax = 1;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 7;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 2;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 40;
+defaultValues=skill_Fist = 3;
+
+aggressiveness = 0.5;
+bravery = 0.9;
+honor = 0;
+intelligence = 0.2;
+
+defaultAI=idle;
+
+defaultSprite = ari_pebblet;
+
+unarmedAction = simplestMonsterAttack;
+
+skinPalette=p45;
+clothPalette=pB;
+armorPalette=pBlueD;
+defaultFaction = enemy;
+
+fxSpeech = sfx_bleepyGrowl;
+fxOnPhysicalHPDmg = bleepyGrowl_quiet;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = beastDeath;
+rotatedCorpse=false;
+
+
+baseSpriteExtraHeight = 8;
+baseSpriteExtraWidth = 8;
+adjustSpriteX = 0;
+adjustSpriteY = -2;
+
+idleAnim = s_idle;
+walkAnim = s_0102loop_slow;
+jumpAnim = s_jump_51;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+deadAnim = s_die;
+
+randomNames=Pebblet;
+
+[ActorTypeReaction]
+ID=ari_pebblet; actorValues=drowning; action=drown;
+
+[JournalEntry]
+ID=ari_journal_pebblet;
+category=creature; halfPage=true; rarity=1;
+title=Pebblet;
+text=<actorBig=ari_pebblet><title=Pebblet><brAdj=>        A lesser cousin of the golem. These rocks have been animated via some form of sorcery, whether that be a spell cast directly upon them, ambient remnant energies or some other magical anomaly.;
+
+
+---------------------------------------Golem
+[ActorType] ID=ari_golem;
+name=Golem;
+journalID=ari_journal_golem;
+bodyStructure=single;
+movementSpeed = 3;
+unarmedPower = 5;
+humanoid = false;
+unrevivable=false;
+tameable=false;
+canUseItems=false;
+
+defaultValues=HP = 55;
+defaultValues=HPMax = 55;
+defaultValues=TrueHPMax = 55;
+defaultValues=MP = 1;
+defaultValues=MPMax =1;
+defaultValues=TrueMPMax = 1;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 5;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 2;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 40;
+defaultValues=skill_Fist = 5;
+
+aggressiveness = 0.5;
+bravery = 0.9;
+honor = 0;
+intelligence = 0.2;
+
+defaultAI=wander_leash1_slow;
+
+defaultSprite = ari_golem;
+
+unarmedAction = simplestMonsterAttack;
+
+skinPalette=p45;
+clothPalette=pB;
+armorPalette=pBlueD;
+defaultFaction = enemy;
+
+fxSpeech = sfx_bleepyGrowl;
+fxOnPhysicalHPDmg = bleepyGrowl_quiet;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = beastDeath;
+rotatedCorpse=false;
+
+
+baseSpriteExtraHeight = 8;
+baseSpriteExtraWidth = 8;
+adjustSpriteX = 0;
+adjustSpriteY = -2;
+
+idleAnim = s_idle;
+walkAnim = s_0102loop_slow;
+jumpAnim = s_jump_51;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+deadAnim = s_die;
+
+randomNames=Golem;
+
+[ActorTypeReaction]
+ID=ari_golem; actorValues=drowning; action=drown;
+
+[JournalEntry]
+ID=ari_journal_golem;
+category=creature; halfPage=true; rarity=1;
+title=Golem;
+text=<actorBig=ari_golem><title=Golem><brAdj=>        A creature that has been magically animated from inanimate material. Typically created of clay, rock, dirt or other hard material to bring increased durability, a Golem can also be animated from much more unlikely substances.;
+
+----------------------------------------------------------------Earth Golem Harden active
+[Action] ID=ari_earth_golem_active_harden; 
+	name=Harden;
+	icon=;
+	mpCost=1 * d:mpCostMult + d:mpCostMod;
+	tooltip=The Golem enters a defensive position for <icon=time>40, increasing <icon=PhysDef> by 5.;
+	rankUpTooltip=;
+	tooltipTopRight=;
+	XPCost=0;
+	casterAnimation=handsup;
+	maxRank=1;
+	canExceedMaxRankBy=0;
+	cooldown=80;
+	
+	FXOnCaster=magicCharge;
+	
+	FXOnTarget=;
+[ActionAoE] 
+	ID=ari_earth_golem_active_harden; 
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_earth_golem_active_harden; 
+	harmful=false;
+	actorValue=PhysDef;
+	magnitude=5;
+	chance=100 * lessThan:20:c:HP;
+	duration=40;
+	FXOnTile=upwardLines;
+[AvAffecterAoE]
+	ID=ari_earth_golem_active_harden;
+	cloneFrom=oneTile;
+[AvAffecter] --Trick AI into using ability
+	ID=ari_earth_golem_active_harden;
+	visibleEvaluations=false;
+	harmful=false; 
+	actorValue=ari_ai_skill_useage_multi;
+	visibleMiss=false;
+	magnitude=2;
+	duration=-6;
+	chance=100 * lessThan:20:c:HP;
+[AvAffecterAoE]
+	ID=ari_earth_golem_active_harden;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+	
+----------------------------------------------------------------Earth Golem Class
+[ActorClass] name=Earth Golem;
+ID=ari_earth_golem_class;
+selectableClass=false;
+icon=;
+journalID=;
+
+description=;
+paletteUI=pDirt;
+
+actions=ari_earth_golem_active_harden;
+
+ruinModeSupportAbility=;
+
+	
+---------------------------------------Earth Golem
+[ActorPrefab]ID=ari_earth_golem; name=Earth Golem;
+actorTypeID=ari_golem; secondaryClass=ari_earth_golem_class;
+ari_earth_golem_active_harden=1; numRanksBought=ari_earth_golem_active_harden=1; action1=ari_earth_golem_active_harden;
+
+---------------------------------------Magma Golem
+[ActorPrefab]ID=ari_magma_golem; name=Magmatic Golem;
+actorTypeID=ari_golem;
+actorClass=; secondaryClass=; actorClass3=; actorClass4=; 
+mountedOn=; mountedBy=; movementType=; position=21,32; destination=-1,-1; facingRot=1170; actualRot=0; 
+incapacitated=False; alreadyKOdOnce=False; timesKOd=0; unkillable=False; damageTaken=0; canDespawn=False; canSwap=False;
+totalXP=0; givesXP=True; canAttractAttention=True; canEditAppearance=True; canLootCorpse=False; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; canManipCorpse=True; 
+idleAnimOverride=; combatMusicOverride=; statementPrefix=; 
+hostile=True; factionBoss=False; faction=enemy; combatTeam=;
+aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; 
+aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0;
+canApplyDifficultyMods=False; difficultyModeSupportAbilAdded=False; 
+dialogNodeID=; 
+aggressiveness=0.9; bravery=0.5; intelligence=0.3; honor=0.2; fearless=False; favoredHand=0; male=True;
+skinPalette=pRed2; 
+MP=5; MPMax=5; TrueMPMax=5;
+MagDef=2;
+supportAbilities=ari_magma_golem_passive_smouldering_aura;
+
+----------------------------------------------------------------Golem smouldering aura
+[SupportAbility]
+ID=ari_magma_golem_passive_smouldering_aura;
+name=Smouldering Aura;
+icon=;
+tooltip=The presence of the Magmatic Golem is smothering, causing enemies near it to take <icon=skill_Fire>3 when it begins its turn.;
+--At the end of its turn, the Magmatic Golem has a chance to cause a fire near it.;
+
+[SupportAbilityReaction]
+ID=ari_magma_golem_passive_smouldering_aura;
+element=timerUp; action=ari_magma_golem_passive_smouldering_aura_act;
+
+
+[Action] ID=ari_magma_golem_passive_smouldering_aura_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+
+[ActionAoE] 
+	ID=ari_magma_golem_passive_smouldering_aura_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectEnemies=true;
+	canSelectAllies=false;
+[AvAffecter]
+	ID=ari_magma_golem_passive_smouldering_aura_act; 
+	harmful=true;
+	actorValue=HP;
+	magnitude=-c:MagAtk - 3 + t:MagDef;
+	duration=-2;
+	chance=d:fireAcc;
+	element=fire;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=ari_magma_golem_passive_smouldering_aura_act;
+	cloneFrom=adjacent+1;
+	
+	
+---------------------------------------Lord Ignis boulder
+[ActorType] ID=ari_combustive_boulder;
+name=Combustive Boulder;
+journalID=;
+bodyStructure=single;
+movementSpeed = 3;
+unarmedPower = 1;
+humanoid = false;
+unrevivable=false;
+tameable=false;
+canUseItems=false;
+
+defaultValues=HP = 20;
+defaultValues=HPMax = 20;
+defaultValues=TrueHPMax = 20;
+defaultValues=MP = 0;
+defaultValues=MPMax =0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 1;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 30;
+
+aggressiveness = 1.0;
+bravery = 0.9;
+honor = 0;
+intelligence = 0.1;
+
+defaultAI=idle;
+
+defaultSprite = ari_pebblet;
+
+unarmedAction = ;
+defaultSupportAbilities=ari_combustive_boulder_explosion_passive;
+
+skinPalette=p31;
+clothPalette=pB;
+armorPalette=pAsh_still;
+defaultFaction = enemy;
+
+fxSpeech = sfx_bleepyGrowl;
+fxOnPhysicalHPDmg = bleepyGrowl_quiet;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = beastDeath;
+rotatedCorpse=false;
+
+baseSpriteExtraHeight = 8;
+baseSpriteExtraWidth = 8;
+adjustSpriteX = 0;
+adjustSpriteY = -2;
+
+idleAnim = s_idle;
+walkAnim = s_0102loop_slow;
+jumpAnim = s_jump_51;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+deadAnim = s_die;
+
+randomNames=Combustive Boulder;
+
+[SupportAbility]
+ID=ari_combustive_boulder_explosion_passive;
+name=Ignis Explosion;
+icon=;
+tooltip=If the boulder reaches an enemy during its turn, it will explode, dealing <icon=skill_Fire>12 in an area around it.;
+
+[SupportAbilityReaction]
+ID=ari_combustive_boulder_explosion_passive;
+element=timerUp; action=ari_combustive_boulder_explosion_passive_act;
+[SupportAbilityReaction]
+ID=ari_combustive_boulder_explosion_passive;
+element=endTurn; action=ari_combustive_boulder_explosion_passive_act;
+
+[Action] ID=ari_combustive_boulder_explosion_passive_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+	fReq=m:numEnemiesWithinX(1);
+[ActionAoE] 
+	ID=ari_combustive_boulder_explosion_passive_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_combustive_boulder_explosion_passive_act;
+	harmful=true;
+	actorValue=HP;
+	magnitude=-12;
+	duration=-2;
+	chance=d:fireAcc;
+	element=fire;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=ari_combustive_boulder_explosion_passive_act;
+	cloneFrom=adjacentAndSelf;
+	maxRange=2;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=true;
+[AvAffecter]
+	ID=ari_combustive_boulder_explosion_passive_act;
+	harmful=true;
+	actorValue=HP;
+	magnitude=-c:TrueHPMax - 1;
+	duration=-2;
+	chance=100;
+	element=fire;
+[AvAffecterAoE]
+	ID=ari_combustive_boulder_explosion_passive_act;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+[AvAffecter]
+	ID=ari_combustive_boulder_explosion_passive_act;
+	harmful=true;
+	actorValue=removeActor;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_combustive_boulder_explosion_passive_act;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+	
+	
+[Action] ID=ari_lord_ignis_boulder_summon; 
+	name=Combustive Boulder;
+	icon=;
+	mpCost=0 * d:mpCostMult + d:mpCostMod;
+	cooldown=15;
+	harmful=false;
+	attractAttention=false;
+	tooltip=Create a molten boulder that will slowly moves towards a target and explode when within range.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	numTargets=1;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+
+[ActionAoE] 
+	ID=ari_lord_ignis_boulder_summon;
+	cloneFrom=oneTile;
+	maxRange=5;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	canSelectActors=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=ari_lord_ignis_boulder_summon; 
+	harmful=false;
+	actorValue=summonActor_temp;
+	magnitude=ari_combustive_boulder;
+	chance=100;
+	duration=-2;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=ari_lord_ignis_boulder_summon;
+	cloneFrom=oneTile;
+	minRange = 4;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=false;
+	bypassAll=false;
+[AvAffecter] --Trick AI into using ability
+	ID=ari_lord_ignis_boulder_summon;
+	visibleEvaluations=false;
+	harmful=false; 
+	actorValue=ari_ai_skill_useage_multi;
+	visibleMiss=false;
+	magnitude=2;
+	duration=-6;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_lord_ignis_boulder_summon;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+	
+[Action] ID=ari_lord_ignis_fire_slam; 
+	name=Ignis Slam;
+	icon=;
+	mpCost=0 * d:mpCostMult + d:mpCostMod;
+	cooldown=30;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Lord Ignis comes down with the power of a mountain, damaging and pushing back his target while spawning pools of magma around the impact location.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	numTargets=1;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+
+[ActionAoE] 
+	ID=ari_lord_ignis_fire_slam;
+	cloneFrom=adjacent+1;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	canSelectActors=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=ari_lord_ignis_fire_slam; 
+	harmful=true;
+	actorValue=HP;
+	magnitude=d:fistDmg - c:MagAtk + t:MagDef;
+	chance=d:fireAcc;
+	duration=-2;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=ari_lord_ignis_fire_slam;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_lord_ignis_fire_slam; 
+	harmful=false;
+	actorValue=push;
+	magnitude=2;
+	chance=d:fireAcc;
+	duration=-2;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=ari_lord_ignis_fire_slam;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_lord_ignis_fire_slam; 
+	weaponAvAffecter=false;
+	actorValue=summonItem;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=coals_hot1;
+	duration=1;
+	chance=35;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+[AvAffecterAoE]
+	ID=ari_lord_ignis_fire_slam;
+	cloneFrom=oneTile;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=false;
+	minRange = 1;
+	maxRange = 3;
+	
+----------------------------------------------------------------Lord Ignis
+[ActorType] ID=ari_lord_ignis;
+name=Lord Ignis;
+journalID=journal_ari_kraken;
+bodyStructure=single;
+movementSpeed = 3;
+movementType = diving;
+unarmedPower = 11;
+humanoid = false;
+canUseItems=false;
+disappearOnDeath=true;
+
+defaultAI=idle;
+
+defaultValues=HP = 250;
+defaultValues=HPMax = 250;
+defaultValues=TrueHPMax = 250;
+defaultValues=MP = 15;
+defaultValues=MPMax = 15;
+defaultValues=TrueMPMax = 15;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 3;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 5;
+defaultValues=MagDef = 4;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 0;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 30;
+defaultValues=skill_Fist = 2;
+defaultValues=skill_Fire = 5;
+defaultValues=ari_kraken_av=1;
+
+specialAnim_prefix = ari_kraken;
+
+ruinModeSupportAbility=;
+
+aggressiveness = 1;
+bravery = 1;
+honor = 0.5;
+intelligence = 0.2;
+
+baseSpriteExtraHeight = 48;
+baseSpriteExtraWidth = 48;
+adjustSpriteX = -2;
+adjustSpriteY = -28;
+
+defaultSprite = ari_lord_ignis;
+previewSprite = ari_lord_ignis;
+unarmedAction = simplestMonsterAttack;
+innateActions = ari_lord_ignis_boulder_summon; --Some kind of molten boulder
+innateActions = ari_lord_ignis_fire_slam; --Some kind of magma ground aoe
+defaultSupportAbilities=bulwark;
+defaultSupportAbilities=ari_lord_ignis_molten_fury_passive;
+defaultSupportAbilities=ari_lord_ignis_molten_eruption_passive;
+
+skinPalette=p40;
+clothPalette=p31;
+armorPalette=pScur2;
+
+defaultFaction = enemy;
+
+fxSpeech = sfx_lowMurmur;
+fxOnPhysicalHPDmg = enemyBloodSpray;
+fxOnDeath = enemyBloodSpray;
+fxOnDeath = sfx_lowMurmurLouder;
+fxOnDeath = splash;
+fxOnDeath = ThudShotBigger;
+
+idleAnim = s_0121loop_slow;
+walkAnim = s_0121loop_serpent_water;
+jumpAnim = s_submerge_serpent_water;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+frozenAnim = s_idle;
+deadAnim = s_die_serpent_water;
+
+randomNames=Lord Ignis;
+
+[ActorTypeDetectAoE]
+ID=ari_lord_ignis;
+needsLoE=false;
+needsLoS=true;
+minRange=0;
+maxRange=7;
+arc=true;
+airborne=true;
+occupyAll=true;
+[ActorTypeReaction]
+ID=ari_lord_ignis;
+actorValues=immob; actorValues=drowning;
+damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=ari_lord_ignis;
+actorValues=drowning; damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=ari_lord_ignis;
+actorValues=push; damageMultiplier=0; healMultiplier=0;
+[ActorTypeReaction]
+ID=ari_lord_ignis;
+actorValues=pull; damageMultiplier=0; healMultiplier=0;
+
+[JournalEntry]
+ID=journal_ari_lord_ignis;
+category=creature; halfPage=true; rarity=2;
+title=Lord Ignis;
+text=<actorBig=ari_lord_ignis><title=Lord Ignis><brAdj=>         The Lord and Master of Mount Ignis. This colossal beast takes up residence in the mountain, becoming active as the mountain itself becomes active. Or perhaps the mountain becomes active as Lord Ignis stirs...? It is possible that subduing Lord Ignis will put the mountain at rest.;
+
+[ActorTypeReaction]
+ID=ari_lord_ignis;
+element=incapacitated;
+action=setDeadIgnisGVar;
+
+
+[Action] ID=setDeadIgnisGVar; 
+    special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+    ID=setDeadIgnisGVar;
+    cloneFrom=oneTile;
+[AvAffecter]
+    ID=setDeadIgnisGVar; 
+    harmful=false; affectIntangible=true; useSeparateChanceRoll=true;
+    visibleEvaluations=false; hideAllEffects=true; visibleMiss=false;
+    actorValue=trigger;
+    magnitude=ari_dead_ignis_trigger;
+    duration=-2;
+    chance=100;
+[AvAffecterAoE]
+    ID=setDeadIgnisGVar;
+    cloneFrom=oneTile;
+	
+----------------------------------------------------------------Lord Ignis Molten Fury passive
+[SupportAbility]
+ID=ari_lord_ignis_molten_fury_passive;
+name=Molten Fury;
+icon=;
+tooltip=If no one is within an adjacent tile of Lord Ignis when he begins his turn, he will blast all enemies within his domain for 10% maximum <icon=HP> and <icon=skill_Fire>3.;
+
+[SupportAbilityReaction]
+ID=ari_lord_ignis_molten_fury_passive;
+element=timerUp; action=ari_lord_ignis_molten_fury_passive_act;
+
+[Action] ID=ari_lord_ignis_molten_fury_passive_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+	fReq=1 - m:numEnemiesWithinX(2);
+[ActionAoE] 
+	ID=ari_lord_ignis_molten_fury_passive_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_lord_ignis_molten_fury_passive_act;
+	harmful=true;
+	actorValue=HP;
+	magnitude=t:TrueHPMax * -0.1 - 3;
+	duration=-2;
+	chance=d:fireAcc;
+	element=fire;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=ari_lord_ignis_molten_fury_passive_act;
+	shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=10;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=true;
+
+	
+----------------------------------------------------------------Lord Ignis Molten Eruption passive
+[SupportAbility]
+ID=ari_lord_ignis_molten_eruption_passive;
+name=Molten Eruption;
+icon=;
+tooltip=If there are enemies near Lord Ignis when he begins his turn, he will force magma eruptions throughout his domain, spawning Magma in a large radius.;
+
+[SupportAbilityReaction]
+ID=ari_lord_ignis_molten_eruption_passive;
+element=timerUp; action=ari_lord_ignis_molten_eruption_passive_act;
+
+[Action] ID=ari_lord_ignis_molten_eruption_passive_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+	fReq=m:numEnemiesWithinX(2);
+[ActionAoE] 
+	ID=ari_lord_ignis_molten_eruption_passive_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_lord_ignis_molten_eruption_passive_act;
+	weaponAvAffecter=false;
+	actorValue=summonItem;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=coals_hot1;
+	duration=1;
+	chance=15;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+	element=fire;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=ari_lord_ignis_molten_eruption_passive_act;
+	cloneFrom=adjacentAndSelf;
+	minRange=3;
+	maxRange=10;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+
+
+----------------------------------------------------------------Sailor Pirates
+
+-----Blackbrow Class
+[ActorClass] 
+name=Blackbrow's Folly;
+ID=ari_blackbrow_warrior;
+cloneFrom=warrior;
+selectableClass=false;
+!actions=Wa_charge;
+actions=ari_blackbrow_active_earthbreaker;
+
+[Action] ID=ari_blackbrow_active_earthbreaker; 
+	name=Earthbreaker;
+	icon=icon_Bra_disorient;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	cooldown=35;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Slam the ground and cause stalagmite eruptions to violently emerge.;
+	tooltipTopRight=;
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	numTargets=1;
+	attractAttention=false;
+	casterAnimation=swing;
+	requiredWeaponElement=melee;
+	FXOnTarget=medShakeHoriz;
+	FXOnTarget=gustyBlast;
+	FXOnTarget=strikeBig;
+
+[ActionAoE] 
+	ID=ari_blackbrow_active_earthbreaker;
+	cloneFrom=adjacent;
+	arc=true;
+	airborne=true;
+	needsLoE=true;
+	needsLoS=true;
+	canSelectActors=true;
+	occupyAll=false;
+[AvAffecter]
+	ID=ari_blackbrow_active_earthbreaker; 
+	harmful=true;
+	actorValue=HP;
+	magnitude=-w:Power - c:PhysAtk + t:PhysDef;
+	chance=w:chance;
+	duration=-2;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=ari_blackbrow_active_earthbreaker;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_blackbrow_active_earthbreaker; 
+	harmful=true;
+	actorValue=HP;
+	magnitude=-w:Power - c:PhysAtk + t:PhysDef;
+	chance=100;
+	duration=-2;
+	FXOnTile=terrain;
+	FXOnHit=pop;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=ari_blackbrow_active_earthbreaker;
+	cloneFrom=adjacent+1;
+	coneAngle=180;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=true;
+	minRange = 2;
+	maxRange = 2;
+[AvAffecter]
+	ID=ari_blackbrow_active_earthbreaker; 
+	weaponAvAffecter=false;
+	actorValue=summonItem;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=ari_churned_earth;
+	duration=1;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_blackbrow_active_earthbreaker;
+	cloneFrom=adjacent+1;
+	coneAngle=180;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=true;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=false;
+	canSelectActors=false;
+	minRange = 2;
+	maxRange = 2;
+[AvAffecter] --Trick AI into using ability
+	ID=ari_blackbrow_active_earthbreaker;
+	visibleEvaluations=false;
+	harmful=false; 
+	actorValue=ari_ai_skill_useage_multi;
+	visibleMiss=false;
+	magnitude=1;
+	duration=-6;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_blackbrow_active_earthbreaker;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+	
+[AvAffecter]
+--purely for visuals
+	ID=ari_blackbrow_active_earthbreaker; 
+	actorValue=height;
+	magnitude=-1;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay_small;
+[AvAffecterAoE]
+--purely for visuals
+	ID=ari_blackbrow_active_earthbreaker;
+	cloneFrom=adjacent+1;
+	coneAngle=180;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=true;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=false;
+	canSelectActors=false;
+	minRange = 2;
+	maxRange = 2;
+[AvAffecter]
+--purely for visuals
+	ID=ari_blackbrow_active_earthbreaker; 
+	actorValue=height;
+	magnitude=1;
+	duration=-2;
+	chance=100;
+	FXOnTile=delay_small;
+[AvAffecterAoE]
+--purely for visuals
+	ID=ari_blackbrow_active_earthbreaker;
+	cloneFrom=adjacent+1;
+	coneAngle=180;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=true;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=false;
+	canSelectActors=false;
+	minRange = 2;
+	maxRange = 2;
+
+
+
+[Action] ID=ari_redhand_active_bomber; 
+	name=Bomb Voyage;
+	icon=icon_Bra_disorient;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	cooldown=35;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Places down a bomb that will explode in a cross-shape, dealing damage to anyone caught within a line from it.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	numTargets=1;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+
+[ActionAoE] 
+	ID=ari_redhand_active_bomber;
+	cloneFrom=oneTile;
+	arc=true;
+	airborne=true;
+	needsLoE=true;
+	needsLoS=true;
+	canSelectActors=false;
+	occupyAll=false;
+	minRange=2;
+	maxRange=5;
+
+[AvAffecter]
+	ID=ari_redhand_active_bomber; 
+	weaponAvAffecter=false;
+	actorValue=summonItem;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=ari_redhand_bomb;
+	duration=1;
+	chance=100;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Black;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Black;
+	FXOnHit=chargeFast_overlap;
+	FXOnHitColor=Red;
+	FXOnTile=starDonk_thrownItem;
+[AvAffecterAoE]
+	ID=ari_redhand_active_bomber;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_redhand_active_bomber; 
+	actorValue=aggro;
+	magnitude=1;
+	duration=-2;
+	chance=150 * m:tIntelligence;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=ari_redhand_active_bomber;
+	cloneFrom=adjacent+1;
+[AvAffecter]
+	ID=ari_redhand_active_bomber; 
+	actorValue=AIBonus;
+	magnitude=-3;
+	duration=-2;
+	chance=100;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=ari_redhand_active_bomber;
+	cloneFrom=adjacent+1;
+
+	
+	
+----------------------------------------------------------------Red-Hand Class
+[ActorClass] name=Red-Hand's Lunacy;
+ID=ari_redhand_class;
+cloneFrom=bombardier;
+selectableClass=false;
+!actions=ari_redhand_active_bomber;
+actions=Bom_activate;
+actions=Bom_throwFlare;
+
+---------------------------------------Red-Hand Pirate
+[ActorPrefab]ID=ari_redhand_pirate; name=Red-Hand;
+actorTypeID=human;
+supportAbilities=escapeGate_fake;
+secondaryClass=ari_redhand_class;
+ari_redhand_active_bomber=1; numRanksBought=ari_redhand_active_bomber=1; action1=ari_redhand_active_bomber;
+
+---------------------------------------Red-Hand Pirate 2
+[ActorPrefab]ID=ari_redhand_pirate_2; name=Red-Hand;
+actorTypeID=human;
+HP=50; HPMax = 50; TrueHPMax = 50;
+supportAbilities=;
+secondaryClass=ari_redhand_class;
+ari_redhand_active_bomber=1; numRanksBought=ari_redhand_active_bomber=1; action1=ari_redhand_active_bomber;
+--Add bomb rain ability or passive at critical health
+
+---------------------------------------Blackbrow Pirate
+[ActorPrefab]ID=ari_blackbrow_pirate; name=Blackbrow;
+actorTypeID=human;
+supportAbilities=escapeGate_fake;
+secondaryClass=ari_blackbrow_class;
+ari_blackbrow_active_earthbreaker=1; numRanksBought=ari_blackbrow_active_earthbreaker=1; action1=ari_blackbrow_active_earthbreaker;
+Wa_charge=1; numRanksBought=Wa_charge=1; action2=Wa_charge;
+ numRanksBought=Wrd_guard=1; action3=Wrd_guard;
+
+---------------------------------------Blackbrow Pirate 2
+[ActorPrefab]ID=ari_blackbrow_pirate_2; name=Blackbrow;
+actorTypeID=human;
+HP=50; HPMax = 50; TrueHPMax = 50;
+supportAbilities=;
+--ari_blackbrow_passive_unlock_sailor_passive;
+secondaryClass=ari_blackbrow_class;
+ari_blackbrow_active_earthbreaker=1; numRanksBought=ari_blackbrow_active_earthbreaker=1; action1=ari_blackbrow_active_earthbreaker;
+Wa_charge=1; numRanksBought=Wa_charge=1; action2=Wa_charge;
+ numRanksBought=Wrd_guard=1; action3=Wrd_guard;
+
+
+[SupportAbility]
+ID=ari_redhand_bomb_frenzy;
+name=Bomb Frenzy;
+icon=icon_Bra_disorient;
+tooltip=Red-hand will lose his mind when he has been injured, raining bombs randomly upon an area around him at the start of his turn.;
+
+[SupportAbilityReaction]
+ID=ari_redhand_bomb_frenzy; 
+element=timerUp;
+action=ari_redhand_bomb_frenzy_act;
+
+
+
+[Action] ID=ari_redhand_bomb_frenzy_act;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=ari_redhand_bomb_frenzy_act;
+	cloneFrom=adjacent+3;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=false;
+	aoeCasterAsOrigin=true;
+	minRange = 4;
+	maxRange = 6;
+[AvAffecter]
+	ID=ari_redhand_bomb_frenzy_act;
+	fReq=moreThan:0.49:m:percentHPLost;
+	actorValue=ari_classism_cooldown;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=1 + moreThan:0:c:ari_classism_cooldown + moreThan:1:c:ari_classism_cooldown + moreThan:2:c:ari_classism_cooldown + moreThan:3:c:ari_classism_cooldown;
+	duration=100;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_redhand_bomb_frenzy_act;
+	cloneFrom=oneTile;
+    aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=ari_redhand_bomb_frenzy_act;
+	fReq=moreThan:0.49:m:percentHPLost;
+	weaponAvAffecter=false;
+	actorValue=summonItem;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=ari_redhand_bomb;
+	duration=1;
+	chance=33 * is:1:c:ari_classism_cooldown;
+	FXOnHit=starDonk_thrownItem;
+[AvAffecterAoE]
+	ID=ari_redhand_bomb_frenzy_act;
+	cloneFrom=adjacent+3;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	occupyAll=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	canSelectEnemies=false;
+	aoeCasterAsOrigin=true;
+	minRange = 4;
+	maxRange = 6;
+[AvAffecter]
+	ID=ari_redhand_bomb_frenzy_act;
+	fReq=moreThan:0.49:m:percentHPLost;
+	actorValue=ari_classism_cooldown;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * moreThan:2:c:ari_classism_cooldown;
+[AvAffecterAoE]
+	ID=ari_redhand_bomb_frenzy_act;
+	cloneFrom=oneTile;
+    aoeCasterAsOrigin=true;
+	
+
+
+[SupportAbility]
+ID=ari_pirate_unlock_sailor_passive;
+name=Against the Ropes;
+icon=icon_Bra_disorient;
+tooltip=This time is for keeps.;
+
+[SupportAbilityReaction]
+ID=ari_pirate_unlock_sailor_passive;
+element=incapacitated; action=ari_pirate_unlock_sailor_passive_act;
+
+[Action] ID=ari_pirate_unlock_sailor_passive_act; 
+    special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+    ID=ari_pirate_unlock_sailor_passive_act;
+    cloneFrom=oneTile;
+[AvAffecter]
+    ID=ari_pirate_unlock_sailor_passive_act; 
+    harmful=false; affectIntangible=true; useSeparateChanceRoll=true;
+    visibleEvaluations=false; hideAllEffects=true; visibleMiss=false;
+    actorValue=trigger;
+    magnitude=ari_dead_blackbrow_trigger;
+    duration=-2;
+    chance=100;
+[AvAffecterAoE]
+    ID=ari_pirate_unlock_sailor_passive_act;
+    cloneFrom=oneTile;
+
+
+	
+	
+	
+----------------------------------------------------------------Goblin
+[ActorType] ID=ari_goblinkin; 
+name=Goblinkin;
+description=A basic, lowly Goblin.;
+journalID=ari_journal_goblin;
+playerUsable= false;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = false;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 3;
+unarmedPower = 1;
+unarmedAction = simplestMonsterAttack;
+defaultValues=HP=20;
+defaultValues=HPMax = 20;
+defaultValues=TrueHPMax = 20;
+defaultValues=MP = 5;
+defaultValues=MPMax = 5;
+defaultValues=TrueMPMax = 5;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+defaultValues=sight = 1;
+
+skinPalette=overworld4;
+clothPalette=overworld8;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=ari_goblin_arm;
+defaultBodyPartSprites=armL=ari_goblin_arm;
+defaultBodyPartSprites=legs=ari_goblin_legs;
+defaultBodyPartSprites=head=ari_goblin_head;
+defaultBodyPartSprites=face=ari_goblin_face;
+defaultBodyPartSprites=torso=ari_goblin_torso;
+
+partSpritesThatTakePriorityOverClass=torso; 
+partSpritesThatTakePriorityOverClass=shoulderL; 
+partSpritesThatTakePriorityOverClass=shoulderR; 
+partSpritesThatTakePriorityOverClass=armL; 
+partSpritesThatTakePriorityOverClass=armR; 
+
+defaultAI=wander_leash1_slow;
+
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+adjustSpriteX = 0;
+adjustSpriteY = 2;
+
+--fearless=True;
+aggressiveness=0.9; bravery=0.5; intelligence=0.2; honor=0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+randomNames=Goblin;
+
+[JournalEntry]
+ID=ari_journal_goblin;
+category=creature; halfPage=true; rarity=2;
+title=Goblin;
+text=<actorBig=ari_goblinkin><title=Goblin><brAdj=>         A vile creature with little intelligence typically found living in dark caves. However, they can also be found banding together to lay siege to towns, capturing its populace and ravaging its stock.;
+
+---------------------------------------Goblin
+[ActorType]ID=ari_goblin_normal; name=Goblin;
+cloneFrom=ari_goblinkin;
+
+---------------------------------------Hoboblin
+[ActorType]ID=ari_hobgoblin_normal; name=Hobgoblin;
+cloneFrom=ari_goblinkin;
+journalID=ari_journal_goblin;
+defaultValues=HP=35;
+defaultValues=HPMax = 35;
+defaultValues=TrueHPMax = 35;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 1;
+defaultValues=skill_Hammer=1;
+fearless=True;
+skinPalette=overworld9;
+clothPalette=p5;
+armorPalette=pR;
+randomNames=Hobgoblin;
+
+
+---------------------------------------Hobgoblin prefab
+[ActorPrefab]ID=ari_hobgoblin; name=Hobgoblin;
+actorTypeID=ari_goblinkin;
+HP=35; HPMax = 35; TrueHPMax = 35;
+fearless=True;
+skinPalette=overworld9;
+clothPalette=p5;
+armorPalette=pR;
+[ActorItem] ID=hammer_iron; cSlot=0; containerID=0;
+
+---------------------------------------Goblin Shaman
+[ActorType]ID=ari_goblin_shaman_normal; name=Goblin Shaman;
+cloneFrom=ari_goblinkin;
+
+defaultValues=HP=25;
+defaultValues=HPMax = 25;
+defaultValues=TrueHPMax = 25;
+defaultValues=MP=18;
+defaultValues=MPMax = 18;
+defaultValues=TrueMPMax = 18;
+defaultValues=MagAtk = 4;
+defaultValues=MagDef = 2;
+defaultValues=skill_Fire=2;
+defaultValues=skill_Elec=2;
+defaultValues=skill_Ice=2;
+
+
+---------------------------------------Goblin Hut
+[ActorType] ID=ari_goblin_hut;
+name=Goblin Hut;
+journalID=ari_journal_goblin_hut;
+bodyStructure=single;
+movementSpeed = 3;
+unarmedPower = 0;
+humanoid = false;
+unrevivable=false;
+tameable=false;
+canUseItems=false;
+
+defaultValues=HP = 55;
+defaultValues=HPMax = 55;
+defaultValues=TrueHPMax = 55;
+defaultValues=MP = 0;
+defaultValues=MPMax =0;
+defaultValues=TrueMPMax = 0;
+defaultValues=PhysAtk = 0;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 0;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 90;
+defaultValues=skill_Fist = 0;
+
+aggressiveness = 0.9;
+bravery = 0.1;
+honor = 0;
+intelligence = 0.1;
+fearless=True;
+
+defaultAI=idle;
+
+defaultSprite = ari_goblin_hut;
+
+innateActions = ari_goblinhut_summon;
+unarmedAction = ;
+
+skinPalette=;
+clothPalette=;
+armorPalette=;
+--defaultFaction = goblin;
+
+fxSpeech = sfx_bleepyGrowl;
+fxOnPhysicalHPDmg = bleepyGrowl_quiet;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = beastDeath;
+rotatedCorpse=false;
+
+
+baseSpriteExtraHeight = 8;
+baseSpriteExtraWidth = 24;
+adjustSpriteX = -3;
+adjustSpriteY = -4;
+
+idleAnim = s_idle;
+walkAnim = s_idle;
+jumpAnim = s_idle;
+painAnim = s_idle;
+dodgeAnim = s_idle;
+sleepAnim = s_idle;
+criticalAnim = s_idle;
+deadAnim = s_idle;
+
+randomNames=Goblin Hut;
+
+[JournalEntry]
+ID=ari_journal_goblin_hut;
+category=creature; halfPage=true; rarity=2;
+title=Goblin Hut;
+text=<actorBig=ari_goblin_hut><title=Goblin Hut><brAdj=>         A temporary den that will spew forth Goblins.;
+
+----------------------------------------------------------------Goblin Hut Summon
+[Action] ID=ari_goblinhut_summon; 
+	name=Goblin Party;
+	icon=;
+	mpCost=0 * d:mpCostMult + d:mpCostMod;
+	cooldown=60;
+	harmful=false;
+	attractAttention=false;
+	tooltip=A pack of Goblins emerge from their hut.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	numTargets=3;
+	maxDistanceBetweenTargets=4;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+
+--Target near you only
+[ActionAoE] 
+	ID=ari_goblinhut_summon;
+	cloneFrom=adjacent+2;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	canSelectActors=false;
+	occupyAll=true;	
+[AvAffecter]
+	ID=ari_goblinhut_summon; 
+	harmful=false;
+	actorValue=summonActor_temp;
+	magnitude=ari_goblin_prefab;
+	chance=100;
+	duration=-2;
+	FXOnTile=tinyShakeHoriz;
+	FXOnTile=Splash;
+	FXOnTileColor=Green;
+	FXOnTile=delay_tiny;
+[AvAffecterAoE]
+	ID=ari_goblinhut_summon;
+	cloneFrom=oneTile;
+[AvAffecter] --Trick AI into using ability
+	ID=ari_goblinhut_summon;
+	visibleEvaluations=false;
+	harmful=false; 
+	actorValue=ari_ai_skill_useage_multi;
+	visibleMiss=false;
+	magnitude=5;
+	duration=-6;
+	chance=100;
+[AvAffecterAoE]
+	ID=ari_goblinhut_summon;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+	canSelectAllies=true;
+
+
+
+
+
+----------------------------------------------------------------Orc
+[ActorType] ID=ari_orckin; 
+name=Orckin;
+description=A basic, lowly Orc.;
+journalID=ari_journal_orc;
+playerUsable= false;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = false;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 3;
+unarmedPower = 1;
+unarmedAction = simplestMonsterAttack;
+defaultValues=HP=25;
+defaultValues=HPMax = 25;
+defaultValues=TrueHPMax = 25;
+defaultValues=MP = 5;
+defaultValues=MPMax = 5;
+defaultValues=TrueMPMax = 5;
+defaultValues=PhysAtk = 3;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+
+skinPalette=overworld4;
+clothPalette=p35;
+armorPalette=p40;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=ari_orc_arm;
+defaultBodyPartSprites=armL=ari_orc_arm;
+defaultBodyPartSprites=legs=ari_orc_legs;
+defaultBodyPartSprites=head=ari_orc_head;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=ari_orc_torso;
+
+partSpritesThatTakePriorityOverClass=torso; 
+partSpritesThatTakePriorityOverClass=shoulderL; 
+partSpritesThatTakePriorityOverClass=shoulderR; 
+partSpritesThatTakePriorityOverClass=armL; 
+partSpritesThatTakePriorityOverClass=armR; 
+
+defaultAI=wander_leash1_slow;
+defaultSupportAbilities=bulwark;
+
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+adjustSpriteX = 0;
+adjustSpriteY = 0;
+
+--fearless=True;
+aggressiveness=0.7; bravery=0.7; intelligence=0.4; honor=0.4;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+randomNames=Orc;
+
+[JournalEntry]
+ID=ari_journal_orc;
+category=creature; halfPage=true; rarity=2;
+title=Orc;
+text=<actorBig=ari_goblinkin><title=Orc><brAdj=>         A vile creature with little intelligence typically found living in dark caves. However, they can also be found banding together to lay siege to towns, capturing its populace and ravaging its stock.;
+
+---------------------------------------normal Orc
+[ActorType]ID=ari_orc_normal; name=Orc;
+cloneFrom=ari_orckin;
+
+	
+	
+----------------------------------------------------------------Troglodyte
+[ActorType] ID=ari_troglodyte; 
+name=Troglodyte;
+description=A blind creature that can typically be found roaming dark caves.;
+journalID=ari_journal_troglodyte;
+playerUsable= false;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 3;
+unarmedPower = 3;
+unarmedAction = simplestMonsterAttack;
+defaultValues=HP=30;
+defaultValues=HPMax = 30;
+defaultValues=TrueHPMax = 30;
+defaultValues=MP = 5;
+defaultValues=MPMax = 5;
+defaultValues=TrueMPMax = 5;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 2;
+defaultValues=actTime = 30;
+
+skinPalette=p3;
+clothPalette=p35;
+--defaultFaction = troglodyte;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=zomb_arm;
+defaultBodyPartSprites=armL=zomb_arm;
+defaultBodyPartSprites=legs=ari_troglodyte_legs;
+defaultBodyPartSprites=head=ari_troglodyte_head;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=zomb_torso;
+
+defaultAI=wander_leash1_slow;
+defaultSupportAbilities=ari_troglodyte_reeking_stench;
+defaultSupportAbilities=ari_troglodyte_smell_fear;
+innateActions=ari_troglodyte_filth;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+adjustSpriteX = 0;
+adjustSpriteY = 0;
+
+aggressiveness=0.5; bravery=0.3; intelligence=0.2; honor=0.2;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+randomNames=Troglodyte;
+
+
+[JournalEntry]
+ID=ari_journal_troglodyte;
+category=creature; halfPage=true; rarity=2;
+title=Troglodyte;
+text=<actorBig=ari_troglodyte><title=Troglodyte><brAdj=>         A rather unintelligent creature typically found living in warm, dark caves. Troglodytes are blind by nature and must resort to listening or smelling their prey out.;
+
+----------------------------------------------------------------Troglodyte Penchant for Filth
+[Action] ID=ari_troglodyte_filth; 
+	name=Penchant for Filth;
+	icon=;
+	mpCost=2 * d:mpCostMult + d:mpCostMod;
+	cooldown=50;
+	harmful=true;
+	attractAttention=false;
+	tooltip=Overwhelm your target's senses with disgust, reducing physical attributes by 2.;
+
+	tooltipTopRight=;
+	
+	XPCost=1; maxRank=1; canExceedMaxRankBy=0;
+	
+	attractAttention=false;
+	
+	casterAnimation=handsup;
+
+	FXOnCaster=magicCharge;
+	FXOnTarget=largePing;
+	FXOnTarget=tinyShakeHoriz;
+	
+[ActionAoE] 
+	ID=ari_troglodyte_filth;
+	needsLoS = true;
+	needsLoE = true;
+	airborne = true;
+	arc = true;
+	cloneFrom=adjacent+1;
+	
+[AvAffecter]
+	ID=ari_troglodyte_filth;
+	harmful=true;
+	actorValue=HP;
+	magnitude=c:PhysAtk * -1;
+	duration=-2;
+	chance=d:fistAcc;
+	FXOnTile=pop;
+	element=melee;
+	element=physical;
+[AvAffecterAoE]
+	ID=ari_troglodyte_filth;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_troglodyte_filth; 
+	visibleEvaluations=true;
+	visibleMiss=true;
+	harmful=false;
+	actorValue=ari_filth_status;
+	magnitude=1;
+	duration=45;
+	chance=d:fistAcc;
+[AvAffecterAoE]
+	ID=ari_troglodyte_filth;
+	cloneFrom=oneTile;
+
+	
+	
+----------------------------------------------------------------Troglodyte Reeking Stench passive
+[SupportAbility]
+ID=ari_troglodyte_reeking_stench;
+name=Reeking Stench;
+icon=;
+tooltip=Being close to a Troglodyte overwhelms the senses with disgust. At the start of its turn, any targets next to it gain Filth and will have -1<icon=PhysAtk><icon=skill_Sword><icon=skill_Shield><icon=skill_Dagger><icon=skill_Fist><icon=skill_Axe><icon=skill_Hammer> when they begin their turn for 25<icon=time>.;
+
+[SupportAbilityReaction]
+ID=ari_troglodyte_reeking_stench;
+element=timerUp; action=ari_troglodyte_reeking_stench_act;
+
+[Action] ID=ari_troglodyte_reeking_stench_act; 	
+	icon=;
+	harmful=true;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=ari_troglodyte_reeking_stench_act;
+	aoeCasterAsOrigin = true;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=ari_troglodyte_reeking_stench_act; 
+	visibleEvaluations=true;
+	visibleMiss=true;
+	harmful=false;
+	actorValue=ari_filth_status;
+	magnitude=1;
+	duration=25;
+	chance=d:ruinAcc;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=ari_troglodyte_reeking_stench_act;
+	cloneFrom=adjacent+1;
+	maxRange=1;
+	canSelectAllies=false;
+	canSelectEnemies=true;
+
+	
+----------------------------------------------------------------Troglodyte Smell Fear passive
+[SupportAbility]
+ID=ari_troglodyte_smell_fear;
+name=Smell Fear;
+icon=;
+tooltip=A Troglodyte can smell the fear from its target. When hitting a target below half health, the Troglodyte deals an additional 3 damage.;
+
+[SupportAbilityReaction]
+ID=ari_troglodyte_smell_fear;
+element=weaponBuff; action=ari_troglodyte_smell_fear_act;
+
+[Action] ID=ari_troglodyte_smell_fear_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=ari_troglodyte_smell_fear_act;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=ari_troglodyte_smell_fear_act; 
+	visibleEvaluations=true;
+	visibleMiss=true;
+	harmful=true;
+	actorValue=HP;
+	magnitude=-3;
+	duration=-2;
+	chance=w:chance * moreThan:0.5:m:targetPercentHPLost;
+	FXOnHit=gustyBlast;
+[AvAffecterAoE]
+	ID=ari_troglodyte_smell_fear_act;
+	cloneFrom=oneTile;
+	canSelectAllies=false;
+	canSelectEnemies=true;
+
+---------------------------------------Troglodyte Cretin
+[ActorPrefab]ID=ari_troglodyte_cretin; name=Troglodyte Cretin;
+actorTypeID=ari_troglodyte;
+PhysAtk = 2;
+skinPalette=p59;
+[ActorItem] ID=spear_bone; cSlot=0; containerID=0;
+
+	
+	
+----------------------------------------------------------------Gnoll
+[ActorType] ID=ari_gnoll; 
+name=Gnoll;
+description=A ferocious bipedal humanoid found hunting prey in groups.;
+journalID=ari_journal_gnoll;
+playerUsable= false;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 3;
+unarmedPower = 2;
+unarmedAction = simplestMonsterAttack;
+defaultValues=HP=25;
+defaultValues=HPMax = 25;
+defaultValues=TrueHPMax = 25;
+defaultValues=MP = 5;
+defaultValues=MPMax = 5;
+defaultValues=TrueMPMax = 5;
+defaultValues=PhysAtk = 5;
+defaultValues=PhysDef = 1;
+defaultValues=PhysEva= 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 1;
+defaultValues=MagEva= 0;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 5;
+defaultValues=actTime = 30;
+
+defaultSupportAbilities=ari_gnoll_blood_frenzy;
+
+skinPalette=p7;
+clothPalette=p11;
+armorPalette=pRed2;
+--defaultFaction = gnoll;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=ari_gnoll_arm;
+defaultBodyPartSprites=armL=ari_gnoll_arm;
+defaultBodyPartSprites=legs=ari_gnoll_legs;
+defaultBodyPartSprites=head=ari_gnoll_head;
+defaultBodyPartSprites=face=;
+defaultBodyPartSprites=torso=ari_gnoll_torso;
+
+defaultAI=wander_leash5_slow;
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+adjustSpriteX = 0;
+adjustSpriteY = 0;
+
+aggressiveness=0.8; bravery=0.6; intelligence=0.2; honor=0.4;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+randomNames=Gnoll;
+
+
+[JournalEntry]
+ID=ari_journal_gnoll;
+category=creature; halfPage=true; rarity=2;
+title=Gnoll;
+text=<actorBig=ari_gnoll><title=Gnoll><brAdj=>         A ferocious bipedal humanoid found hunting prey in groups.;
+
+----------------------------------------------------------------Gnoll Blood Frenzy passive
+[SupportAbility]
+ID=ari_gnoll_blood_frenzy;
+name=Blood Frenzy;
+icon=;
+tooltip=When the Gnoll attacks its target, it has a chance to gain <icon=time>10.;
+
+[SupportAbilityReaction]
+ID=ari_gnoll_blood_frenzy;
+element=weaponBuff; action=ari_gnoll_blood_frenzy_act;
+
+[Action] ID=ari_gnoll_blood_frenzy_act; 	
+	icon=;
+	harmful=false;
+	special=usableEvenWhenCantAct;
+    special=usableEvenWhenReacting;
+    special=usableEvenWhenYourTurn;
+    special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=ari_gnoll_blood_frenzy_act;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=ari_gnoll_blood_frenzy_act; 
+	actorValue=actTimer;
+	visibleEvaluations=true;
+	visibleMiss=false;
+	harmful=false;
+	magnitude=10;
+	duration=-2;
+	chance=33;
+	FXOnHit=delay_minor;
+	FXOnHit=egg_fade;
+	FXOnHit=sfx_schwee;
+[AvAffecterAoE]
+	ID=ari_gnoll_blood_frenzy_act; 
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+
+---------------------------------------Gnoll Outrider
+[ActorPrefab]ID=ari_gnoll_outrider; name=Gnoll Outrider;
+actorTypeID=ari_gnoll;
+PhysAtk = 3;
+moveDistance = 6;
+skinPalette=p28;
+clothPalette=p3;
+armorPalette=pRedD2;
+[ActorItem] ID=axe_bone; cSlot=0; containerID=0;
+
+
+---------------------------------------Slime
+[ActorType] ID=ari_slime;
+name=Slime;
+journalID=ari_journal_slime;
+bodyStructure=single;
+movementSpeed = 3;
+unarmedPower = 2;
+humanoid = false;
+unrevivable=false;
+tameable=false;
+canUseItems=false;
+
+defaultValues=HP = 20;
+defaultValues=HPMax = 20;
+defaultValues=TrueHPMax = 20;
+defaultValues=MP = 1;
+defaultValues=MPMax =1;
+defaultValues=TrueMPMax = 1;
+defaultValues=PhysAtk = 2;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 0;
+defaultValues=MagDef = 0;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 1;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 30;
+defaultValues=skill_Fist = 3;
+
+aggressiveness = 0.5;
+bravery = 0.2;
+honor = 0;
+intelligence = 0.2;
+
+defaultAI=idle;
+
+defaultSprite = ari_slime;
+
+unarmedAction = simplestMonsterAttack;
+
+skinPalette=overworld1;
+clothPalette=pB;
+armorPalette=pR;
+--defaultFaction = slime;
+
+fxSpeech = sfx_bleepyGrowl;
+fxOnPhysicalHPDmg = bleepyGrowl_quiet;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = beastDeath;
+rotatedCorpse=false;
+
+
+baseSpriteExtraHeight = 8;
+baseSpriteExtraWidth = 8;
+adjustSpriteX = 0;
+adjustSpriteY = 0;
+
+idleAnim = s_idle;
+walkAnim = s_0102loop_slow;
+jumpAnim = s_jump_51;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+deadAnim = s_die;
+
+randomNames=Slime;
+
+[JournalEntry]
+ID=ari_journal_slime;
+category=creature; halfPage=true; rarity=1;
+title=Slime;
+text=<actorBig=ari_slime><title=Slime><brAdj=>        A sentient, amorphous pile of goop. It moves extremely slowly but can very quickly disintegrate gear if allowed to act with impunity.;
+
+
+---------------------------------------Fire slime
+[ActorPrefab]ID=ari_fire_slime; name=Fire Slime;
+actorTypeID=ari_slime;
+PhysAtk = 3;
+MagAtk = 2;
+skinPalette=p56;
+clothPalette=pB;
+armorPalette=pR;
+actorClass=scholar;
+MP = 15; MPMax = 15; TrueMPMax = 15;
+skill_Fire=2;
+Sch_flame=2;
+numRanksBought=Sch_flame=2;
+action1=Sch_flame;
+
+---------------------------------------Ice slime
+[ActorPrefab]ID=ari_ice_slime; name=Ice Slime;
+actorTypeID=ari_slime;
+PhysAtk = 3;
+MagAtk = 2;
+skinPalette=pIce;
+clothPalette=pB;
+armorPalette=pR;
+actorClass=scholar;
+MP = 15; MPMax = 15; TrueMPMax = 15;
+skill_Ice=2;
+Sch_frost=2;
+numRanksBought=Sch_frost=2;
+action1=Sch_frost;
+
+
+----------------------------------------------------------------Elemental
+[ActorType] ID=ari_elemental; 
+name=Elemental;
+description=An element brought to life through ambient magic.;
+journalID=ari_journal_elemental;
+playerUsable= false;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=human;
+humanoid = true;
+movementSpeed = 3;
+unarmedPower = 3;
+unarmedAction = simplestMonsterAttack;
+defaultValues=HP=25;
+defaultValues=HPMax = 25;
+defaultValues=TrueHPMax = 25;
+defaultValues=MP = 20;
+defaultValues=MPMax = 20;
+defaultValues=TrueMPMax = 20;
+defaultValues=PhysAtk = 4;
+defaultValues=PhysDef = 0;
+defaultValues=PhysEva= 5;
+defaultValues=MagAtk = 4;
+defaultValues=MagDef = 3;
+defaultValues=MagEva= 10;
+defaultValues=Acc = 1;
+defaultValues=moveDistance = 3;
+defaultValues=actTime = 30;
+fearless=True;
+
+skinPalette=p5;
+
+fxSpeech = sfx_speech;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = humanDeath;
+
+defaultBodyPartSprites=armR=ari_elemental_arm;
+defaultBodyPartSprites=armL=ari_elemental_arm;
+defaultBodyPartSprites=legs=;
+defaultBodyPartSprites=head=ari_elemental_head;
+defaultBodyPartSprites=face=ari_goblin_face;
+defaultBodyPartSprites=torso=ari_elemental_torso;
+
+defaultAI=wander_leash1_slow;
+
+
+idleAnim = idle;
+walkAnim = walk;
+jumpAnim = jump;
+climbAnim = climb;
+painAnim = pain;
+chargeAnim = charge;
+castAnim = cast;
+dodgeAnim = dodge;
+sleepAnim = crouch;
+drownAnim = drowning;
+stunAnim = stunned;
+criticalAnim = crouch;
+deadAnim = die;
+
+adjustSpriteX = 0;
+adjustSpriteY = 0;
+
+aggressiveness=0.6; bravery=0.6; intelligence=0.4; honor=0.6;
+
+defaultDialogNode = ;
+dialog_speechFont=scuri;
+randomNames=Elemental;
+
+[JournalEntry]
+ID=ari_journal_elemental;
+category=creature; halfPage=true; rarity=2;
+title=Elemental;
+text=<actorBig=ari_elemental><title=Elemental><brAdj=>         Ambient magics coalesced to bring life to an element. Adventurers specializing in only one element may want to take precautions, as they may find difficulty in bringing down an Elemental imbued with their proficiency.;
+
+
+---------------------------------------Fire Elemental
+[ActorPrefab]ID=ari_fire_elemental; name=Fire Elemental;
+actorTypeID=ari_elemental;
+skinPalette=p31;
+clothPalette=pB;
+armorPalette=pR;
+actorClass=scholar;
+skill_Fire=4;
+Sch_flame=3;
+numRanksBought=Sch_flame=3;
+action1=Sch_flame;
+armLSprite=ari_elemental_arm; 
+armRSprite=ari_elemental_arm; 
+torsoSprite=ari_elemental_torso; 
+shoulderLSprite=; 
+shoulderRSprite=; 
+
+---------------------------------------Ice Elemental
+[ActorPrefab]ID=ari_ice_elemental; name=Ice Elemental;
+actorTypeID=ari_elemental;
+skinPalette=pBlue;
+clothPalette=pB;
+armorPalette=pR;
+actorClass=scholar;
+skill_Ice=4;
+Sch_frost=3;
+numRanksBought=Sch_frost=3;
+action1=Sch_frost;
+armLSprite=ari_elemental_arm; 
+armRSprite=ari_elemental_arm; 
+torsoSprite=ari_elemental_torso; 
+shoulderLSprite=; 
+shoulderRSprite=; 
+
+
+----------------------------------------------------------------Elemental Crystal
+[ActorType] ID=ari_elemental_crystal; 
+name=Elemental Crystal;
+description=A crystallized substance imbued with an element.;
+journalID=ari_journal_elemental_crystal;
+playerUsable= false;
+canSpawnWithClass = true;
+randomSkinPaletteOnSpawn = true;
+
+bodyStructure=single;
+movementSpeed = 3;
+unarmedPower = 1;
+humanoid = false;
+unrevivable=true;
+tameable=false;
+canUseItems=false;
+
+defaultValues=HP = 40;
+defaultValues=HPMax = 40;
+defaultValues=TrueHPMax = 40;
+defaultValues=MP = 75;
+defaultValues=MPMax =75;
+defaultValues=TrueMPMax = 75;
+defaultValues=PhysAtk = 1;
+defaultValues=PhysDef = 2;
+defaultValues=PhysEva = 0;
+defaultValues=MagAtk = 4;
+defaultValues=MagDef = 2;
+defaultValues=MagEva = 0;
+defaultValues=moveDistance = 0;
+defaultValues=jumpDistance = 0;
+defaultValues=actTime = 30;
+fearless=True;
+
+aggressiveness = 0.7;
+bravery = 0.0;
+honor = 0.0;
+intelligence = 0.1;
+
+defaultAI=idle;
+
+defaultSprite = ari_elemental_crystal;
+
+unarmedAction = simplestMonsterAttack;
+
+skinPalette=overworld1;
+clothPalette=pB;
+armorPalette=pR;
+--defaultFaction = slime;
+
+fxSpeech = sfx_bleepyGrowl;
+fxOnPhysicalHPDmg = bleepyGrowl_quiet;
+fxOnPhysicalHPDmg = hitDust;
+fxOnDeath = hitDust_strong;
+fxOnDeath = beastDeath;
+rotatedCorpse=false;
+
+
+baseSpriteExtraHeight = 8;
+baseSpriteExtraWidth = 8;
+adjustSpriteX = 0;
+adjustSpriteY = 0;
+
+idleAnim = s_idle;
+walkAnim = s_0102loop_slow;
+jumpAnim = s_jump_51;
+painAnim = s_pain;
+dodgeAnim = s_dodge;
+sleepAnim = s_crouch;
+criticalAnim = s_crouch;
+deadAnim = s_die;
+
+randomNames=Elemental Crystal;
+
+[JournalEntry]
+ID=ari_journal_elemental_crystal;
+category=creature; halfPage=true; rarity=2;
+title=Elemental Crystal;
+text=<actorBig=ari_elemental_crystal><title=Elemental Crystal><brAdj=>         A crystallized substance imbued with an element. Completely stationary, it serves as little more than a turret, slinging spells at foes.;
+
+---------------------------------------Fire Crystal
+[ActorPrefab]ID=ari_elemental_crystal_fire; name=Fire Crystal;
+actorTypeID=ari_elemental_crystal;
+skinPalette=p31;
+clothPalette=pB;
+armorPalette=pR;
+actorClass=scholar;
+skill_Fire=4;
+Sch_flame=3;
+numRanksBought=Sch_flame=3;
+action1=Sch_flame;
+
+---------------------------------------Ice Crystal
+[ActorPrefab]ID=ari_elemental_crystal_ice; name=Ice Crystal;
+actorTypeID=ari_elemental_crystal;
+skinPalette=pBlue;
+clothPalette=pB;
+armorPalette=pR;
+actorClass=scholar;
+skill_Ice=4;
+Sch_frost=3;
+numRanksBought=Sch_frost=3;
+action1=Sch_frost;
+
+

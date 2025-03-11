@@ -1,0 +1,149 @@
+------BLEEDING
+[ActorValue]
+ID=mafe_bleeding1;
+name=Bleeding!;
+icon=Bleeding!;
+bubbleIcon=Bleeding!_Override;
+--minimum=0;
+maximum=100;
+removedByNegativeMagnitude=true;
+description=...;
+AIValue= 0;
+defaultValue = 0; AIValue = 0;
+harmfulMagnitude = 1;
+bonusesMultiplier = 1;
+animationOnHarmful = pain;
+affectsActors = true;
+canAffectIncapped = false;
+showDamageNumbers = true;
+showDamageNumbersMagnitude = false;
+showDamageNumbersSign = false;
+showDamageNumbersIcon = true;
+showDamageNumbersElements = false;
+showDamageNumbersIconInTooltips = true;
+damageNumberColor_Positive = White;
+damageNumberColor_Negative = White;
+actorPaletteOverride =;
+actorPaletteOverrideDuration = 0.27;
+elementReactionModifiesDuration = false;
+canBeRemovedByNonspecificAVEffectRemoval = true;
+recordInActorData = true;
+showEvaluationInfo = true;
+allowDecimalValues = false;
+percentage = false;
+XPCostBase = 0;
+XPCostIncrement = 0;
+XPCostMultiplier = 1;
+XPCostFloorToNearest = 0;
+[ActorValueReaction]
+ID=mafe_bleeding1; actorValues=cure; actorValues=cure_exceptBurn; newID=X; action=mafe_sangra_gone;
+[ActorValueReaction]
+ID=mafe_bleeding1; element=noActionTaken; element=dispel; newID=X; action=mafe_sangra_gone;
+[ActorValueReaction]
+ID=mafe_bleeding1; actorValues=mafe_bleeding1; newID=mafe_bleeding1;
+[ActorValueReaction]
+ID=mafe_bleeding1; element=weaponBuff; action=mafe_sangra_daño;
+[ActorValueReaction]
+ID=mafe_bleeding1; element=moveAbilUsed; action=mafe_sangra_daño2;
+[ActorValueReaction]
+ID=mafe_bleeding1; actorValues=pull; actorValues=push; actorValues=rotate; actorValues=pushAt; actorValues=push_safe; actorValues=mafe_pets_gotGate_d; action=mafe_sangra_daño2;
+[ActorValueReaction]
+ID=mafe_bleeding1; element=ruinTouch; damageMultiplier=1.34;
+
+[Action] ID=mafe_sangra_gone;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=mafe_sangra_gone;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mafe_sangra_gone; 
+	harmful=false; visibleMiss=false; affectIntangible=true; visibleEvaluations=false;
+	actorValue=mafe_bleeding1;
+	magnitude=-t:mafe_bleeding1;
+	chance=100*t:mafe_bleeding1;
+	duration=-2;
+[AvAffecterAoE]
+	ID=mafe_sangra_gone;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+
+[Action] ID=mafe_sangra_daño2;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=mafe_sangra_daño2;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=mafe_sangra_daño2; 
+	fReq=1-tsa:bulwark-tsa:multiscale-lessThan:1:AVrxn:push-lessThan:1:AVrxn:pushAt-lessThan:1:AVrxn:pull-lessThan:1:AVrxn:rotate-lessThan:1:AVrxn:relocate-lessThan:1:AVrxn:drowning-lessThan:1:AVrxn:push_safe;
+	harmful=true; visibleMiss=false; affectIntangible=true;
+	actorValue=HP;
+	magnitude=-c:mafe_bleeding1;
+	chance=100*t:mafe_bleeding1;
+	duration=-2;
+	element=life;
+	element=slash;
+	FXOnHit=manySplatter;
+	FXOnHitColor=Red;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=mafe_sangra_daño2;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=mafe_sangra_daño2; 
+	fReq=1-tsa:bulwark-tsa:multiscale-lessThan:1:AVrxn:push-lessThan:1:AVrxn:pushAt-lessThan:1:AVrxn:pull-lessThan:1:AVrxn:rotate-lessThan:1:AVrxn:relocate-lessThan:1:AVrxn:drowning-lessThan:1:AVrxn:push_safe;
+	harmful=true; visibleMiss=false; affectIntangible=true; visibleEvaluations=false;
+	actorValue=mafe_bleeding1;
+	magnitude=c:mafe_bleeding1*0.5;
+	chance=100*t:mafe_bleeding1;
+	duration=tDur:mafe_bleeding1;
+[AvAffecterAoE]
+	ID=mafe_sangra_daño2;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+
+[Action] ID=mafe_sangra_daño;
+	requiredWeaponElement=weapon;
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+	special=dontDelayOtherActions;
+[ActionAoE] 
+	ID=mafe_sangra_daño;
+	cloneFrom=oneTile;
+	maxRange=12;
+[AvAffecter]
+	ID=mafe_sangra_daño; 
+    useMyAoEWhenAddingAsWeaponAvAffecter=true;
+	harmful=true; visibleMiss=false; affectIntangible=true;
+	actorValue=HP;
+	magnitude=-c:mafe_bleeding1;
+	chance=100*t:mafe_bleeding1;
+	duration=-2;
+	element=life;
+	element=slash;
+	FXOnHit=manySplatter;
+	FXOnHitColor=Red;
+	applyElementToTile=false;
+[AvAffecterAoE]
+	ID=mafe_sangra_daño;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;
+[AvAffecter]
+	ID=mafe_sangra_daño; 
+    useMyAoEWhenAddingAsWeaponAvAffecter=true;
+	harmful=true; visibleMiss=false; affectIntangible=true; visibleEvaluations=false;
+	actorValue=mafe_bleeding1;
+	magnitude=c:mafe_bleeding1*0.5;
+	chance=100*t:mafe_bleeding1;
+	duration=tDur:mafe_bleeding1;
+[AvAffecterAoE]
+	ID=mafe_sangra_daño;
+	cloneFrom=oneTile;
+	aoeCasterAsOrigin=true;

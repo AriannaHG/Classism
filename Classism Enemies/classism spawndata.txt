@@ -1,0 +1,287 @@
+--Wolves in Mount Ignis
+[SpawnData]
+ID=classism_wolfdenspawn1;
+
+minActors = 2;
+maxActors = 5;
+
+minDifferentTypes = 1;
+maxDifferentTypes = 2;
+
+actorTypesMins=ari_wolf=0;
+actorTypesMaxes=ari_wolf=5;
+actorTypesChanceToReroll=ari_wolf=0;
+actorTypesMins=ari_alpha_wolf=0;
+actorTypesMaxes=ari_alpha_wolf=2;
+actorTypesChanceToReroll=ari_alpha_wolf=0;
+
+--optionalItemsPerActor_actorTypeID=spider;
+--optionalItemsPerActor_itemID=silk_spide;
+--optionalItemsChanceToBeNothing=0.8;
+
+factionOverride=classism_wolf;
+valuesDictOverrides=combatTeam=classism_wolf;
+
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 0;
+maxGoldPerActor = 5;
+
+hostile=true;
+
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+
+spawnFX=;
+
+--Random Slimes
+[SpawnData]
+ID=classism_slimespawn1;
+
+minActors = 1;
+maxActors = 4;
+
+minDifferentTypes = 0;
+maxDifferentTypes = 1;
+
+actorTypesMins=ari_slime=0;
+actorTypesMaxes=ari_slime=5;
+actorTypesChanceToReroll=ari_slime=0;
+
+--optionalItemsPerActor_actorTypeID=spider;
+--optionalItemsPerActor_itemID=silk_spide;
+--optionalItemsChanceToBeNothing=0.8;
+
+factionOverride=enemy;
+valuesDictOverrides=combatTeam=enemy;
+
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 0;
+maxGoldPerActor = 2;
+
+hostile=true;
+
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+
+spawnFX=;
+
+--Goblin Huts
+[SpawnData]
+ID=classism_goblinhutspawn1;
+
+minActors = 1;
+maxActors = 2;
+
+minDifferentTypes = 1;
+maxDifferentTypes = 1;
+
+actorTypesMins=ari_goblin_hut=1;
+actorTypesMaxes=ari_goblin_hut=2;
+actorTypesChanceToReroll=ari_goblin_hut=0;
+
+--optionalItemsPerActor_actorTypeID=spider;
+--optionalItemsPerActor_itemID=silk_spide;
+--optionalItemsChanceToBeNothing=0.8;
+
+factionOverride=classism_goblin;
+valuesDictOverrides=combatTeam=classism_goblin;
+
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 0;
+maxGoldPerActor = 20;
+
+hostile=true;
+
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+
+spawnFX=;
+
+-----------------------------------------------------------------Goblins
+------------------------------Weak goblin spawn
+[SpawnData]
+ID=classism_goblinspawn_weak_1;
+minActors = 1;
+maxActors = 2;
+minDifferentTypes = 1;
+maxDifferentTypes = 1;
+actorTypesMins=ari_goblin_normal=1;
+actorTypesMaxes=ari_goblin_normal=2;
+actorTypesChanceToReroll=ari_goblin_normal=0;
+mandatoryItemsPerActor_actorTypeID=ari_goblin_normal;
+mandatoryItemsPerActor_itemID=dagger_wood;
+mandatoryItemsChanceToBeNothing=0.2;
+actorClassesMins=scout=2;
+actorClassesMaxes=scout=2;
+actorClassesChanceToReroll=scout=0;
+
+forbiddenAbilities=Sc_spot;
+forbiddenAbilities=Sc_firstAid;
+forbiddenAbilities=Sc_sidestep;
+forbiddenAbilities=Sc_firestarter;
+
+factionOverride=classism_goblin;
+valuesDictOverrides=combatTeam=classism_goblin;
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 0;
+maxGoldPerActor = 2;
+hostile=true;
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+spawnFX=;
+
+
+------------------------------Normal goblin horde spawn
+[SpawnData]
+ID=classism_goblin_horde1;
+minActors = 3;
+maxActors = 5;
+minDifferentTypes = 1;
+maxDifferentTypes = 1;
+actorTypesMins=ari_goblin_normal=3;
+actorTypesMaxes=ari_goblin_normal=5;
+actorTypesChanceToReroll=ari_goblin_normal=0;
+mandatoryItemsPerActor_actorTypeID=ari_goblin_normal;
+mandatoryItemsPerActor_itemID=dagger_wood;
+mandatoryItemsChanceToBeNothing=0.4;
+actorClassesMins=scout=5;
+actorClassesMaxes=scout=5;
+actorClassesChanceToReroll=scout=0;
+
+forbiddenAbilities=Sc_spot;
+forbiddenAbilities=Sc_firstAid;
+forbiddenAbilities=Sc_sidestep;
+forbiddenAbilities=Sc_firestarter;
+
+factionOverride=classism_goblin;
+valuesDictOverrides=combatTeam=classism_goblin;
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 0;
+maxGoldPerActor = 0;
+hostile=true;
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+spawnFX=;
+
+------------------------------Normal Hobgoblin spawn
+[SpawnData]
+ID=classism_hobgoblin_spawn1;
+minActors = 1;
+maxActors = 2;
+minDifferentTypes = 1;
+maxDifferentTypes = 1;
+actorTypesMins=ari_hobgoblin_normal=1;
+actorTypesMaxes=ari_hobgoblin_normal=2;
+actorTypesChanceToReroll=ari_hobgoblin_normal=0;
+mandatoryItemsPerActor_actorTypeID=ari_hobgoblin_normal;
+mandatoryItemsPerActor_itemID=hammer_iron;
+mandatoryItemsChanceToBeNothing=0.1;
+actorClassesMins=berserker=2;
+actorClassesMaxes=berserker=2;
+actorClassesChanceToReroll=berserker=0;
+
+forbiddenAbilities=Ber_terrorize;
+forbiddenAbilities=Ber_scatter;
+
+factionOverride=classism_goblin;
+valuesDictOverrides=combatTeam=classism_goblin;
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 6;
+maxGoldPerActor = 10;
+hostile=true;
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+spawnFX=;
+
+------------------------------Weak Goblin Shaman spawn
+[SpawnData]
+ID=classism_goblin_shaman_spawn1;
+minActors = 1;
+maxActors = 1;
+minDifferentTypes = 1;
+maxDifferentTypes = 1;
+actorTypesMins=ari_goblin_shaman_normal=1;
+actorTypesMaxes=ari_goblin_shaman_normal=1;
+actorTypesChanceToReroll=ari_goblin_shaman_normal=0;
+mandatoryItemsPerActor_actorTypeID=ari_goblin_shaman_normal;
+mandatoryItemsPerActor_itemID=spear_bone;
+mandatoryItemsChanceToBeNothing=0.1;
+actorClassesMins=sorcerer=1;
+actorClassesMaxes=sorcerer=1;
+actorClassesChanceToReroll=sorcerer=0;
+
+forbiddenAbilities=So_cyclone;
+forbiddenAbilities=So_shockBolts;
+
+factionOverride=classism_goblin;
+valuesDictOverrides=combatTeam=classism_goblin;
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 6;
+maxGoldPerActor = 10;
+hostile=true;
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+spawnFX=;
+
+
+------------------------------Normal goblin spawn
+[SpawnData]
+ID=classism_goblinspawn1;
+
+minActors = 4;
+maxActors = 8;
+
+minDifferentTypes = 1;
+maxDifferentTypes = 3;
+
+actorTypesMins=ari_goblinkin=2;
+actorTypesMaxes=ari_goblinkin=8;
+actorTypesChanceToReroll=ari_goblinkin=0;
+actorTypesMins=ari_hobgoblin=0;
+actorTypesMaxes=ari_hobgoblin=3;
+actorTypesChanceToReroll=ari_hobgoblin=0;
+actorTypesMins=ari_goblin_shaman=0;
+actorTypesMaxes=ari_goblin_shaman=1;
+actorTypesChanceToReroll=ari_goblin_shaman=0;
+
+--optionalItemsPerActor_actorTypeID=spider;
+--optionalItemsPerActor_itemID=silk_spide;
+--optionalItemsChanceToBeNothing=0.8;
+
+factionOverride=classism_goblin;
+valuesDictOverrides=combatTeam=classism_goblin;
+
+--minOptionalLootPerActor = 0;
+--maxOptionalLootPerActor = 1;
+minGoldPerActor = 0;
+maxGoldPerActor = 2;
+
+hostile=true;
+
+canDespawn=true;
+canManipCorpse=true;
+noPassives=true;
+random10percentHPMPBoost=true;
+
+spawnFX=;

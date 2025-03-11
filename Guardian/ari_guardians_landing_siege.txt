@@ -1,0 +1,327 @@
+[ZoneMerge]  ID=ari_guardians_landing_siege; 
+mergeWith=ari_guardians_landing1;
+X=37; Y=0;
+fReq=g:ari_guardians_keep_goblin_siege; 
+dark=True; timeUntilNewDay=21.76619; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=232; darkG=232; darkB=243; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=ocean; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pOrange; zoneGrassPalette=pCGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=zoneDirt; zoneMisc1Palette=p63; zoneMisc2Palette=zoneDirt; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=tree_big; q=1; x=0; y=5;
+[Item] ID=fire_eternal; q=1; x=0; y=6;
+[Item] ID=grass_mid1; q=1; x=0; y=29;
+[Item] ID=tree_huge_br1; q=1; r=-180; x=0; y=31;
+[Item] ID=flowers2; q=1; r=-360; x=0; y=31;
+[Item] ID=tree_huge_br9; q=1; r=270; x=0; y=32;
+[Item] ID=flower2; q=1; x=0; y=32;
+[Item] ID=tree_huge_br5; q=1; r=-90; x=0; y=33;
+[Item] ID=tree_huge_br4; q=1; r=-90; x=0; y=34;
+[Item] ID=flower2; q=1; x=1; y=31;
+[Item] ID=grass_tall1; q=1; x=2; y=29;
+[Item] ID=grass_mid1; q=1; x=2; y=30;
+[Item] ID=brambles_broken; q=1; x=3; y=0;
+[Item] ID=grass_tall1; q=1; x=3; y=8;
+[Item] ID=grass_mid1; q=1; x=3; y=30;
+[Item] ID=brambles_broken; q=1; r=-360; x=4; y=1;
+[Item] ID=grass_mid1; q=1; x=4; y=29;
+[Item] ID=brambles_broken; q=1; r=-360; x=5; y=3;
+[Item] ID=rubble; q=1; r=-360; x=5; y=7;
+[Item] ID=brambles_broken; q=1; x=6; y=2;
+[Item] ID=blood_pool; q=1; x=6; y=5;
+[Item] ID=blood_pool; q=3; x=6; y=7;
+[Item] ID=barrel_broken; q=1; r=-360; x=6; y=11; containerID=0;
+[Item] ID=blood_pool; q=5; x=7; y=6;
+[Item] ID=bones1; q=1; r=90; x=7; y=9;
+[Item] ID=rubble; q=1; x=7; y=10;
+[Item] ID=rubble; q=1; r=-360; x=8; y=2;
+[Item] ID=brambles_broken; q=1; x=8; y=2;
+[Item] ID=travelPoint_4; q=1; r=90; x=8; y=3;
+[Item] ID=skull; q=1; x=8; y=7;
+[Item] ID=ribs1; q=1; x=8; y=8;
+[Item] ID=bone_spine; q=1; r=-90; x=8; y=8;
+[Item] ID=travelPoint_2; q=1; r=270; x=8; y=31;
+[Item] ID=rubble; q=1; r=-360; x=9; y=3;
+[Item] ID=bones1; q=1; r=180; x=9; y=8;
+[Item] ID=fire_eternal; q=1; x=9; y=12;
+[Item] ID=crate_small_damaged; q=1; x=9; y=13; containerID=1;
+[Item] ID=brambles_broken; q=1; x=10; y=1;
+[Item] ID=rubble; q=1; r=-360; x=10; y=16;
+[Item] ID=rubble; q=1; x=11; y=0;
+[Item] ID=tree_big; q=1; x=11; y=3;
+[Item] ID=brambles_broken; q=1; r=-360; x=11; y=4;
+[Item] ID=fire_eternal; q=1; x=11; y=5;
+[Item] ID=lamp_off; q=1; r=270; x=11; y=13;
+[Item] ID=blood_pool; q=2; x=11; y=14;
+[Item] ID=tree; q=1; x=12; y=2;
+[Item] ID=tree_small; q=1; x=12; y=4;
+[Item] ID=fire_eternal; q=1; x=12; y=8;
+[Item] ID=barrel_broken; q=1; r=-360; x=12; y=11; containerID=2;
+[Item] ID=fire_eternal; q=1; x=12; y=12;
+[Item] ID=crate_small_damaged; q=1; x=12; y=12; containerID=3;
+[Item] ID=barrel_broken; q=1; x=13; y=5; containerID=4;
+[Item] ID=lamp_off; q=1; r=90; x=13; y=8;
+[Item] ID=crate_small_damaged; q=1; x=13; y=10; containerID=5;
+[Item] ID=blood_pool; q=3; x=13; y=13;
+[Item] ID=blood_pool; q=2; x=13; y=20;
+[Item] ID=grass_mid1; q=1; x=13; y=30;
+[Item] ID=flowers2; q=1; r=-360; x=13; y=31;
+[Item] ID=blood_pool; q=3; x=14; y=19;
+[Item] ID=flowers2; q=1; r=-360; x=14; y=30;
+[Item] ID=flower2; q=1; x=14; y=31;
+[Item] ID=grass_tall1; q=1; x=15; y=30;
+[Item] ID=rubble; q=1; x=16; y=9;
+[Item] ID=fire_eternal; q=1; x=16; y=12;
+[Item] ID=grass_mid1; q=1; x=16; y=29;
+[Item] ID=fire_eternal; q=1; x=17; y=11;
+[Item] ID=crate_big_open; q=1; r=-90; x=18; y=9; containerID=6;
+[Item] ID=fire_eternal; q=1; x=18; y=13;
+[Item] ID=fire_eternal; q=1; x=18; y=20;
+[Item] ID=blood_pool; q=3; x=19; y=7;
+[Item] ID=fire_eternal; q=1; x=19; y=10;
+[Item] ID=crate_small_damaged; q=1; r=-360; x=19; y=20; containerID=7;
+[Item] ID=fire_eternal; q=1; x=19; y=21;
+[Item] ID=blood_pool; q=2; x=20; y=6;
+[Item] ID=grass_mid1; q=1; x=20; y=7;
+[Item] ID=crate_small_damaged; q=1; x=20; y=10; containerID=8;
+[Item] ID=fire_eternal; q=1; x=20; y=11;
+[Item] ID=grass_tall1; q=1; x=21; y=7;
+[Item] ID=grass_mid1; q=1; x=21; y=9;
+[Item] ID=barrel_broken; q=1; x=21; y=10; containerID=9;
+[Item] ID=crate_med_open; q=1; r=90; x=21; y=13; containerID=10;
+[Item] ID=grass_tall1; q=1; x=23; y=8;
+[Item] ID=grass_mid1; q=1; x=23; y=9;
+[Item] ID=cantBlackenTile; q=1; x=23; y=12;
+[Item] ID=cantBlackenTile; q=1; x=23; y=13;
+[Item] ID=cantBlackenTile; q=1; x=23; y=14;
+[Item] ID=cantBlackenTile; q=1; x=23; y=15;
+[Item] ID=cantBlackenTile; q=1; x=23; y=16;
+[Item] ID=cantBlackenTile; q=1; x=23; y=17;
+[Item] ID=boulder2; q=1; x=24; y=0;
+[Item] ID=grass_mid1; q=1; x=24; y=9;
+[Item] ID=item_cantGrabOrPlace; q=1; x=24; y=11;
+[Item] ID=cantBlackenTile; q=1; x=24; y=11;
+[Item] ID=cantBlackenTile; q=1; x=24; y=12;
+[Item] ID=cantBlackenTile; q=1; x=24; y=13;
+[Item] ID=cantBlackenTile; q=1; x=24; y=14;
+[Item] ID=cantBlackenTile; q=1; x=24; y=15;
+[Item] ID=cantBlackenTile; q=1; x=24; y=16;
+[Item] ID=cantBlackenTile; q=1; x=24; y=17;
+[Item] ID=cantBlackenTile; q=1; x=24; y=18;
+[Item] ID=boulder2; q=1; r=360; x=25; y=0;
+[Item] ID=boulder3; q=1; r=-360; x=25; y=1;
+[Item] ID=cantBlackenTile; q=1; x=25; y=11;
+[Item] ID=cantBlackenTile; q=1; x=25; y=12;
+[Item] ID=cantBlackenTile; q=1; x=25; y=13;
+[Item] ID=cantBlackenTile; q=1; x=25; y=14;
+[Item] ID=cantBlackenTile; q=1; x=25; y=15;
+[Item] ID=cantBlackenTile; q=1; x=25; y=16;
+[Item] ID=cantBlackenTile; q=1; x=25; y=17;
+[Item] ID=cantBlackenTile; q=1; x=25; y=18;
+[Item] ID=boulder3; q=1; x=26; y=0;
+[Item] ID=cantBlackenTile; q=1; x=26; y=10;
+[Item] ID=cantBlackenTile; q=1; x=26; y=11;
+[Item] ID=cantBlackenTile; q=1; x=26; y=12;
+[Item] ID=cantBlackenTile; q=1; x=26; y=13;
+[Item] ID=cantBlackenTile; q=1; x=26; y=14;
+[Item] ID=cantBlackenTile; q=1; x=26; y=15;
+[Item] ID=cantBlackenTile; q=1; x=26; y=16;
+[Item] ID=cantBlackenTile; q=1; x=26; y=17;
+[Item] ID=cantBlackenTile; q=1; x=26; y=18;
+[Item] ID=cantBlackenTile; q=1; x=26; y=19;
+[Item] ID=boulder3; q=1; r=-90; x=27; y=0;
+[Item] ID=boulder2; q=1; r=-360; x=27; y=1;
+[Item] ID=item_cantGrabOrPlace; q=1; x=27; y=10;
+[Item] ID=cantBlackenTile; q=1; x=27; y=10;
+[Item] ID=cantBlackenTile; q=1; x=27; y=10;
+[Item] ID=cantBlackenTile; q=1; x=27; y=11;
+[Item] ID=cantBlackenTile; q=1; x=27; y=12;
+[Item] ID=cantBlackenTile; q=1; x=27; y=13;
+[Item] ID=cantBlackenTile; q=1; x=27; y=14;
+[Item] ID=cantBlackenTile; q=1; x=27; y=15;
+[Item] ID=cantBlackenTile; q=1; x=27; y=16;
+[Item] ID=cantBlackenTile; q=1; x=27; y=17;
+[Item] ID=cantBlackenTile; q=1; x=27; y=18;
+[Item] ID=cantBlackenTile; q=1; x=27; y=19;
+[Item] ID=item_cantGrabOrPlace; q=1; x=27; y=20;
+[Item] ID=crate_med; q=1; x=27; y=20; containerID=11;
+[Item] ID=cantBlackenTile; q=1; x=27; y=20;
+[Item] ID=cantBlackenTile; q=1; x=27; y=20;
+
+
+[Actor]ID=human_ari_guardians_landing_siege_; name=Redd;
+actorTypeID=human; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=6,6; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=True; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=pHuman1; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=True; dialogNodeID=ari_ep_guardian_guard_greeting0; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=human_head_shortHair1; faceSprite=template_face; legsSprite=template_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=5; HPMax=45; TrueHPMax=45; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=human_ari_guardians_landing_siege_0; name=Hank;
+actorTypeID=human; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=27,12; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=pHuman1; armorPalette=pSteel; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=ari_ep_guardian_guard_greeting0; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=human_head_shortHair1; faceSprite=template_face; legsSprite=template_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=45; HPMax=45; TrueHPMax=45; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=armor_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_steel; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=14; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=spear_steel; cSlot=0; containerID=0;
+[ActorItem] ID=shield_steel; cSlot=1; containerID=1;
+[ActorItem] ID=armor_steel; cSlot=2; containerID=2;
+
+
+[Actor]ID=scurio_ari_guardians_landing_siege_; name=Lorl;
+actorTypeID=scurio; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=19,6; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=True; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pGreen; skinPalette=pScur2; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=True; dialogNodeID=auto; aggressiveness=0.55; bravery=0.45; intelligence=0.5; honor=0.55; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=scur_head; faceSprite=scur_face; legsSprite=scur_legs; armLSprite=npc1_arm; armRSprite=npc1_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=5; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=actTime; sourceAVAffecter=av_scuri1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-2; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=rasmen_ari_guardians_landing_siege_; name=Bore;
+actorTypeID=rasmen; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=13,19; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=True; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pRasmen1; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=True; dialogNodeID=auto; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.55; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=rasmen_head; faceSprite=rasmen_face; legsSprite=template_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=5; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=sight; sourceAVAffecter=av_sight; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEvaFlank; sourceAVAffecter=av_PhysEvaFlank; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=12; duration=-1;
+[ActorEffect]
+ actorValue=blind; sourceAVAffecter=av_unblind; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+[ActorEffect]
+ actorValue=silence; sourceAVAffecter=av_unsilence; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-200; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=human_ari_guardians_landing_siege_1; name=Sky;
+actorTypeID=human; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=25,8; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=pHuman1; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=auto; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=human_head_shortHair1; faceSprite=template_face; legsSprite=template_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ferren_ari_ari_guardians_landing_siege_; name=Silas;
+actorTypeID=ferren; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=21,20; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pSilver; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=auto; aggressiveness=0.4; bravery=0.6; intelligence=0.7; honor=0.7; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ferren_head; faceSprite=scur_face; legsSprite=ferren_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=av_ferren1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=av_ferren2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=15; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ferren_ari_guardians_landing_siege_0; name=Norwe;
+actorTypeID=ferren; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=26,21; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pSilver; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=auto; aggressiveness=0.4; bravery=0.6; intelligence=0.7; honor=0.7; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ferren_head; faceSprite=scur_face; legsSprite=ferren_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=av_ferren1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=av_ferren2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=15; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ferren_ari_guardians_landing_siege_1; name=Bain;
+actorTypeID=ferren; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=12,13; destination=-1,-1; facingRot=540; actualRot=0; incapacitated=True; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=False; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pSilver; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=True; dialogNodeID=auto; aggressiveness=0.4; bravery=0.6; intelligence=0.7; honor=0.7; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ferren_head; faceSprite=scur_face; legsSprite=ferren_legs; armLSprite=template_arm; armRSprite=template_arm; torsoSprite=template_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=5; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=av_ferren1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=av_ferren2; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=15; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=2; aliasID=leaveTo_guardians_goblin_encampment;
+topX=3;topY=33;btmX=12;btmY=34;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=2; effectID=travel_point; sValue=ari_guardians_landing_goblincamp1; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=4; aliasID=;
+topX=14;topY=6;btmX=14;btmY=6;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=4; effectID=; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=6; aliasID=leaveTo_goblinSiege;
+topX=3;topY=0;btmX=13;btmY=1;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=6; effectID=; sValue=; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

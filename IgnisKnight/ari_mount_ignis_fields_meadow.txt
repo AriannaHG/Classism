@@ -1,0 +1,343 @@
+[Zone]  ID=ari_mount_ignis_fields_meadow; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=220; darkG=220; darkB=220; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p43; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=grass_mid1; q=1; x=4; y=26;
+[Item] ID=grass_mid1; q=1; x=5; y=12;
+[Item] ID=grass_mid1; q=1; x=5; y=24;
+[Item] ID=grass_mid1; q=1; x=5; y=25;
+[Item] ID=grass_tall1; q=1; x=6; y=12;
+[Item] ID=grass_mid1; q=1; x=6; y=13;
+[Item] ID=grass_tall1; q=1; x=6; y=20;
+[Item] ID=grass_mid1; q=1; x=6; y=31;
+[Item] ID=grass_mid1; q=1; x=7; y=16;
+[Item] ID=rocks2; q=6; r=360; x=7; y=23;
+[Item] ID=grass_tall1; q=1; x=7; y=31;
+[Item] ID=grass_mid1; q=1; x=7; y=32;
+[Item] ID=grass_mid1; q=1; x=7; y=42;
+[Item] ID=grass_mid1; q=1; x=8; y=15;
+[Item] ID=grass_tall1; q=1; x=8; y=32;
+[Item] ID=grass_mid1; q=1; x=8; y=33;
+[Item] ID=grass_mid1; q=1; x=8; y=40;
+[Item] ID=grass_mid1; q=1; x=8; y=42;
+[Item] ID=grass_tall1; q=1; x=9; y=6;
+[Item] ID=rocks2; q=2; r=360; x=9; y=24;
+[Item] ID=bush1; q=1; x=9; y=41;
+[Item] ID=grass_mid1; q=1; x=10; y=6;
+[Item] ID=grass_mid1; q=1; x=10; y=7;
+[Item] ID=tree_leafy; q=1; r=-360; x=10; y=15;
+[Item] ID=bush1; q=1; x=10; y=37;
+[Item] ID=rocks2; q=1; r=-360; x=10; y=39;
+[Item] ID=rocks2; q=4; x=11; y=12;
+[Item] ID=grass_mid1; q=1; x=11; y=14;
+[Item] ID=grass_tall1; q=1; x=11; y=15;
+[Item] ID=grass_tall1; q=1; x=11; y=26;
+[Item] ID=grass_mid1; q=1; x=12; y=5;
+[Item] ID=rocks2; q=1; x=12; y=11;
+[Item] ID=grass_mid1; q=1; x=12; y=26;
+[Item] ID=flower1; q=1; r=-360; x=12; y=27;
+[Item] ID=tree_huge_br1; q=1; r=-270; x=12; y=28;
+[Item] ID=grass_mid1; q=1; x=12; y=28;
+[Item] ID=tree_huge_br4; q=1; r=90; x=12; y=29;
+[Item] ID=grass_mid1; q=1; x=13; y=6;
+[Item] ID=tree_huge_br9; q=1; r=180; x=13; y=28;
+[Item] ID=tree_huge_br3; q=1; r=-360; x=13; y=29;
+[Item] ID=rocks2; q=2; x=13; y=39;
+[Item] ID=rocks2; q=1; r=360; x=13; y=40;
+[Item] ID=grass_mid1; q=1; x=14; y=5;
+[Item] ID=grass_mid1; q=1; x=14; y=6;
+[Item] ID=grass_mid1; q=1; x=14; y=11;
+[Item] ID=grass_tall1; q=1; oX=0; oY=-2; x=14; y=21;
+[Item] ID=tree_big_leafy; q=1; x=14; y=25;
+[Item] ID=tree_huge_br10; q=1; r=180; x=14; y=27;
+[Item] ID=tree_huge_br7; q=1; r=180; x=14; y=28;
+[Item] ID=tree_huge_mid; q=1; x=14; y=30;
+[Item] ID=tree_huge_bot; q=1; x=14; y=31;
+[Item] ID=flower1; q=1; x=14; y=33;
+[Item] ID=grass_mid1; q=1; x=14; y=44;
+[Item] ID=tree_leafy; q=1; x=15; y=6;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=15; y=11;
+[Item] ID=grass_mid1; q=1; x=15; y=14;
+[Item] ID=rocks2; q=1; x=15; y=16;
+[Item] ID=tree_huge_br9; q=1; r=180; x=15; y=28;
+[Item] ID=tree_huge_br3; q=1; x=15; y=29;
+[Item] ID=grass_mid1; q=1; x=15; y=33;
+[Item] ID=grass_tall1; q=1; x=15; y=44;
+[Item] ID=rocks2; q=2; r=-360; x=16; y=16;
+[Item] ID=tree_big_leafy; q=1; x=16; y=19;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=16; y=23;
+[Item] ID=flowers1; q=1; r=360; x=16; y=25;
+[Item] ID=tree_huge_br1; q=1; r=270; x=16; y=28;
+[Item] ID=tree_huge_br4; q=1; x=16; y=29;
+[Item] ID=grass_tall1; q=1; x=16; y=33;
+[Item] ID=grass_mid1; q=1; x=16; y=43;
+[Item] ID=grass_mid1; q=1; x=17; y=8;
+[Item] ID=grass_tall1; q=1; x=17; y=12;
+[Item] ID=rocks2; q=6; x=17; y=17;
+[Item] ID=tree_leafy; q=1; r=-360; x=17; y=21;
+[Item] ID=flowers1; q=1; x=17; y=31;
+[Item] ID=grass_tall1; q=1; x=17; y=44;
+[Item] ID=grass_tall1; q=1; x=18; y=7;
+[Item] ID=tree_huge_br1; q=1; r=-270; x=18; y=13;
+[Item] ID=tree_huge_br4; q=1; r=90; x=18; y=14;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=18; y=25;
+[Item] ID=tree_big_leafy; q=1; x=18; y=32;
+[Item] ID=tree_leafy; q=1; r=360; x=18; y=36;
+[Item] ID=grass_mid1; q=1; x=18; y=45;
+[Item] ID=tree_huge_br9; q=1; r=180; x=19; y=13;
+[Item] ID=tree_huge_br3; q=1; r=-360; x=19; y=14;
+[Item] ID=flower1; q=1; x=19; y=20;
+[Item] ID=flowers1; q=1; x=19; y=21;
+[Item] ID=rocks2; q=1; x=19; y=39;
+[Item] ID=tree_huge_br10; q=1; r=180; x=20; y=12;
+[Item] ID=tree_huge_br7; q=1; r=180; x=20; y=13;
+[Item] ID=tree_huge_mid; q=1; x=20; y=15;
+[Item] ID=tree_huge_bot; q=1; x=20; y=16;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=20; y=18;
+[Item] ID=rocks2; q=2; r=360; x=21; y=10;
+[Item] ID=tree_huge_br9; q=1; r=180; x=21; y=13;
+[Item] ID=tree_huge_br3; q=1; r=360; x=21; y=14;
+[Item] ID=tree_huge_br1; q=1; r=270; x=22; y=13;
+[Item] ID=tree_huge_br4; q=1; x=22; y=14;
+[Item] ID=grass_tall1; q=1; x=22; y=43;
+[Item] ID=grass_mid1; q=1; x=22; y=44;
+[Item] ID=rocks2; q=1; r=-360; x=23; y=16;
+[Item] ID=grass_mid1; q=1; x=23; y=42;
+[Item] ID=grass_mid1; q=1; x=23; y=44;
+[Item] ID=tree_leafy; q=1; r=360; x=24; y=9;
+[Item] ID=tree_big_leafy; q=1; r=360; x=24; y=13;
+[Item] ID=grass_tall1; q=1; x=24; y=36;
+[Item] ID=grass_mid1; q=1; x=24; y=37;
+[Item] ID=grass_mid1; q=1; x=25; y=4;
+[Item] ID=grass_mid1; q=1; x=25; y=44;
+[Item] ID=bush1; q=1; x=25; y=45;
+[Item] ID=grass_tall1; q=1; x=26; y=3;
+[Item] ID=grass_mid1; q=1; x=26; y=4;
+[Item] ID=rocks2; q=6; r=-360; x=26; y=12;
+[Item] ID=tree_leafy; q=1; r=-360; x=26; y=15;
+[Item] ID=flowers1; q=1; r=-360; x=26; y=28;
+[Item] ID=grass_mid1; q=1; x=26; y=29;
+[Item] ID=tree_leafy; q=1; r=360; x=26; y=31;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=26; y=36;
+[Item] ID=grass_mid1; q=1; x=26; y=44;
+[Item] ID=flower1; q=1; x=27; y=19;
+[Item] ID=tree_big_leafy; q=1; x=27; y=24;
+[Item] ID=tree_leafy; q=1; r=-360; x=27; y=26;
+[Item] ID=grass_tall1; q=1; x=27; y=28;
+[Item] ID=rocks2; q=4; r=360; x=27; y=40;
+[Item] ID=grass_tall1; q=1; x=28; y=4;
+[Item] ID=grass_mid1; q=1; x=28; y=14;
+[Item] ID=tree_leafy; q=1; x=28; y=21;
+[Item] ID=flower1; q=1; x=28; y=33;
+[Item] ID=grass_mid1; q=1; x=29; y=8;
+[Item] ID=tree_leafy; q=1; r=-360; x=29; y=12;
+[Item] ID=grass_mid1; q=1; x=29; y=13;
+[Item] ID=grass_tall1; q=1; x=29; y=14;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=29; y=20;
+[Item] ID=tree_huge_br1; q=1; r=-270; x=29; y=22;
+[Item] ID=tree_huge_br4; q=1; r=90; x=29; y=23;
+[Item] ID=tree_leafy; q=1; r=-360; x=29; y=27;
+[Item] ID=tree_huge_br1; q=1; r=180; x=29; y=29;
+[Item] ID=tree_huge_br9; q=1; r=90; x=29; y=30;
+[Item] ID=tree_huge_br3; q=1; r=90; x=29; y=31;
+[Item] ID=grass_tall1; q=1; x=30; y=8;
+[Item] ID=grass_mid1; q=1; x=30; y=9;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=30; y=13;
+[Item] ID=grass_mid1; q=1; x=30; y=14;
+[Item] ID=grass_mid1; q=1; x=30; y=15;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=30; y=19;
+[Item] ID=tree_huge_br9; q=1; r=180; x=30; y=22;
+[Item] ID=tree_huge_br3; q=1; r=-360; x=30; y=23;
+[Item] ID=flowers1; q=1; x=30; y=26;
+[Item] ID=tree_huge_br4; q=1; r=-180; x=30; y=29;
+[Item] ID=tree_huge_br4; q=1; r=180; x=30; y=29;
+[Item] ID=tree_huge_br7; q=1; r=180; x=30; y=30;
+[Item] ID=tree_huge_mid; q=1; x=30; y=32;
+[Item] ID=tree_huge_bot; q=1; x=30; y=33;
+[Item] ID=grass_tall1; q=1; x=30; y=35;
+[Item] ID=rocks2; q=2; r=360; x=30; y=38;
+[Item] ID=pebbles1; q=1; r=-360; x=31; y=2;
+[Item] ID=tree_leafy; q=1; r=-360; x=31; y=14;
+[Item] ID=tree_huge_br10; q=1; r=180; x=31; y=21;
+[Item] ID=tree_huge_br7; q=1; r=180; x=31; y=22;
+[Item] ID=tree_huge_mid; q=1; x=31; y=24;
+[Item] ID=tree_huge_bot; q=1; x=31; y=25;
+[Item] ID=grass_mid1; q=1; x=31; y=26;
+[Item] ID=tree_huge_br1; q=1; r=-180; x=31; y=29;
+[Item] ID=tree_huge_br9; q=1; r=270; x=31; y=30;
+[Item] ID=tree_huge_br3; q=1; r=-90; x=31; y=31;
+[Item] ID=tree_leafy; q=1; r=360; x=32; y=5;
+[Item] ID=rocks2; q=1; r=360; x=32; y=9;
+[Item] ID=grass_mid1; q=1; x=32; y=14;
+[Item] ID=tree_huge_br9; q=1; r=180; x=32; y=22;
+[Item] ID=tree_huge_br3; q=1; r=360; x=32; y=23;
+[Item] ID=grass_tall1; q=1; x=32; y=26;
+[Item] ID=grass_mid1; q=1; x=32; y=35;
+[Item] ID=rocks2; q=1; r=360; x=32; y=38;
+[Item] ID=rocks2; q=2; r=360; x=33; y=16;
+[Item] ID=tree_huge_br1; q=1; r=270; x=33; y=22;
+[Item] ID=tree_huge_br4; q=1; x=33; y=23;
+[Item] ID=bush1; q=1; r=-360; x=33; y=33;
+[Item] ID=tree_leafy; q=1; r=-360; x=34; y=24;
+[Item] ID=tree_big_leafy; q=1; r=-360; x=35; y=15;
+[Item] ID=grass_tall1; q=1; x=35; y=34;
+[Item] ID=grass_mid1; q=1; x=35; y=42;
+[Item] ID=pebbles2; q=1; r=-360; x=36; y=20;
+[Item] ID=pebbles2; q=1; r=-360; x=36; y=31;
+[Item] ID=rocks2; q=1; r=-360; x=36; y=40;
+[Item] ID=dirt_sandy2; q=1; x=37; y=22;
+[Item] ID=dirt_sandy2; q=2; x=37; y=23;
+[Item] ID=dirt_sandy2; q=1; x=37; y=24;
+[Item] ID=pebbles1; q=1; r=-360; x=37; y=26;
+[Item] ID=grass_mid1; q=1; x=37; y=42;
+[Item] ID=grass_mid1; q=1; x=37; y=45;
+[Item] ID=rubble; q=1; r=-360; x=38; y=11;
+[Item] ID=rubble; q=1; r=-360; x=38; y=13;
+[Item] ID=dirt_sandy2; q=1; x=38; y=19;
+[Item] ID=dirt_sandy2; q=1; x=38; y=20;
+[Item] ID=rubble; q=1; r=-360; x=38; y=27;
+[Item] ID=dirt_sandy2; q=1; x=38; y=29;
+[Item] ID=pebbles1; q=1; r=-360; x=38; y=31;
+[Item] ID=grass_mid1; q=1; x=39; y=3;
+[Item] ID=dirt_sandy2; q=1; x=39; y=11;
+[Item] ID=dirt_sandy2; q=1; x=39; y=12;
+[Item] ID=dirt_sandy2; q=1; x=39; y=13;
+[Item] ID=pebbles1; q=1; r=-360; x=39; y=15;
+[Item] ID=pebbles1; q=1; x=39; y=16;
+[Item] ID=travelPoint_0; q=1; r=180; x=39; y=40;
+[Item] ID=bush1; q=1; r=-360; x=39; y=42;
+[Item] ID=grass_tall1; q=1; x=40; y=2;
+[Item] ID=travelPoint_1; q=1; r=180; x=40; y=5;
+[Item] ID=pebbles1; q=1; r=-360; x=40; y=8;
+[Item] ID=rubble; q=1; x=40; y=20;
+[Item] ID=rockEdge1_overhang; q=1; r=90; x=40; y=22;
+[Item] ID=dirt_sandy2; q=1; r=180; x=40; y=24;
+[Item] ID=dirt_sandy2; q=1; x=40; y=31;
+[Item] ID=dirt_sandy2; q=2; x=40; y=32;
+[Item] ID=pebbles1; q=1; r=360; x=40; y=34;
+[Item] ID=grass_mid1; q=1; x=41; y=3;
+[Item] ID=rubble; q=1; x=41; y=8;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=16;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=17;
+[Item] ID=pebbles1; q=1; r=-360; x=41; y=18;
+[Item] ID=dirt_sandy2; q=1; x=41; y=20;
+[Item] ID=dirt_sandy2; q=1; x=41; y=21;
+[Item] ID=dirt_sandy2; q=1; x=41; y=23;
+[Item] ID=dirt_sandy2; q=1; x=41; y=24;
+[Item] ID=dirt_sandy2; q=1; x=41; y=25;
+[Item] ID=rockEdge1_overhang2; q=1; r=90; x=41; y=26;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=27;
+[Item] ID=rockEdge1_overhang; q=1; r=90; x=41; y=27;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=28;
+[Item] ID=rubble; q=1; r=-360; x=41; y=35;
+[Item] ID=grass_tall1; q=1; x=41; y=46;
+[Item] ID=dirt_sandy2; q=2; x=42; y=7;
+[Item] ID=dirt_sandy2; q=1; x=42; y=8;
+[Item] ID=dirt_sandy2; q=1; r=180; x=42; y=11;
+[Item] ID=rubble; q=1; r=-360; x=42; y=12;
+[Item] ID=pebbles1; q=1; x=42; y=15;
+[Item] ID=dirt_sandy2; q=1; x=42; y=17;
+[Item] ID=dirt_sandy2; q=1; x=42; y=18;
+[Item] ID=pebbles1; q=1; r=-360; x=42; y=21;
+[Item] ID=rubble; q=1; x=42; y=22;
+[Item] ID=rubble; q=1; x=42; y=23;
+[Item] ID=dirt_sandy2; q=2; x=42; y=28;
+[Item] ID=pebbles1; q=1; x=42; y=30;
+[Item] ID=dirt_sandy2; q=1; x=42; y=34;
+[Item] ID=pebbles1; q=1; r=-360; x=42; y=36;
+[Item] ID=dirt_sandy2; q=1; r=180; x=43; y=10;
+[Item] ID=pebbles2; q=1; x=43; y=25;
+[Item] ID=dirt_sandy2; q=1; x=43; y=30;
+[Item] ID=pebbles1; q=1; r=-360; x=44; y=13;
+[Item] ID=rubble; q=1; x=44; y=18;
+[Item] ID=dirt_sandy2; q=1; x=44; y=20;
+[Item] ID=dirt_sandy2; q=1; x=44; y=21;
+[Item] ID=dirt_sandy2; q=2; x=44; y=22;
+[Item] ID=dirt_sandy2; q=1; x=44; y=23;
+[Item] ID=dirt_sandy2; q=1; x=44; y=24;
+[Item] ID=pebbles2; q=1; r=-360; x=44; y=33;
+[Item] ID=dirt_sandy2; q=1; x=44; y=37;
+
+
+[Actor]ID=ari_gnoll_ari_mount_ignis_fields_meadow_; name=Gnoll;
+actorTypeID=ari_gnoll; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=19,14; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=p11; skinPalette=p7; armorPalette=pRed2; unarmoredPalette=pRed2; aiScript=wander_leash5_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_gnoll_head; faceSprite=; legsSprite=ari_gnoll_legs; armLSprite=ari_gnoll_arm; armRSprite=ari_gnoll_arm; torsoSprite=ari_gnoll_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=axe_iron; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_wolf_ari_mount_ignis_fields_meadow_; name=Wolf;
+actorTypeID=ari_wolf; sprite=ari_wolf; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=16,17; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p12; armorPalette=p40; unarmoredPalette=p40; aiScript=wander_leash5_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_wolf_ari_mount_ignis_fields_meadow_0; name=Wolf;
+actorTypeID=ari_wolf; sprite=ari_wolf; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=29,14; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p12; armorPalette=p40; unarmoredPalette=p40; aiScript=wander_leash5_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=1; bravery=0.9; intelligence=0.3; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_gnoll_ari_mount_ignis_fields_meadow_0; name=Gnoll;
+actorTypeID=ari_gnoll; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=28,14; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=p11; skinPalette=p7; armorPalette=pRed2; unarmoredPalette=pRed2; aiScript=wander_leash5_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_gnoll_head; faceSprite=; legsSprite=ari_gnoll_legs; armLSprite=ari_gnoll_arm; armRSprite=ari_gnoll_arm; torsoSprite=ari_gnoll_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=axe_iron; cSlot=0; containerID=0;
+
+
+
+[Trigger] numID=0; aliasID=leaveTo_mountignis_fields;
+topX=42;topY=38;btmX=44;btmY=46;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=ari_mount_ignis_fields1; sValue2=; bValue1=False; bValue2=False; fValue=6; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=leaveTo_mountignisfields_2;
+topX=42;topY=2;btmX=44;btmY=8;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=travel_point; sValue=ari_mount_ignis_fields1; sValue2=; bValue1=False; bValue2=False; fValue=5; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

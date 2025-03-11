@@ -1,0 +1,331 @@
+[Zone]  ID=ari_pirate_cove2_2; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=55; darkG=55; darkB=75; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pYellow4; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=lamp_wall; q=1; r=270; x=4; y=12;
+[Item] ID=pebbles1; q=1; x=5; y=12;
+[Item] ID=pebbles2; q=1; r=360; x=5; y=12;
+[Item] ID=shelves_big_empty2; q=1; x=7; y=5;
+[Item] ID=crate_med_open; q=1; x=7; y=9; containerID=0;
+[Item] ID=boulder3; q=1; x=7; y=15;
+[Item] ID=shelves_big_empty2; q=1; r=-360; x=8; y=5;
+[Item] ID=rocks1; q=4; r=-360; x=8; y=12;
+[Item] ID=pebbles2; q=1; r=-360; x=8; y=16;
+[Item] ID=lamp_wall; q=1; x=9; y=3;
+[Item] ID=pebbles2; q=1; x=9; y=9;
+[Item] ID=pebbles1; q=1; r=-360; x=10; y=6;
+[Item] ID=pebbles1; q=1; r=-360; x=10; y=17;
+[Item] ID=rocks1; q=5; r=-360; x=11; y=8;
+[Item] ID=rocks1; q=2; x=11; y=19;
+[Item] ID=pebbles2; q=1; r=360; x=12; y=4;
+[Item] ID=pebbles1; q=1; r=360; x=12; y=11;
+[Item] ID=pebbles2; q=1; x=12; y=11;
+[Item] ID=shelves_big_empty2; q=1; x=13; y=3;
+[Item] ID=rug_corner_round2; q=1; x=13; y=4;
+[Item] ID=rug_edge2; q=1; r=270; x=13; y=5;
+[Item] ID=rug_edge2; q=1; r=270; x=13; y=6;
+[Item] ID=rug_edge2; q=1; r=270; x=13; y=7;
+[Item] ID=crate_small; q=1; x=13; y=7; containerID=1;
+[Item] ID=rug_corner_round2; q=1; r=270; x=13; y=8;
+[Item] ID=shelves_big_empty1; q=1; r=-360; x=14; y=3;
+[Item] ID=rug_edge2; q=1; x=14; y=4;
+[Item] ID=rug_mid2; q=1; x=14; y=5;
+[Item] ID=rug_mid2; q=1; x=14; y=6;
+[Item] ID=rug_mid2; q=1; x=14; y=7;
+[Item] ID=rug_edge2; q=1; r=180; x=14; y=8;
+[Item] ID=table_left; q=1; x=14; y=8;
+[Item] ID=pebbles2; q=1; r=-360; x=14; y=15;
+[Item] ID=rug_edge2; q=1; x=15; y=4;
+[Item] ID=rug_mid2; q=1; x=15; y=5;
+[Item] ID=rug_mid2; q=1; x=15; y=6;
+[Item] ID=rug_mid2; q=1; x=15; y=7;
+[Item] ID=rug_edge2; q=1; r=180; x=15; y=8;
+[Item] ID=table_mid; q=1; x=15; y=8;
+[Item] ID=lamp; q=1; x=15; y=8;
+[Item] ID=travelPoint_0; q=1; r=270; x=15; y=24;
+[Item] ID=sunbeam_circle_med; q=1; x=15; y=27;
+[Item] ID=rug_edge2; q=1; x=16; y=4;
+[Item] ID=rug_mid2; q=1; x=16; y=5;
+[Item] ID=rug_mid2; q=1; x=16; y=6;
+[Item] ID=rug_mid2; q=1; x=16; y=7;
+[Item] ID=rug_edge2; q=1; r=180; x=16; y=8;
+[Item] ID=table_mid; q=1; x=16; y=8;
+[Item] ID=sunbeam_circle_big; q=1; x=16; y=27;
+[Item] ID=pebbles2; q=1; r=-360; x=17; y=3;
+[Item] ID=rug_edge2; q=1; x=17; y=4;
+[Item] ID=rug_mid2; q=1; x=17; y=5;
+[Item] ID=rug_mid2; q=1; x=17; y=6;
+[Item] ID=rug_mid2; q=1; x=17; y=7;
+[Item] ID=rug_edge2; q=1; r=180; x=17; y=8;
+[Item] ID=table_right; q=1; x=17; y=8;
+[Item] ID=crate_small_damaged; q=1; x=17; y=9; containerID=2;
+[Item] ID=woodPlank; q=1; x=17; y=10;
+[Item] ID=pebbles2; q=1; r=360; x=17; y=22;
+[Item] ID=rug_corner_round2; q=1; r=90; x=18; y=4;
+[Item] ID=rug_edge2; q=1; r=90; x=18; y=5;
+[Item] ID=rug_edge2; q=1; r=90; x=18; y=6;
+[Item] ID=rug_edge2; q=1; r=90; x=18; y=7;
+[Item] ID=rug_corner_round2; q=1; r=180; x=18; y=8;
+[Item] ID=woodPlank; q=1; r=-360; x=18; y=9;
+[Item] ID=pebbles1; q=1; r=360; x=18; y=14;
+[Item] ID=lamp_wall; q=1; x=19; y=1;
+[Item] ID=shelves_big_broken1; q=1; x=20; y=3;
+[Item] ID=pebbles1; q=1; r=360; x=20; y=4;
+[Item] ID=woodPlank; q=1; r=180; x=20; y=4;
+[Item] ID=rocks1; q=5; r=360; x=20; y=6;
+[Item] ID=pebbles2; q=1; r=-360; x=20; y=16;
+[Item] ID=rocks1; q=1; r=-360; x=20; y=20;
+[Item] ID=shelves_big_broken2; q=1; r=-360; x=21; y=3;
+[Item] ID=pebbles2; q=1; r=360; x=21; y=8;
+[Item] ID=rocks1; q=1; r=-360; x=21; y=12;
+[Item] ID=pebbles1; q=1; r=360; x=22; y=5;
+[Item] ID=rocks1; q=6; x=22; y=13;
+[Item] ID=rocks1; q=4; r=360; x=22; y=14;
+[Item] ID=crate_small_damaged; q=1; x=23; y=11; containerID=3;
+[Item] ID=lamp_wall; q=1; r=90; x=23; y=15;
+[Item] ID=rocks1; q=3; r=360; x=25; y=10;
+[Item] ID=lamp_wall; q=1; r=180; x=25; y=11;
+[Item] ID=pebbles1; q=1; r=-360; x=27; y=9;
+[Item] ID=pebbles1; q=1; r=-360; x=28; y=6;
+[Item] ID=sunbeam; q=1; x=33; y=0;
+[Item] ID=pebbles2; q=1; r=-360; x=33; y=5;
+[Item] ID=pebbles2; q=1; x=34; y=4;
+[Item] ID=rocks1; q=1; r=360; x=34; y=9;
+[Item] ID=sunbeam_circle_small_dull; q=1; x=35; y=7;
+[Item] ID=pebbles1; q=1; x=35; y=9;
+[Item] ID=chest_wood1; q=1; x=36; y=3; containerID=4;
+[Item] ID=gp; q=1; containedIn=4; cSlot=6;
+[Item] ID=gp; q=1; containedIn=4; cSlot=8;
+[Item] ID=pebbles2; q=1; x=37; y=3;
+[Item] ID=pebbles1; q=1; r=-360; x=37; y=5;
+[Item] ID=pebbles2; q=1; r=-360; x=37; y=11;
+[Item] ID=rocks1; q=2; r=360; x=38; y=5;
+[Item] ID=gp; q=1; x=38; y=8;
+[Item] ID=rocks1; q=1; r=-360; x=38; y=13;
+[Item] ID=chest_wood2_open; q=1; x=39; y=9; containerID=5;
+[Item] ID=food; q=3; containedIn=5; cSlot=2;
+[Item] ID=loot_gp3; q=1; containedIn=5; cSlot=5;
+[Item] ID=woodPlank; q=1; x=39; y=10;
+[Item] ID=chest_wood2; q=1; x=39; y=13; containerID=6;
+[Item] ID=loot_gp3; q=1; containedIn=6; cSlot=5;
+[Item] ID=sunbeam_circle_big_dull; q=1; x=40; y=9;
+[Item] ID=rocks1; q=6; x=41; y=6;
+[Item] ID=loot_gp3; q=1; x=41; y=10;
+[Item] ID=sunbeam_flipped; q=1; r=180; x=42; y=2;
+[Item] ID=chest_wood1; q=1; x=42; y=6; containerID=7;
+[Item] ID=woodPlank; q=1; containedIn=7; cSlot=4;
+[Item] ID=woodPlank; q=1; containedIn=7; cSlot=12;
+[Item] ID=chest_wood2; q=1; x=42; y=9; containerID=8;
+[Item] ID=loot_gp3; q=1; containedIn=8; cSlot=5;
+[Item] ID=pebbles1; q=1; r=-360; x=43; y=11;
+[Item] ID=rocks1; q=1; r=-360; x=44; y=7;
+[Item] ID=rocks1; q=4; x=44; y=8;
+[Item] ID=rocks1; q=4; r=-360; x=44; y=12;
+
+
+[Actor]ID=human_ari_pirate_cove2_2_; name=Bevar;
+actorTypeID=human; sprite=; actorClass=sailor; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=8,11; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pHuman3; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=human_head_shortHair2; faceSprite=meh_face; legsSprite=legs_lightArmor; armLSprite=sailor_arm; armRSprite=sailor_arm; torsoSprite=sailor_torso; shoulderLSprite=sailor_shoulder; shoulderRSprite=sailor_shoulder; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; Sai_steady=1; sailor_XP=0; Sai_swagger=1; 
+numRanksBought=Sai_steady=1; 
+numRanksBought=Sai_swagger=1; 
+chosenAbilityOfEachClass=sailor=Sai_heave; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=shield_wood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=9; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=hood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fist; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=sword_wood; cSlot=0; containerID=0;
+[ActorItem] ID=shield_wood; cSlot=1; containerID=1;
+[ActorItem] ID=hood; cSlot=3;
+
+
+[Actor]ID=human_ari_pirate_cove2_2_1; name=Jay;
+actorTypeID=human; sprite=; actorClass=sailor; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=6; position=21,11; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pHuman4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=human_head_shortHair4; faceSprite=sleepy_face; legsSprite=template_legs; armLSprite=sailor_arm; armRSprite=sailor_arm; torsoSprite=sailor_torso; shoulderLSprite=sailor_shoulder; shoulderRSprite=sailor_shoulder; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; Sai_heave=1; sailor_XP=0; Sai_steady=1; 
+numRanksBought=Sai_heave=1; 
+numRanksBought=Sai_steady=1; 
+chosenAbilityOfEachClass=sailor=Sai_heave; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=hood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fist; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+[ActorItem] ID=hood; cSlot=3;
+
+
+[Actor]ID=scurio_ari_pirate_cove2_2_; name=Alles;
+actorTypeID=scurio; sprite=; actorClass=sailor; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=8; position=13,9; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pGreen; skinPalette=pYellow3; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.55; bravery=0.45; intelligence=0.5; honor=0.55; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=scur_head3; faceSprite=scur_face_scar; legsSprite=scur_legs_boots; armLSprite=sailor_arm; armRSprite=sailor_arm; torsoSprite=sailor_torso; shoulderLSprite=sailor_shoulder; shoulderRSprite=sailor_shoulder; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; Sai_rope=1; sailor_XP=0; Sai_swagger=1; 
+numRanksBought=Sai_rope=1; 
+numRanksBought=Sai_swagger=1; 
+chosenAbilityOfEachClass=sailor=Sai_heave; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=actTime; sourceAVAffecter=av_scuri1; hideAllEffects=True; showNoDescription=True; durationIsWorldtimeDays=False; magnitude=-2; duration=-1;
+[ActorEffect]
+ actorValue=PhysAtk; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=2; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Sword; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Axe; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Hammer; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Spear; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Flail; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fist; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=sailor; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+[ActorItem] ID=dagger_wood; cSlot=1; containerID=1;
+
+
+[Actor]ID=ari_redhand_pirate_ari_pirate_cove2_2_0; name=Red-Hand;
+actorTypeID=human; sprite=; actorClass=bombardier; secondaryClass=sailor; actorClass3=; actorClass4=; movementSpeed=6; position=16,7; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=False; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=True; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pHuman1; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=talkWhenCritical; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=ari_ep_redhand_escape1; aggressiveness=0.5; bravery=0.5; intelligence=0.5; honor=0.4; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=human_head_shortHair3; faceSprite=angry_face; legsSprite=template_legs; armLSprite=bombardier_arm; armRSprite=bombardier_arm; torsoSprite=bombardier_torso; shoulderLSprite=bombardier_shoulder; shoulderRSprite=bombardier_shoulder; backSprite=;
+ supportAbilities=escapeGate_fake;  supportAbilities=activeArms;  supportAbilities=; ari_redhand_active_bomber=1; Bom_activate=2; bombardier_XP=0; Bom_throwFlare=3; activeArms=1; mechMastery=1; 
+numRanksBought=ari_redhand_active_bomber=1; 
+numRanksBought=Bom_activate=2; 
+numRanksBought=Bom_throwFlare=3; 
+numRanksBought=activeArms=1; 
+numRanksBought=mechMastery=1; 
+chosenAbilityOfEachClass=sailor=Sai_heave; 
+chosenAbilityOfEachClass=bombardier=Bom_activate; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=cloak; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=6; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=hood; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=PhysDef; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=PhysEva; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=3; duration=-1;
+[ActorEffect]
+ actorValue=skill_Dagger; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Aim; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Life; sourceAVAffecter=bombardier; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=xbow_iron; cSlot=0; containerID=0;
+[ActorItem] ID=cloak; cSlot=2;
+[ActorItem] ID=hood; cSlot=3;
+
+
+
+[Trigger] numID=0; aliasID=leaveTo_piratecove2_1;
+topX=14;topY=26;btmX=18;btmY=27;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=ari_pirate_cove2_1; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=pirate_cove_redhand_combat;
+topX=5;topY=11;btmX=24;btmY=15;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=talk; sValue=ari_redhand_pirate_ari_pirate_cove2_2_0; sValue2=ari_ep_redhand_battle_1; bValue1=True; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

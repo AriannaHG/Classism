@@ -1,0 +1,611 @@
+[Zone]  ID=ari_deepearth_delve3_1; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=45; darkG=65; darkB=15; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=pYellow4; zoneGrassPalette=pGreen2; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pSepia; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=sunbeam; q=1; x=0; y=19;
+[Item] ID=loot_gp_much; q=1; x=1; y=22;
+[Item] ID=plant_small3; q=1; r=-360; x=1; y=23;
+[Item] ID=rocks1; q=4; r=360; x=1; y=26;
+[Item] ID=plant_small1; q=1; r=-360; x=2; y=23;
+[Item] ID=grass_mid1; q=1; x=2; y=24;
+[Item] ID=sunbeam_circle_med_dull; q=1; x=2; y=26;
+[Item] ID=rocks1; q=2; r=-360; x=2; y=27;
+[Item] ID=plant_small3; q=1; x=3; y=17;
+[Item] ID=grass_mid1; q=1; x=3; y=18;
+[Item] ID=brambles; q=1; x=3; y=19;
+[Item] ID=rocks1; q=1; r=-360; x=3; y=22;
+[Item] ID=plant_small1; q=1; r=-360; x=3; y=28;
+[Item] ID=plant_small3; q=1; r=360; x=3; y=28;
+[Item] ID=rocks1; q=1; r=360; x=4; y=15;
+[Item] ID=loot_gp_much; q=1; x=4; y=16;
+[Item] ID=plant_small2; q=1; r=-360; x=4; y=17;
+[Item] ID=brambles_broken; q=1; r=-360; x=4; y=18;
+[Item] ID=plant_small1; q=1; r=360; x=4; y=19;
+[Item] ID=plant_small2; q=1; r=-360; x=4; y=25;
+[Item] ID=plant_small3; q=1; r=-360; x=4; y=28;
+[Item] ID=rocks1; q=4; r=360; x=5; y=14;
+[Item] ID=loot_gp_much; q=1; x=5; y=14;
+[Item] ID=bush2; q=1; x=5; y=19;
+[Item] ID=plant_small1; q=1; r=360; x=5; y=22;
+[Item] ID=rocks1; q=1; r=360; x=5; y=24;
+[Item] ID=plant_small1; q=1; r=-360; x=5; y=27;
+[Item] ID=loot_gp_much; q=1; x=6; y=19;
+[Item] ID=plant_small1; q=1; r=-360; x=6; y=22;
+[Item] ID=grass_mid1; q=1; x=6; y=25;
+[Item] ID=brambles; q=1; x=7; y=20;
+[Item] ID=rocks1; q=1; x=7; y=29;
+[Item] ID=rocks1; q=6; r=-360; x=7; y=33;
+[Item] ID=brambles; q=1; r=360; x=8; y=18;
+[Item] ID=plant_small1; q=1; r=-360; x=8; y=19;
+[Item] ID=rocks1; q=2; r=-360; x=8; y=30;
+[Item] ID=rocks1; q=2; r=360; x=8; y=33;
+[Item] ID=rocks1; q=1; x=9; y=8;
+[Item] ID=rocks1; q=2; r=-360; x=10; y=12;
+[Item] ID=plant_small1; q=1; x=10; y=19;
+[Item] ID=plant_small2; q=1; x=10; y=19;
+[Item] ID=brambles; q=1; r=-360; x=11; y=12;
+[Item] ID=plant_small2; q=1; r=-360; x=11; y=13;
+[Item] ID=grass_mid1; q=1; x=11; y=15;
+[Item] ID=rocks1; q=2; r=360; x=11; y=18;
+[Item] ID=plant_small1; q=1; r=-360; x=12; y=12;
+[Item] ID=bush2; q=1; r=-360; x=12; y=15;
+[Item] ID=bush2; q=1; r=-360; x=12; y=18;
+[Item] ID=bush2; q=1; x=12; y=20;
+[Item] ID=grass_mid1; q=1; x=13; y=6;
+[Item] ID=bush2; q=1; r=-360; x=13; y=10;
+[Item] ID=brambles; q=1; x=13; y=19;
+[Item] ID=grass_mid1; q=1; x=13; y=20;
+[Item] ID=bush2; q=1; r=360; x=14; y=6;
+[Item] ID=rocks1; q=1; r=-360; x=14; y=7;
+[Item] ID=brambles; q=1; x=14; y=21;
+[Item] ID=grass_mid1; q=1; x=14; y=36;
+[Item] ID=plant_small2; q=1; r=-360; x=15; y=20;
+[Item] ID=plant_small1; q=1; r=360; x=15; y=21;
+[Item] ID=rocks1; q=1; x=15; y=31;
+[Item] ID=brambles; q=1; x=15; y=34;
+[Item] ID=brambles; q=1; r=-360; x=15; y=35;
+[Item] ID=plant_small3; q=1; r=-360; x=15; y=36;
+[Item] ID=rocks1; q=3; r=-360; x=16; y=6;
+[Item] ID=sunbeam; q=1; x=16; y=13;
+[Item] ID=plant_small1; q=1; r=-360; x=16; y=21;
+[Item] ID=sunbeam_flipped; q=1; r=-360; x=16; y=27;
+[Item] ID=plant_small1; q=1; r=-360; x=16; y=33;
+[Item] ID=plant_small3; q=1; r=-360; x=16; y=34;
+[Item] ID=rocks1; q=1; r=-360; x=16; y=45;
+[Item] ID=grass_mid1; q=1; x=16; y=46;
+[Item] ID=sunbeam; q=1; x=17; y=13;
+[Item] ID=pebbles1; q=1; r=-360; x=17; y=15;
+[Item] ID=grass_mid1; q=1; x=17; y=23;
+[Item] ID=plant_small1; q=1; r=360; x=17; y=34;
+[Item] ID=rocks1; q=6; r=-360; x=17; y=36;
+[Item] ID=plant_small1; q=1; r=360; x=17; y=38;
+[Item] ID=grass_mid1; q=1; x=17; y=45;
+[Item] ID=rocks1; q=6; r=360; x=18; y=15;
+[Item] ID=rocks1; q=4; r=360; x=18; y=22;
+[Item] ID=plant_small1; q=1; r=-360; x=18; y=35;
+[Item] ID=plant_small3; q=1; r=-360; x=18; y=40;
+[Item] ID=grass_mid1; q=1; x=18; y=40;
+[Item] ID=sunbeam_circle_big_dull; q=1; x=19; y=20;
+[Item] ID=rocks1; q=1; x=19; y=28;
+[Item] ID=sunbeam_circle_med_dull; q=1; x=19; y=34;
+[Item] ID=plant_small3; q=1; r=360; x=19; y=36;
+[Item] ID=plant_small3; q=1; r=360; x=19; y=39;
+[Item] ID=rocks1; q=3; x=19; y=40;
+[Item] ID=brambles; q=1; r=-360; x=19; y=43;
+[Item] ID=rocks1; q=3; r=360; x=20; y=28;
+[Item] ID=plant_small1; q=1; r=-360; x=20; y=39;
+[Item] ID=grass_mid1; q=1; x=20; y=41;
+[Item] ID=plant_small3; q=1; r=-360; x=20; y=43;
+[Item] ID=pebbles1; q=1; r=360; x=21; y=9;
+[Item] ID=plant_small3; q=1; r=-360; x=21; y=18;
+[Item] ID=plant_small2; q=1; r=360; x=21; y=19;
+[Item] ID=plant_small2; q=1; r=-360; x=21; y=20;
+[Item] ID=plant_small2; q=1; r=360; x=21; y=20;
+[Item] ID=rocks1; q=2; x=21; y=40;
+[Item] ID=bush2; q=1; r=-360; x=22; y=13;
+[Item] ID=brambles; q=1; x=22; y=14;
+[Item] ID=plant_small3; q=1; r=360; x=22; y=15;
+[Item] ID=grass_mid1; q=1; x=22; y=17;
+[Item] ID=bush2; q=1; r=360; x=22; y=18;
+[Item] ID=brambles; q=1; r=-360; x=22; y=42;
+[Item] ID=rocks1; q=1; r=360; x=23; y=10;
+[Item] ID=rocks1; q=1; r=-360; x=23; y=20;
+[Item] ID=rocks1; q=3; r=-360; x=23; y=26;
+[Item] ID=rocks1; q=1; r=360; x=23; y=41;
+[Item] ID=rocks1; q=3; r=-360; x=24; y=9;
+[Item] ID=pebbles1; q=1; r=-360; x=24; y=14;
+[Item] ID=bush2; q=1; r=360; x=24; y=23;
+[Item] ID=rocks1; q=4; r=-360; x=24; y=27;
+[Item] ID=plant_small3; q=1; x=25; y=9;
+[Item] ID=rocks1; q=2; r=-360; x=25; y=22;
+[Item] ID=plant_small3; q=1; r=360; x=25; y=37;
+[Item] ID=rocks1; q=4; r=360; x=25; y=40;
+[Item] ID=plant_small1; q=1; x=26; y=9;
+[Item] ID=rocks1; q=1; r=-360; x=26; y=23;
+[Item] ID=rocks1; q=2; r=360; x=26; y=26;
+[Item] ID=brambles; q=1; r=-360; x=27; y=8;
+[Item] ID=bush2; q=1; r=360; x=27; y=22;
+[Item] ID=brambles; q=1; r=-360; x=27; y=38;
+[Item] ID=cliff_water2; q=1; r=270; x=28; y=3;
+[Item] ID=plant_small1; q=1; r=-360; x=28; y=6;
+[Item] ID=grass_mid1; q=1; x=28; y=22;
+[Item] ID=plant_small2; q=1; r=-360; x=28; y=23;
+[Item] ID=grass_mid1; q=1; x=28; y=38;
+[Item] ID=plant_small1; q=1; r=360; x=29; y=8;
+[Item] ID=plant_small2; q=1; r=360; x=29; y=8;
+[Item] ID=pebbles1; q=1; r=-360; x=29; y=12;
+[Item] ID=rocks1; q=2; r=360; x=29; y=33;
+[Item] ID=brambles; q=1; r=-360; x=29; y=36;
+[Item] ID=plant_small3; q=1; r=360; x=29; y=38;
+[Item] ID=pebbles1; q=1; x=30; y=7;
+[Item] ID=grass_mid1; q=1; x=30; y=8;
+[Item] ID=plant_small3; q=1; r=360; x=30; y=22;
+[Item] ID=plant_small3; q=1; r=-360; x=31; y=2;
+[Item] ID=plant_small3; q=1; r=-360; x=31; y=8;
+[Item] ID=plant_small2; q=1; r=-360; x=31; y=8;
+[Item] ID=bush2; q=1; r=-360; x=31; y=21;
+[Item] ID=grass_mid1; q=1; x=31; y=37;
+[Item] ID=plant_small2; q=1; r=-360; x=31; y=38;
+[Item] ID=grass_mid1; q=1; x=32; y=2;
+[Item] ID=rocks1; q=6; r=360; x=32; y=20;
+[Item] ID=plant_small2; q=1; r=-360; x=32; y=21;
+[Item] ID=plant_small2; q=1; r=360; x=32; y=24;
+[Item] ID=bush2; q=1; r=-360; x=32; y=30;
+[Item] ID=plant_small2; q=1; x=32; y=31;
+[Item] ID=brambles; q=1; r=-360; x=33; y=1;
+[Item] ID=plant_small1; q=1; x=33; y=2;
+[Item] ID=plant_small3; q=1; r=360; x=33; y=2;
+[Item] ID=bush2; q=1; x=33; y=6;
+[Item] ID=grass_mid1; q=1; x=33; y=21;
+[Item] ID=bush2; q=1; x=33; y=24;
+[Item] ID=grass_mid1; q=1; x=33; y=29;
+[Item] ID=bush2; q=1; r=-360; x=34; y=1;
+[Item] ID=barrel_open; q=1; r=-360; x=34; y=12; containerID=0;
+[Item] ID=loot_none; q=1; containedIn=0; cSlot=0;
+[Item] ID=loot_none; q=1; containedIn=0; cSlot=1;
+[Item] ID=loot_none; q=1; containedIn=0; cSlot=2;
+[Item] ID=loot0; q=1; containedIn=0; cSlot=3;
+[Item] ID=loot1; q=1; containedIn=0; cSlot=4;
+[Item] ID=loot0; q=1; containedIn=0; cSlot=7;
+[Item] ID=rocks1; q=1; r=360; x=34; y=22;
+[Item] ID=grass_mid1; q=1; x=34; y=25;
+[Item] ID=grass_mid1; q=1; x=34; y=26;
+[Item] ID=plant_small2; q=1; x=34; y=27;
+[Item] ID=plant_small3; q=1; r=-360; x=34; y=27;
+[Item] ID=bush2; q=1; x=34; y=28;
+[Item] ID=plant_small2; q=1; r=-360; x=35; y=1;
+[Item] ID=barrel_open; q=1; x=35; y=12; containerID=1;
+[Item] ID=loot_none; q=1; containedIn=1; cSlot=0;
+[Item] ID=loot_none; q=1; containedIn=1; cSlot=1;
+[Item] ID=loot0; q=1; containedIn=1; cSlot=2;
+[Item] ID=loot3; q=1; containedIn=1; cSlot=3;
+[Item] ID=loot_none; q=1; containedIn=1; cSlot=5;
+[Item] ID=loot_none; q=1; containedIn=1; cSlot=6;
+[Item] ID=loot3; q=1; containedIn=1; cSlot=7;
+[Item] ID=sunbeam_circle_med_dull; q=1; x=35; y=24;
+[Item] ID=plant_small2; q=1; r=-360; x=35; y=27;
+[Item] ID=rocks1; q=3; r=360; x=35; y=28;
+[Item] ID=plant_small3; q=1; r=360; x=35; y=29;
+[Item] ID=rocks1; q=2; r=-360; x=35; y=35;
+[Item] ID=rocks1; q=3; r=360; x=35; y=36;
+[Item] ID=rocks1; q=2; x=36; y=1;
+[Item] ID=barrel_open; q=1; x=36; y=1; containerID=2;
+[Item] ID=loot_none; q=1; containedIn=2; cSlot=1;
+[Item] ID=loot0; q=1; containedIn=2; cSlot=3;
+[Item] ID=loot0; q=1; containedIn=2; cSlot=4;
+[Item] ID=loot_none; q=1; containedIn=2; cSlot=5;
+[Item] ID=rocks1; q=1; x=36; y=8;
+[Item] ID=rocks1; q=2; x=36; y=20;
+[Item] ID=grass_mid1; q=1; x=36; y=27;
+[Item] ID=bush2; q=1; r=360; x=36; y=34;
+[Item] ID=rocks1; q=1; r=360; x=36; y=35;
+[Item] ID=pebbles1; q=1; r=-360; x=37; y=2;
+[Item] ID=pebbles1; q=1; r=-360; x=37; y=8;
+[Item] ID=rocks1; q=4; r=-360; x=37; y=9;
+[Item] ID=sunbeam; q=1; r=-180; x=37; y=17;
+[Item] ID=rocks1; q=1; x=37; y=34;
+[Item] ID=grass_mid1; q=1; x=38; y=33;
+[Item] ID=grass_mid1; q=1; x=39; y=12;
+[Item] ID=rocks1; q=1; x=39; y=20;
+[Item] ID=grass_mid1; q=1; x=39; y=26;
+[Item] ID=rocks1; q=1; r=-360; x=39; y=30;
+[Item] ID=plant_small2; q=1; r=-360; x=39; y=31;
+[Item] ID=plant_small3; q=1; r=-360; x=39; y=31;
+[Item] ID=bush2; q=1; r=-360; x=39; y=33;
+[Item] ID=plant_small3; q=1; r=360; x=39; y=35;
+[Item] ID=plant_small1; q=1; r=-360; x=40; y=2;
+[Item] ID=bush2; q=1; r=-360; x=40; y=3;
+[Item] ID=plant_small3; q=1; r=360; x=40; y=12;
+[Item] ID=plant_small3; q=1; x=40; y=23;
+[Item] ID=plant_small3; q=1; r=-360; x=40; y=23;
+[Item] ID=rocks1; q=1; r=-360; x=40; y=26;
+[Item] ID=bush2; q=1; r=-360; x=40; y=29;
+[Item] ID=rocks1; q=2; r=-360; x=40; y=31;
+[Item] ID=grass_mid1; q=1; x=40; y=32;
+[Item] ID=grass_mid1; q=1; x=40; y=34;
+[Item] ID=brambles; q=1; r=-360; x=41; y=3;
+[Item] ID=plant_small3; q=1; r=-360; x=41; y=4;
+[Item] ID=plant_small2; q=1; r=-360; x=41; y=4;
+[Item] ID=grass_mid1; q=1; x=41; y=6;
+[Item] ID=brambles; q=1; r=-360; x=41; y=14;
+[Item] ID=grass_mid1; q=1; x=41; y=23;
+[Item] ID=grass_mid1; q=1; x=41; y=30;
+[Item] ID=bush2; q=1; r=360; x=41; y=31;
+[Item] ID=plant_small2; q=1; r=360; x=41; y=32;
+[Item] ID=brambles; q=1; x=42; y=4;
+[Item] ID=brambles; q=1; x=42; y=5;
+[Item] ID=plant_small2; q=1; r=360; x=42; y=13;
+[Item] ID=plant_small2; q=1; r=-360; x=42; y=21;
+[Item] ID=grass_mid1; q=1; x=42; y=22;
+[Item] ID=plant_small3; q=1; r=360; x=42; y=30;
+[Item] ID=brambles; q=1; x=43; y=5;
+[Item] ID=plant_small1; q=1; r=-360; x=43; y=13;
+[Item] ID=grass_mid1; q=1; x=43; y=14;
+[Item] ID=bush2; q=1; r=-360; x=43; y=22;
+[Item] ID=plant_small1; q=1; r=-360; x=44; y=5;
+[Item] ID=plant_small3; q=1; r=-360; x=44; y=5;
+[Item] ID=rocks1; q=1; r=-360; x=44; y=9;
+[Item] ID=plant_small2; q=1; r=360; x=44; y=14;
+[Item] ID=grass_mid1; q=1; x=44; y=22;
+[Item] ID=plant_small3; q=1; r=360; x=45; y=6;
+[Item] ID=plant_small2; q=1; x=45; y=6;
+[Item] ID=grass_mid1; q=1; x=45; y=22;
+[Item] ID=pebbles1; q=1; r=360; x=46; y=7;
+[Item] ID=barrel_open; q=1; x=46; y=7; containerID=3;
+[Item] ID=loot0; q=1; containedIn=3; cSlot=0;
+[Item] ID=loot_none; q=1; containedIn=3; cSlot=2;
+[Item] ID=loot_none; q=1; containedIn=3; cSlot=3;
+[Item] ID=loot_none; q=1; containedIn=3; cSlot=4;
+[Item] ID=loot_none; q=1; containedIn=3; cSlot=5;
+[Item] ID=loot_none; q=1; containedIn=3; cSlot=6;
+[Item] ID=loot_none; q=1; containedIn=3; cSlot=8;
+[Item] ID=bush2; q=1; r=360; x=46; y=9;
+[Item] ID=plant_small2; q=1; r=-360; x=46; y=10;
+[Item] ID=grass_mid1; q=1; x=46; y=10;
+[Item] ID=pebbles1; q=1; r=360; x=46; y=12;
+[Item] ID=grass_mid1; q=1; x=46; y=22;
+[Item] ID=travelPoint_0; q=1; r=180; x=46; y=25;
+[Item] ID=rocks1; q=4; r=360; x=46; y=28;
+[Item] ID=brambles; q=1; r=-360; x=47; y=9;
+[Item] ID=plant_small1; q=1; r=360; x=47; y=10;
+[Item] ID=plant_small3; q=1; r=360; x=47; y=23;
+
+
+[Actor]ID=ari_goblin_hut_ari_deepearth_delve3_1_; name=Goblin Hut;
+actorTypeID=ari_goblin_hut; sprite=ari_goblin_hut; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=30,5; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pG; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.1; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_goblin_hut_ari_deepearth_delve3_1_0; name=Goblin Hut;
+actorTypeID=ari_goblin_hut; sprite=ari_goblin_hut; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=42,11; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pG; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.1; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_goblin_hut_ari_deepearth_delve3_1_1; name=Goblin Hut;
+actorTypeID=ari_goblin_hut; sprite=ari_goblin_hut; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=6,15; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pG; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.1; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_goblin_hut_ari_deepearth_delve3_1_2; name=Goblin Hut;
+actorTypeID=ari_goblin_hut; sprite=ari_goblin_hut; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=18,41; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pG; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.1; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_goblin_hut_ari_deepearth_delve3_1_3; name=Goblin Hut;
+actorTypeID=ari_goblin_hut; sprite=ari_goblin_hut; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=38,1; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=pG; armorPalette=pR; unarmoredPalette=pR; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.1; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=29,7; destination=-1,-1; facingRot=450; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=dagger_bone; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_bone; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_0; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=34,3; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=dagger_bone; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_bone; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_1; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=39,11; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_2; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=40,4; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_3; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=44,13; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=dagger_bone; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_bone; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_4; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=37,4; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_hobgoblin_ari_deepearth_delve3_1_; name=Hobgoblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=31,10; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=p5; skinPalette=overworld9; armorPalette=pR; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=30; HPMax=30; TrueHPMax=30; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=hammer_iron; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_hobgoblin_ari_deepearth_delve3_1_0; name=Hobgoblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=39,6; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=p5; skinPalette=overworld9; armorPalette=pR; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=30; HPMax=30; TrueHPMax=30; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=hammer_iron; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_5; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=5,17; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=dagger_bone; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_bone; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_6; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=8,13; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_hobgoblin_ari_deepearth_delve3_1_1; name=Hobgoblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=9,17; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=p5; skinPalette=overworld9; armorPalette=pR; unarmoredPalette=pUnarmored; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; HP=30; HPMax=30; TrueHPMax=30; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=hammer_iron; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_7; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=23,40; destination=-1,-1; facingRot=360; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_8; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=18,39; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_9; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=21,42; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=skill_Ruin; sourceAVAffecter=dagger_bone; sourceType=item; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_bone; cSlot=0; containerID=0;
+
+
+[Actor]ID=ari_goblinkin_ari_deepearth_delve3_1_10; name=Goblin;
+actorTypeID=ari_goblinkin; sprite=; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=18,44; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=overworld8; skinPalette=overworld4; armorPalette=pUnarmored; unarmoredPalette=pUnarmored; aiScript=wander_leash1_slow; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.9; bravery=0.3; intelligence=0.2; honor=0.2; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+ headSprite=ari_goblin_head; faceSprite=ari_goblin_face; legsSprite=ari_goblin_legs; armLSprite=ari_goblin_arm; armRSprite=ari_goblin_arm; torsoSprite=ari_goblin_torso; shoulderLSprite=; shoulderRSprite=; backSprite=;
+ supportAbilities=;  supportAbilities=;  supportAbilities=; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+[ActorItem] ID=dagger_wood; cSlot=0; containerID=0;
+
+
+
+[Trigger] numID=0; aliasID=leaveTo_deepdelve2;
+topX=48;topY=22;btmX=49;btmY=27;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=ari_deepearth_delve2; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

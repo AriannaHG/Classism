@@ -1,0 +1,713 @@
+[Zone]  ID=ari_mount_ignis1; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=False; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=75; darkG=45; darkB=45; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=p43; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=p31; zoneDirtDarkPalette=pDirt; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=dirt_sandy2; q=2; r=180; x=0; y=17;
+[Item] ID=dirt_sandy2; q=1; r=180; x=0; y=18;
+[Item] ID=dirt_sandy2; q=1; r=180; x=1; y=16;
+[Item] ID=boulder2; q=1; x=1; y=17;
+[Item] ID=dirt_sandy2; q=1; r=180; x=1; y=18;
+[Item] ID=blockedLoS; q=1; x=1; y=20;
+[Item] ID=dirt_sandy2; q=1; r=180; x=1; y=22;
+[Item] ID=dirt_sandy2; q=1; r=180; x=1; y=23;
+[Item] ID=dirt_sandy2; q=1; r=180; x=1; y=24;
+[Item] ID=dirt_sandy2; q=2; r=180; x=1; y=25;
+[Item] ID=dirt_sandy2; q=1; r=180; x=1; y=26;
+[Item] ID=blockedLoS; q=1; x=2; y=14;
+[Item] ID=rubble; q=1; r=-360; x=2; y=16;
+[Item] ID=rocks1; q=1; r=360; x=2; y=18;
+[Item] ID=dirt_sandy2; q=1; r=180; x=2; y=19;
+[Item] ID=dirt_sandy2; q=2; r=180; x=2; y=20;
+[Item] ID=blockedLoS; q=1; x=2; y=20;
+[Item] ID=dirt_sandy2; q=2; r=180; x=2; y=21;
+[Item] ID=rocks1; q=2; x=2; y=23;
+[Item] ID=rubble; q=1; x=2; y=24;
+[Item] ID=pressPlateUp; q=1; specialX=41; specialY=21; x=2; y=25;
+[Item] ID=pebbles1; q=1; x=2; y=25;
+[Item] ID=pebbles1; q=1; r=-180; x=2; y=25;
+[Item] ID=pebbles2; q=1; x=2; y=25;
+[Item] ID=rocks1; q=4; r=-360; x=2; y=26;
+[Item] ID=dirt_sandy2; q=1; r=180; x=3; y=14;
+[Item] ID=dirt_sandy2; q=2; r=180; x=3; y=15;
+[Item] ID=blockedLoS; q=1; x=3; y=15;
+[Item] ID=dirt_sandy2; q=2; r=360; x=3; y=16;
+[Item] ID=blockedLoS; q=1; x=3; y=16;
+[Item] ID=dirt_sandy2; q=2; x=3; y=17;
+[Item] ID=blockedLoS; q=1; x=3; y=17;
+[Item] ID=pebbles2; q=1; x=3; y=22;
+[Item] ID=stalag; q=1; r=-360; x=3; y=24;
+[Item] ID=pebbles1; q=1; x=3; y=25;
+[Item] ID=stalags; q=1; r=360; x=3; y=26;
+[Item] ID=sunbeam; q=1; x=4; y=6;
+[Item] ID=dirt_sandy2; q=2; r=180; x=4; y=11;
+[Item] ID=dirt_sandy2; q=1; r=180; x=4; y=12;
+[Item] ID=dirt_sandy2; q=1; r=180; x=4; y=13;
+[Item] ID=rubble; q=1; r=-360; x=4; y=14;
+[Item] ID=pebbles2; q=1; r=-360; x=4; y=18;
+[Item] ID=rocks1; q=1; r=-360; x=4; y=26;
+[Item] ID=rocks1; q=6; r=360; x=5; y=11;
+[Item] ID=rocks1; q=1; r=-360; x=5; y=12;
+[Item] ID=rubble; q=1; r=-360; x=5; y=14;
+[Item] ID=stalags; q=1; r=360; x=5; y=17;
+[Item] ID=dirt_sandy2; q=2; x=5; y=18;
+[Item] ID=dirt_sandy2; q=1; x=5; y=19;
+[Item] ID=dirt_sandy2; q=2; x=5; y=20;
+[Item] ID=dirt_sandy2; q=2; x=5; y=21;
+[Item] ID=dirt_sandy2; q=1; x=5; y=22;
+[Item] ID=rubble; q=1; r=360; x=5; y=23;
+[Item] ID=dirt_sandy2; q=1; r=360; x=6; y=11;
+[Item] ID=sunbeam_circle_med_dull; q=1; x=6; y=13;
+[Item] ID=dirt_sandy2; q=1; x=6; y=16;
+[Item] ID=dirt_sandy2; q=1; x=6; y=17;
+[Item] ID=blockedLoS; q=1; x=6; y=17;
+[Item] ID=blockedLoS; q=1; x=6; y=18;
+[Item] ID=rubble; q=1; r=-360; x=6; y=23;
+[Item] ID=dirt_sandy2; q=2; r=180; x=6; y=27;
+[Item] ID=stalags; q=1; r=360; x=7; y=14;
+[Item] ID=dirt_sandy2; q=2; x=7; y=15;
+[Item] ID=dirt_sandy1; q=1; r=90; x=7; y=15;
+[Item] ID=dirt_sandy2; q=2; r=180; x=7; y=16;
+[Item] ID=blockedLoS; q=1; x=7; y=16;
+[Item] ID=boulder3; q=1; x=7; y=17;
+[Item] ID=dirtEdge_side1; q=1; x=7; y=17;
+[Item] ID=dirt_sandy2; q=1; x=7; y=23;
+[Item] ID=boulder3; q=1; x=7; y=27;
+[Item] ID=pebbles2; q=1; r=360; x=8; y=17;
+[Item] ID=dirt_sandy2; q=2; x=8; y=24;
+[Item] ID=pebbles2; q=1; x=8; y=26;
+[Item] ID=blockedLoS; q=1; x=8; y=28;
+[Item] ID=dirt_sandy2; q=2; r=180; x=8; y=30;
+[Item] ID=dirt_sandy2; q=1; r=180; x=8; y=31;
+[Item] ID=dirt_sandy2; q=2; r=180; x=9; y=11;
+[Item] ID=dirt_sandy2; q=2; x=9; y=17;
+[Item] ID=pebbles1; q=1; r=-360; x=9; y=25;
+[Item] ID=blockedLoS; q=1; x=9; y=28;
+[Item] ID=dirt_sandy2; q=1; r=180; x=9; y=29;
+[Item] ID=rubble; q=1; x=9; y=30;
+[Item] ID=stalags; q=1; r=-360; x=9; y=31;
+[Item] ID=blockedLoS; q=1; x=9; y=33;
+[Item] ID=dirt_sandy2; q=2; r=180; x=9; y=34;
+[Item] ID=dirt_sandy2; q=1; r=180; x=9; y=35;
+[Item] ID=dirt_sandy2; q=1; r=180; x=9; y=36;
+[Item] ID=rubble; q=1; r=-360; x=10; y=11;
+[Item] ID=dirt_sandy2; q=1; x=10; y=13;
+[Item] ID=dirt_sandy2; q=1; x=10; y=14;
+[Item] ID=blockedLoS; q=1; x=10; y=14;
+[Item] ID=rubble; q=1; r=360; x=10; y=15;
+[Item] ID=pebbles2; q=1; r=360; x=10; y=16;
+[Item] ID=dirt_sandy2; q=1; x=10; y=25;
+[Item] ID=blockedLoS; q=1; x=10; y=28;
+[Item] ID=rocks1; q=4; r=360; x=10; y=29;
+[Item] ID=rocks1; q=1; r=-360; x=10; y=30;
+[Item] ID=blockedLoS; q=1; x=10; y=33;
+[Item] ID=dirt_sandy2; q=2; r=180; x=10; y=36;
+[Item] ID=dirt_sandy2; q=2; r=180; x=10; y=40;
+[Item] ID=dirt_sandy2; q=2; r=180; x=10; y=41;
+[Item] ID=dirt_sandy2; q=1; r=180; x=10; y=42;
+[Item] ID=blockedLoS; q=1; x=11; y=14;
+[Item] ID=sunbeam; q=1; x=11; y=19;
+[Item] ID=pebbles1; q=1; x=11; y=26;
+[Item] ID=dirt_sandy2; q=2; r=180; x=11; y=28;
+[Item] ID=blockedLoS; q=1; x=11; y=28;
+[Item] ID=rocks1; q=2; r=360; x=11; y=31;
+[Item] ID=dirt_sandy2; q=1; r=180; x=11; y=33;
+[Item] ID=blockedLoS; q=1; x=11; y=33;
+[Item] ID=dirt_sandy2; q=1; x=11; y=34;
+[Item] ID=rubble; q=1; r=360; x=11; y=40;
+[Item] ID=stalags; q=1; r=-360; x=11; y=41;
+[Item] ID=dirt_sandy2; q=1; r=180; x=11; y=42;
+[Item] ID=dirt_sandy1; q=1; r=90; x=11; y=42;
+[Item] ID=rocks1; q=1; r=360; x=12; y=11;
+[Item] ID=rocks1; q=2; r=-360; x=12; y=12;
+[Item] ID=blockedLoS; q=1; x=12; y=14;
+[Item] ID=boulder3; q=1; x=12; y=15;
+[Item] ID=rubble; q=1; r=360; x=12; y=30;
+[Item] ID=dirt_sandy2; q=1; r=360; x=12; y=31;
+[Item] ID=dirt_sandy2; q=1; r=180; x=12; y=32;
+[Item] ID=blockedLoS; q=1; x=12; y=32;
+[Item] ID=stalag; q=1; r=-360; x=12; y=40;
+[Item] ID=rubble; q=1; r=-360; x=12; y=42;
+[Item] ID=ore_iron; q=1; x=13; y=14;
+[Item] ID=rubble; q=1; r=-360; x=13; y=15;
+[Item] ID=rubble; q=1; r=-360; x=13; y=16;
+[Item] ID=sunbeam_circle_small_dull; q=1; x=13; y=27;
+[Item] ID=dirt_sandy1; q=1; r=90; x=13; y=29;
+[Item] ID=dirt_sandy2; q=2; x=13; y=30;
+[Item] ID=blockedLoS; q=1; x=13; y=30;
+[Item] ID=dirt_sandy2; q=1; r=180; x=13; y=31;
+[Item] ID=blockedLoS; q=1; x=13; y=31;
+[Item] ID=pebbles2; q=1; x=13; y=34;
+[Item] ID=stalag; q=1; x=13; y=35;
+[Item] ID=dirt_sandy2; q=1; r=180; x=13; y=37;
+[Item] ID=dirt_sandy2; q=2; r=180; x=13; y=38;
+[Item] ID=dirt_sandy2; q=1; r=180; x=13; y=39;
+[Item] ID=rocks1; q=1; r=-360; x=13; y=42;
+[Item] ID=blockedLoS; q=1; x=14; y=14;
+[Item] ID=rubble; q=1; r=-360; x=14; y=15;
+[Item] ID=stalags; q=1; r=360; x=14; y=16;
+[Item] ID=dirt_sandy2; q=1; r=180; x=14; y=30;
+[Item] ID=boulder; q=1; x=14; y=32;
+[Item] ID=rubble; q=1; r=-360; x=14; y=35;
+[Item] ID=stalags; q=1; x=14; y=37;
+[Item] ID=rubble; q=1; x=14; y=38;
+[Item] ID=dirt_sandy2; q=2; r=180; x=14; y=39;
+[Item] ID=rocks1; q=2; r=360; x=14; y=42;
+[Item] ID=blockedLoS; q=1; x=15; y=14;
+[Item] ID=ore_iron; q=1; x=15; y=15;
+[Item] ID=dirt_sandy2; q=1; x=15; y=16;
+[Item] ID=boulder; q=1; x=15; y=33;
+[Item] ID=rocks1; q=4; r=-360; x=15; y=38;
+[Item] ID=stalags; q=1; r=-360; x=15; y=41;
+[Item] ID=dirt_sandy2; q=2; r=360; x=15; y=42;
+[Item] ID=dirt_sandy2; q=1; r=180; x=16; y=10;
+[Item] ID=dirt_sandy2; q=1; r=180; x=16; y=13;
+[Item] ID=dirt_sandy2; q=2; r=180; x=16; y=25;
+[Item] ID=pebbles2; q=1; r=-360; x=16; y=27;
+[Item] ID=stalag; q=1; r=-360; x=16; y=28;
+[Item] ID=pebbles1; q=1; r=-360; x=16; y=30;
+[Item] ID=dirt_sandy2; q=1; x=16; y=33;
+[Item] ID=dirt_sandy2; q=2; r=360; x=16; y=34;
+[Item] ID=blockedLoS; q=1; x=16; y=34;
+[Item] ID=pebbles2; q=1; x=16; y=36;
+[Item] ID=rocks1; q=1; r=-360; x=16; y=40;
+[Item] ID=dirt_sandy2; q=1; x=16; y=41;
+[Item] ID=dirt_sandy1; q=1; r=90; x=16; y=41;
+[Item] ID=dirt_sandy2; q=1; r=360; x=16; y=42;
+[Item] ID=rocks1; q=4; r=360; x=17; y=10;
+[Item] ID=pebbles2; q=1; r=360; x=17; y=12;
+[Item] ID=stalags; q=1; r=-360; x=17; y=13;
+[Item] ID=dirt_sandy2; q=1; r=180; x=17; y=24;
+[Item] ID=rocks1; q=2; r=360; x=17; y=25;
+[Item] ID=stalags; q=1; r=360; x=17; y=32;
+[Item] ID=dirt_sandy2; q=1; r=180; x=17; y=34;
+[Item] ID=blockedLoS; q=1; x=17; y=34;
+[Item] ID=stalag; q=1; r=-360; x=17; y=37;
+[Item] ID=dirt_sandy2; q=1; r=360; x=17; y=40;
+[Item] ID=dirt_sandy2; q=1; x=17; y=41;
+[Item] ID=dirt_sandy2; q=1; x=18; y=10;
+[Item] ID=blockedLoS; q=1; x=18; y=10;
+[Item] ID=dirt_sandy2; q=1; x=18; y=32;
+[Item] ID=dirt_sandy1; q=1; r=90; x=18; y=32;
+[Item] ID=dirt_sandy2; q=2; r=180; x=18; y=33;
+[Item] ID=pebbles2; q=1; r=-360; x=18; y=38;
+[Item] ID=rubble; q=1; r=360; x=18; y=39;
+[Item] ID=dirt_sandy2; q=1; r=180; x=19; y=9;
+[Item] ID=rocks1; q=1; x=19; y=10;
+[Item] ID=rubble; q=1; r=-360; x=19; y=13;
+[Item] ID=dirt_sandy2; q=2; r=180; x=19; y=23;
+[Item] ID=pebbles2; q=1; r=360; x=19; y=24;
+[Item] ID=pebbles1; q=1; r=-360; x=19; y=28;
+[Item] ID=stalags; q=1; r=-360; x=19; y=29;
+[Item] ID=dirt_sandy2; q=1; r=360; x=19; y=30;
+[Item] ID=dirt_sandy2; q=2; r=360; x=19; y=31;
+[Item] ID=dirt_sandy2; q=1; x=19; y=32;
+[Item] ID=blockedLoS; q=1; x=19; y=32;
+[Item] ID=stalags; q=1; x=19; y=34;
+[Item] ID=rubble; q=1; r=360; x=19; y=38;
+[Item] ID=dirt_sandy2; q=2; x=19; y=39;
+[Item] ID=dirt_sandy1; q=1; r=90; x=19; y=39;
+[Item] ID=pebbles1; q=1; r=360; x=20; y=10;
+[Item] ID=dirt_sandy2; q=2; x=20; y=13;
+[Item] ID=dirt_sandy2; q=1; r=180; x=20; y=22;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=26;
+[Item] ID=dirt_sandy1; q=1; r=90; x=20; y=26;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=27;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=29;
+[Item] ID=dirt_sandy2; q=1; r=360; x=20; y=30;
+[Item] ID=blockedLoS; q=1; x=20; y=32;
+[Item] ID=rocks1; q=1; x=20; y=33;
+[Item] ID=pebbles2; q=1; r=-360; x=20; y=35;
+[Item] ID=ore_iron; q=1; x=21; y=8;
+[Item] ID=rubble; q=1; x=21; y=9;
+[Item] ID=boulder; q=1; x=21; y=9;
+[Item] ID=rubble; q=1; r=-360; x=21; y=10;
+[Item] ID=boulder2; q=1; x=21; y=10;
+[Item] ID=dirt_sandy2; q=1; r=180; x=21; y=19;
+[Item] ID=dirt_sandy2; q=2; r=180; x=21; y=20;
+[Item] ID=dirt_sandy2; q=1; r=180; x=21; y=21;
+[Item] ID=rocks1; q=6; r=-360; x=21; y=24;
+[Item] ID=dirt_sandy2; q=3; x=21; y=25;
+[Item] ID=dirt_sandy1; q=1; r=90; x=21; y=25;
+[Item] ID=dirt_sandy2; q=1; x=21; y=26;
+[Item] ID=dirt_sandy2; q=2; r=360; x=21; y=28;
+[Item] ID=dirt_sandy2; q=2; x=21; y=29;
+[Item] ID=dirt_sandy2; q=1; x=21; y=33;
+[Item] ID=rocks1; q=2; x=21; y=36;
+[Item] ID=dirt_sandy2; q=1; r=180; x=21; y=40;
+[Item] ID=dirt_sandy2; q=2; r=180; x=21; y=41;
+[Item] ID=dirt_sandy2; q=1; r=180; x=21; y=42;
+[Item] ID=dirt_sandy2; q=1; r=180; x=21; y=43;
+[Item] ID=rubble; q=1; x=22; y=9;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=13;
+[Item] ID=dirt_sandy2; q=2; r=180; x=22; y=14;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=15;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=16;
+[Item] ID=dirt_sandy2; q=2; r=180; x=22; y=17;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=18;
+[Item] ID=rubble; q=1; r=-360; x=22; y=19;
+[Item] ID=rubble; q=1; r=-360; x=22; y=20;
+[Item] ID=dirt_sandy2; q=2; x=22; y=24;
+[Item] ID=dirt_sandy1; q=1; r=90; x=22; y=24;
+[Item] ID=dirt_sandy2; q=1; x=22; y=25;
+[Item] ID=dirt_sandy2; q=1; x=22; y=34;
+[Item] ID=dirt_sandy2; q=2; x=22; y=35;
+[Item] ID=dirt_sandy2; q=2; x=22; y=36;
+[Item] ID=pebbles1; q=1; r=-360; x=22; y=39;
+[Item] ID=dirt_sandy2; q=2; r=180; x=22; y=43;
+[Item] ID=dirt_sandy2; q=1; r=180; x=22; y=44;
+[Item] ID=sunbeam; q=1; x=23; y=4;
+[Item] ID=rocks1; q=1; r=360; x=23; y=12;
+[Item] ID=rubble; q=1; x=23; y=13;
+[Item] ID=rubble; q=1; r=-360; x=23; y=14;
+[Item] ID=rocks1; q=3; r=-360; x=23; y=15;
+[Item] ID=pebbles1; q=1; r=-360; x=23; y=18;
+[Item] ID=rubble; q=1; x=23; y=24;
+[Item] ID=travelPoint_0; q=1; r=270; x=23; y=40;
+[Item] ID=boulder3; q=1; r=-360; x=24; y=9;
+[Item] ID=pebbles2; q=1; r=-360; x=24; y=20;
+[Item] ID=rocks1; q=1; r=-360; x=24; y=23;
+[Item] ID=dirt_sandy2; q=1; x=24; y=24;
+[Item] ID=dirt_sandy2; q=1; r=180; x=24; y=33;
+[Item] ID=dirt_sandy2; q=2; r=180; x=24; y=34;
+[Item] ID=dirt_sandy2; q=2; r=180; x=24; y=35;
+[Item] ID=dirt_sandy2; q=1; r=180; x=24; y=36;
+[Item] ID=pebbles1; q=1; r=-360; x=24; y=38;
+[Item] ID=sunbeam_circle_med; q=1; x=24; y=43;
+[Item] ID=rocks1; q=5; r=-360; x=25; y=9;
+[Item] ID=sunbeam_circle_med_dull; q=1; x=25; y=12;
+[Item] ID=stalag; q=1; r=-360; x=25; y=14;
+[Item] ID=pebbles2; q=1; r=-360; x=25; y=17;
+[Item] ID=dirt_sandy2; q=1; x=25; y=20;
+[Item] ID=stalags; q=1; r=360; x=25; y=22;
+[Item] ID=dirt_sandy2; q=1; x=25; y=23;
+[Item] ID=sunbeam; q=1; r=360; x=25; y=27;
+[Item] ID=dirt_sandy2; q=1; r=180; x=25; y=31;
+[Item] ID=dirt_sandy2; q=2; r=180; x=25; y=32;
+[Item] ID=rubble; q=1; x=25; y=33;
+[Item] ID=dirt_sandy2; q=2; x=26; y=9;
+[Item] ID=stalag; q=1; x=26; y=12;
+[Item] ID=rocks1; q=2; r=360; x=26; y=14;
+[Item] ID=rubble; q=1; r=360; x=26; y=16;
+[Item] ID=dirt_sandy2; q=1; r=180; x=26; y=20;
+[Item] ID=dirt_sandy2; q=2; x=26; y=21;
+[Item] ID=blockedLoS; q=1; x=26; y=21;
+[Item] ID=dirt_sandy2; q=1; x=26; y=22;
+[Item] ID=blockedLoS; q=1; x=26; y=22;
+[Item] ID=blockedLoS; q=1; x=26; y=23;
+[Item] ID=dirt_sandy2; q=1; r=180; x=26; y=30;
+[Item] ID=rocks1; q=6; x=26; y=31;
+[Item] ID=pebbles2; q=1; r=-360; x=26; y=35;
+[Item] ID=rocks1; q=1; r=360; x=26; y=38;
+[Item] ID=rocks1; q=2; r=-360; x=26; y=39;
+[Item] ID=dirt_sandy2; q=2; x=26; y=40;
+[Item] ID=rubble; q=1; x=26; y=42;
+[Item] ID=dirt_sandy2; q=2; x=26; y=43;
+[Item] ID=dirt_sandy2; q=1; x=26; y=44;
+[Item] ID=rubble; q=1; r=-360; x=27; y=10;
+[Item] ID=dirt_sandy2; q=1; x=27; y=16;
+[Item] ID=rubble; q=1; r=-360; x=27; y=17;
+[Item] ID=dirt_sandy2; q=2; r=180; x=27; y=21;
+[Item] ID=dirt_sandy2; q=1; r=180; x=27; y=22;
+[Item] ID=dirt_sandy2; q=1; r=180; x=27; y=28;
+[Item] ID=dirt_sandy2; q=2; r=180; x=27; y=29;
+[Item] ID=sunbeam_circle_med_dull; q=1; x=27; y=34;
+[Item] ID=rubble; q=1; r=360; x=27; y=36;
+[Item] ID=dirt_sandy2; q=1; x=27; y=37;
+[Item] ID=dirt_sandy2; q=1; x=27; y=38;
+[Item] ID=dirt_sandy2; q=2; x=27; y=39;
+[Item] ID=dirt_sandy2; q=1; x=27; y=40;
+[Item] ID=dirt_sandy2; q=1; x=27; y=41;
+[Item] ID=dirt_sandy2; q=2; x=27; y=42;
+[Item] ID=dirt_sandy2; q=2; x=27; y=43;
+[Item] ID=dirt_sandy2; q=1; x=28; y=10;
+[Item] ID=pebbles1; q=1; r=360; x=28; y=12;
+[Item] ID=stalags; q=1; r=-360; x=28; y=15;
+[Item] ID=dirt_sandy2; q=2; x=28; y=17;
+[Item] ID=blockedLoS; q=1; x=28; y=17;
+[Item] ID=dirt_sandy2; q=1; r=180; x=28; y=23;
+[Item] ID=dirt_sandy2; q=1; r=180; x=28; y=24;
+[Item] ID=blockedLoS; q=1; x=28; y=26;
+[Item] ID=dirt_sandy2; q=1; r=180; x=28; y=27;
+[Item] ID=rubble; q=1; r=360; x=28; y=28;
+[Item] ID=pebbles2; q=1; r=-360; x=28; y=31;
+[Item] ID=stalag; q=1; r=-360; x=28; y=32;
+[Item] ID=rocks1; q=6; r=-360; x=28; y=35;
+[Item] ID=dirt_sandy2; q=1; x=28; y=36;
+[Item] ID=dirt_sandy2; q=1; x=29; y=11;
+[Item] ID=dirt_sandy2; q=2; x=29; y=12;
+[Item] ID=rubble; q=1; r=-360; x=29; y=14;
+[Item] ID=blockedLoS; q=1; x=29; y=17;
+[Item] ID=stalags; q=1; r=-360; x=29; y=24;
+[Item] ID=blockedLoS; q=1; x=29; y=26;
+[Item] ID=rocks1; q=1; r=360; x=29; y=27;
+[Item] ID=pebbles1; q=1; r=-360; x=29; y=30;
+[Item] ID=dirt_sandy2; q=1; x=29; y=34;
+[Item] ID=dirt_sandy1; q=1; r=90; x=29; y=34;
+[Item] ID=dirt_sandy2; q=2; x=29; y=35;
+[Item] ID=dirt_sandy2; q=1; x=30; y=13;
+[Item] ID=dirt_sandy2; q=2; x=30; y=14;
+[Item] ID=dirt_sandy2; q=1; x=30; y=15;
+[Item] ID=blockedLoS; q=1; x=30; y=15;
+[Item] ID=blockedLoS; q=1; x=30; y=16;
+[Item] ID=blockedLoS; q=1; x=30; y=17;
+[Item] ID=dirt_sandy2; q=2; x=30; y=18;
+[Item] ID=blockedLoS; q=1; x=30; y=18;
+[Item] ID=dirt_sandy2; q=2; r=180; x=30; y=25;
+[Item] ID=blockedLoS; q=1; x=30; y=26;
+[Item] ID=stalags; q=1; r=-360; x=30; y=29;
+[Item] ID=dirt_sandy2; q=1; r=360; x=30; y=30;
+[Item] ID=dirt_sandy2; q=1; x=30; y=31;
+[Item] ID=dirt_sandy2; q=1; x=30; y=32;
+[Item] ID=dirt_sandy2; q=2; x=30; y=33;
+[Item] ID=dirt_sandy2; q=2; x=30; y=34;
+[Item] ID=dirt_sandy2; q=1; r=180; x=31; y=14;
+[Item] ID=blockedLoS; q=1; x=31; y=14;
+[Item] ID=rubble; q=1; r=-360; x=31; y=16;
+[Item] ID=rocks1; q=4; r=360; x=31; y=25;
+[Item] ID=dirt_sandy2; q=1; r=180; x=31; y=26;
+[Item] ID=rubble; q=1; r=360; x=31; y=29;
+[Item] ID=blockedLoS; q=1; x=32; y=13;
+[Item] ID=rubble; q=1; r=-360; x=32; y=14;
+[Item] ID=pebbles1; q=1; r=-360; x=32; y=18;
+[Item] ID=stalags; q=1; r=360; x=32; y=29;
+[Item] ID=dirt_sandy2; q=1; r=180; x=32; y=30;
+[Item] ID=dirt_sandy2; q=2; r=180; x=32; y=31;
+[Item] ID=dirt_sandy2; q=2; r=180; x=33; y=13;
+[Item] ID=stalags; q=1; r=-360; x=33; y=19;
+[Item] ID=dirt_sandy2; q=1; x=33; y=20;
+[Item] ID=dirt_sandy2; q=1; r=360; x=33; y=21;
+[Item] ID=dirt_sandy2; q=1; r=360; x=33; y=22;
+[Item] ID=blockedLoS; q=1; x=33; y=22;
+[Item] ID=rocks1; q=1; x=33; y=29;
+[Item] ID=rocks1; q=4; r=-360; x=33; y=30;
+[Item] ID=rubble; q=1; x=33; y=31;
+[Item] ID=sunbeam; q=1; x=34; y=2;
+[Item] ID=dirt_sandy2; q=2; r=180; x=34; y=11;
+[Item] ID=dirt_sandy2; q=1; r=180; x=34; y=12;
+[Item] ID=boulder3; q=1; r=-360; x=34; y=13;
+[Item] ID=pebbles2; q=1; r=360; x=34; y=14;
+[Item] ID=dirt_sandy2; q=2; x=34; y=17;
+[Item] ID=dirt_sandy2; q=1; x=34; y=18;
+[Item] ID=dirt_sandy2; q=1; r=360; x=34; y=19;
+[Item] ID=dirt_sandy2; q=2; x=34; y=20;
+[Item] ID=dirt_sandy2; q=2; r=360; x=34; y=23;
+[Item] ID=blockedLoS; q=1; x=34; y=23;
+[Item] ID=rubble; q=1; r=-360; x=34; y=26;
+[Item] ID=dirt_sandy2; q=2; x=34; y=27;
+[Item] ID=dirt_sandy2; q=1; x=34; y=28;
+[Item] ID=blockedLoS; q=1; x=34; y=28;
+[Item] ID=stalags; q=1; x=34; y=31;
+[Item] ID=dirt_sandy2; q=2; r=180; x=35; y=9;
+[Item] ID=dirt_sandy2; q=1; r=180; x=35; y=10;
+[Item] ID=rocks1; q=1; r=-360; x=35; y=11;
+[Item] ID=dirt_sandy2; q=1; x=35; y=16;
+[Item] ID=dirt_sandy2; q=1; r=-180; x=35; y=24;
+[Item] ID=blockedLoS; q=1; x=35; y=24;
+[Item] ID=rubble; q=1; r=-360; x=35; y=25;
+[Item] ID=rocks1; q=1; r=-360; x=35; y=26;
+[Item] ID=dirt_sandy2; q=1; r=180; x=35; y=27;
+[Item] ID=dirt_sandy2; q=2; r=180; x=35; y=28;
+[Item] ID=blockedLoS; q=1; x=35; y=28;
+[Item] ID=dirt_sandy2; q=2; r=180; x=35; y=32;
+[Item] ID=dirt_sandy2; q=1; r=180; x=36; y=8;
+[Item] ID=rubble; q=1; x=36; y=9;
+[Item] ID=stalags; q=1; r=-360; x=36; y=14;
+[Item] ID=dirt_sandy2; q=2; x=36; y=15;
+[Item] ID=dirt_sandy2; q=1; x=36; y=16;
+[Item] ID=rocks1; q=1; r=-360; x=36; y=32;
+[Item] ID=boulder2; q=1; x=37; y=8;
+[Item] ID=sunbeam_circle_small_dull; q=1; x=37; y=10;
+[Item] ID=pebbles1; q=1; x=37; y=11;
+[Item] ID=dirt_sandy1; q=1; r=90; x=37; y=14;
+[Item] ID=dirt_sandy2; q=2; r=180; x=37; y=23;
+[Item] ID=dirt_sandy2; q=1; r=180; x=37; y=24;
+[Item] ID=rocks1; q=6; r=360; x=37; y=32;
+[Item] ID=sunbeam_flipped; q=1; r=-360; x=38; y=3;
+[Item] ID=dirt_sandy2; q=1; r=360; x=38; y=8;
+[Item] ID=dirt_sandy2; q=1; r=360; x=38; y=9;
+[Item] ID=rocks1; q=2; r=360; x=38; y=10;
+[Item] ID=rocks1; q=4; r=360; x=38; y=23;
+[Item] ID=stalags; q=1; r=-360; x=38; y=30;
+[Item] ID=dirt_sandy2; q=1; x=38; y=31;
+[Item] ID=dirt_sandy1; q=1; r=90; x=38; y=31;
+[Item] ID=dirt_sandy2; q=2; r=360; x=38; y=32;
+[Item] ID=blockedLoS; q=1; x=39; y=9;
+[Item] ID=rubble; q=1; x=39; y=10;
+[Item] ID=rubble; q=1; r=-360; x=39; y=14;
+[Item] ID=rubble; q=1; r=360; x=39; y=23;
+[Item] ID=stalag; q=1; x=39; y=26;
+[Item] ID=pebbles1; q=1; x=39; y=27;
+[Item] ID=dirt_sandy2; q=1; r=-360; x=39; y=32;
+[Item] ID=dirt_sandy1; q=1; r=90; x=39; y=32;
+[Item] ID=dirt_sandy2; q=2; r=180; x=40; y=5;
+[Item] ID=dirt_sandy2; q=1; r=180; x=40; y=6;
+[Item] ID=dirt_sandy2; q=2; r=180; x=40; y=7;
+[Item] ID=dirt_sandy2; q=1; r=180; x=40; y=8;
+[Item] ID=dirt_sandy2; q=2; x=40; y=10;
+[Item] ID=blockedLoS; q=1; x=40; y=10;
+[Item] ID=rocks1; q=4; r=360; x=40; y=14;
+[Item] ID=dirt_sandy2; q=1; r=180; x=40; y=18;
+[Item] ID=dirt_sandy2; q=2; r=180; x=40; y=19;
+[Item] ID=dirt_sandy2; q=1; r=180; x=40; y=20;
+[Item] ID=dirt_sandy2; q=1; r=180; x=40; y=22;
+[Item] ID=rocks1; q=1; r=360; x=40; y=23;
+[Item] ID=boulder3; q=1; r=360; x=40; y=32;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=0;
+[Item] ID=dirt_sandy2; q=2; r=180; x=41; y=1;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=4;
+[Item] ID=blockedLoS; q=1; x=41; y=4;
+[Item] ID=rubble; q=1; r=360; x=41; y=5;
+[Item] ID=boulder3; q=1; r=360; x=41; y=7;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=8;
+[Item] ID=dirt_sandy2; q=1; r=180; x=41; y=10;
+[Item] ID=blockedLoS; q=1; x=41; y=10;
+[Item] ID=boulder2; q=1; x=41; y=11;
+[Item] ID=sunbeam_circle_small_dull; q=1; x=41; y=12;
+[Item] ID=pebbles2; q=1; r=360; x=41; y=12;
+[Item] ID=rocks1; q=1; r=360; x=41; y=14;
+[Item] ID=lockdown_closed; q=1; x=41; y=21;
+[Item] ID=rocks1; q=2; r=-360; x=41; y=23;
+[Item] ID=stalag; q=1; x=41; y=29;
+[Item] ID=dirt_sandy2; q=2; r=180; x=42; y=3;
+[Item] ID=blockedLoS; q=1; x=42; y=3;
+[Item] ID=rocks1; q=3; r=360; x=42; y=6;
+[Item] ID=rubble; q=1; r=-360; x=42; y=8;
+[Item] ID=dirt_sandy2; q=2; r=180; x=42; y=9;
+[Item] ID=rocks1; q=5; r=360; x=42; y=14;
+[Item] ID=dirt_sandy2; q=2; x=42; y=20;
+[Item] ID=dirt_sandy2; q=1; x=42; y=22;
+[Item] ID=rubble; q=1; r=-360; x=42; y=23;
+[Item] ID=pebbles1; q=1; r=-360; x=42; y=29;
+[Item] ID=rubble; q=1; r=360; x=42; y=32;
+[Item] ID=dirt_sandy2; q=1; r=180; x=43; y=2;
+[Item] ID=travelPoint_1; q=1; r=90; x=43; y=5;
+[Item] ID=rocks1; q=1; r=360; x=43; y=11;
+[Item] ID=chest_wood2; q=1; x=43; y=18; containerID=0;
+[Item] ID=fish_flop; q=1; containedIn=0; cSlot=0;
+[Item] ID=; q=1; containedIn=0; cSlot=1;
+[Item] ID=gp; q=1; containedIn=0; cSlot=2;
+[Item] ID=; q=1; containedIn=0; cSlot=3;
+[Item] ID=gp; q=24; containedIn=0; cSlot=4;
+[Item] ID=woodPlank; q=1; containedIn=0; cSlot=5;
+[Item] ID=gp; q=1; containedIn=0; cSlot=6;
+[Item] ID=dagger_wood; q=1; containedIn=0; cSlot=7; containerID=1;
+[Item] ID=; q=1; containedIn=0; cSlot=8;
+[Item] ID=gp; q=1; containedIn=0; cSlot=9;
+[Item] ID=bottle; q=1; containedIn=0; cSlot=10;
+[Item] ID=bow_steel; q=1; containedIn=0; cSlot=11; containerID=2;
+[Item] ID=; q=1; containedIn=0; cSlot=12;
+[Item] ID=; q=1; containedIn=0; cSlot=13;
+[Item] ID=gp; q=1; containedIn=0; cSlot=14;
+[Item] ID=bow_wood; q=1; containedIn=0; cSlot=15; containerID=3;
+[Item] ID=stalags; q=1; r=360; x=43; y=23;
+[Item] ID=dirt_sandy2; q=1; x=43; y=24;
+[Item] ID=dirt_sandy2; q=1; x=43; y=31;
+[Item] ID=dirt_sandy2; q=1; x=43; y=32;
+[Item] ID=pebbles1; q=1; x=44; y=5;
+[Item] ID=rocks1; q=2; r=-360; x=44; y=12;
+[Item] ID=pebbles2; q=1; r=-360; x=44; y=13;
+[Item] ID=boulder2; q=1; x=44; y=14;
+[Item] ID=dirt_sandy2; q=2; x=44; y=23;
+[Item] ID=dirt_sandy2; q=2; x=44; y=24;
+[Item] ID=dirt_sandy2; q=1; x=44; y=25;
+[Item] ID=rubble; q=1; r=360; x=44; y=29;
+[Item] ID=dirt_sandy2; q=2; x=44; y=30;
+[Item] ID=dirt_sandy2; q=1; x=44; y=31;
+[Item] ID=rubble; q=1; r=-360; x=45; y=14;
+[Item] ID=dirt_sandy2; q=1; x=45; y=18;
+[Item] ID=dirt_sandy2; q=2; x=45; y=19;
+[Item] ID=dirt_sandy2; q=3; x=45; y=26;
+[Item] ID=dirt_sandy2; q=2; x=45; y=27;
+[Item] ID=dirt_sandy2; q=2; x=45; y=28;
+[Item] ID=dirt_sandy2; q=1; x=45; y=29;
+[Item] ID=dirt_sandy2; q=2; x=45; y=30;
+[Item] ID=boulder2; q=1; x=46; y=7;
+[Item] ID=pebbles1; q=1; r=-360; x=46; y=9;
+[Item] ID=stalags; q=1; r=360; x=46; y=13;
+[Item] ID=dirt_sandy2; q=1; x=46; y=14;
+[Item] ID=dirt_sandy2; q=2; x=47; y=0;
+[Item] ID=dirt_sandy2; q=1; x=47; y=1;
+[Item] ID=dirt_sandy2; q=1; x=47; y=2;
+[Item] ID=rubble; q=1; r=360; x=47; y=3;
+[Item] ID=rubble; q=1; r=360; x=47; y=6;
+[Item] ID=dirt_sandy2; q=2; x=47; y=7;
+[Item] ID=dirt_sandy2; q=2; x=47; y=8;
+[Item] ID=dirt_sandy2; q=2; x=47; y=9;
+[Item] ID=dirt_sandy2; q=1; x=47; y=10;
+[Item] ID=rubble; q=1; r=-360; x=47; y=11;
+[Item] ID=stalags; q=1; r=360; x=47; y=12;
+[Item] ID=dirt_sandy2; q=2; x=47; y=13;
+[Item] ID=dirt_sandy2; q=1; x=47; y=14;
+[Item] ID=dirt_sandy2; q=1; x=48; y=3;
+[Item] ID=dirt_sandy2; q=2; x=48; y=4;
+[Item] ID=dirt_sandy2; q=1; x=48; y=5;
+[Item] ID=dirt_sandy2; q=2; x=48; y=6;
+[Item] ID=dirt_sandy2; q=1; x=48; y=7;
+[Item] ID=dirt_sandy2; q=2; x=48; y=11;
+[Item] ID=dirt_sandy2; q=1; x=48; y=12;
+[Item] ID=dirt_sandy2; q=1; x=48; y=13;
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=2; position=18,24; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_0; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=2; position=11,31; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_1; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=2; position=39,23; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_2; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=2; position=44,29; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_4; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=2; position=11,15; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_5; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=2; position=42,10; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_3; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=2; position=45,14; destination=-1,-1; facingRot=270; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_earth_golem_ari_mount_ignis1_; name=Earth Golem;
+actorTypeID=ari_golem; sprite=ari_golem; actorClass=none; secondaryClass=ari_earth_golem_class; actorClass3=; actorClass4=; movementSpeed=3; position=30,20; destination=-1,-1; facingRot=90; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; ari_earth_golem_active_harden=1; 
+numRanksBought=ari_earth_golem_active_harden=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_pebblet_ari_mount_ignis1_6; name=Pebblet;
+actorTypeID=ari_pebblet; sprite=ari_pebblet; actorClass=none; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=20,28; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=enemy; combatTeam=; clothPalette=pB; skinPalette=p45; armorPalette=pBlueD; unarmoredPalette=pBlueD; aiScript=idle; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.9; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MPMax=1; 
+
+[ActorState]
+canSwap=False;
+
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=0; aliasID=leaveTo_mountIgnis2;
+topX=41;topY=0;btmX=47;btmY=2;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=ari_mount_ignis2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=leaveTo_mountIgnisfield1;
+topX=21;topY=42;btmX=27;btmY=44;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=travel_point; sValue=ari_mount_ignis_fields1; sValue2=; bValue1=False; bValue2=False; fValue=2; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=spawn_golem1;
+topX=13;topY=14;btmX=13;btmY=14;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=use; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=True; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=2; effectID=spawn; sValue=ari_earth_golem; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=9; yValue=13;
+
+
+

@@ -1,0 +1,408 @@
+[Location] ID=passive_quest_krakenslayer1; name=Feeding Grounds;
+discoverable_fReq=g:class_krakenslayer;
+x=283; y=352;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_feeding_ground;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_feeding_ground;
+
+[Location] ID=ari_mount_ignis1; name=Mount Ignis;
+x=371; y=275;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_mount_ignis;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=False;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_mount_ignis;
+
+
+[Location] ID=ari_mountignis_port1; name=Port Ignis;
+x=372; y=277;
+port=true;
+discovered=false;
+namePopup_texture=tbg_port;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+zoneDescTitle=Port;
+discoveryFameMod=1;
+externalSong=PM-Resort2;
+locationItem=port_bighouses5;
+
+wealthLevel=30;
+
+--Here's where I'm putting the cargo I've chosen, and the cafe food.
+tradeGood_itemTypeID=cargo_gemstone;
+cafeFood_itemTypeID=food_basic1;
+
+--These icons are what show up on the map. You'll want to change these to whatever your port offers. You can also make your own, like I did in The Sea Below.
+tooltipIcons=sign_icon_cup;
+tooltipIcons=sign_icon_book;
+
+--This is where the ship weapons go.
+--itemType_quantity=cannon_falconet=-2;
+--itemType_quantity=gear_boarding=-2;
+--itemType_quantity=cannon_culverin=-2;
+
+--Here are some basic items available at the merchant.
+--itemType_quantity=reviveDust=-2;
+--itemType_quantity=bandage=-2;
+--itemType_quantity=splint=-2;
+--itemType_quantity=lifeshard=-2;
+--itemType_quantity=bottle_beer=-2;
+--itemType_quantity=dart=-2;
+
+--Here are the ships available by default.
+--shipwright_boatTypes=lightgalley;
+--shipwright_boatTypes=caravel;
+--shipwright_boatTypes=cog;
+
+--Now we're getting into unlockables. Notice how there are two lines for every unlockable item.
+--itemType_quantity_unlockable=cannon_harpoon=-2;
+--itemType_formula_unlockable=cannon_harpoon=m:locWealth(70);
+--itemType_quantity_unlockable=gear_extraCache=-2;
+--itemType_formula_unlockable=gear_extraCache=m:locWealth(80);
+--itemType_quantity_unlockable=cannon_cannon=-2;
+--itemType_formula_unlockable=cannon_cannon=m:locWealth(90);
+--itemType_quantity_unlockable=gear_boarding_hook=1;
+--itemType_formula_unlockable=gear_boarding_hook=m:locWealth(100);
+
+--itemType_quantity_unlockable=mythril_chunk=1;
+--itemType_formula_unlockable=mythril_chunk=m:locWealth(65);
+--itemType_quantity_unlockable=xpGem=3;
+--itemType_formula_unlockable=xpGem=m:locWealth(65);
+--itemType_quantity_unlockable=xpGemMed=2;
+--itemType_formula_unlockable=xpGemMed=m:locWealth(75);
+--itemType_quantity_unlockable=fish_mag=1;
+--itemType_formula_unlockable=fish_mag=m:locWealth(75);
+--itemType_quantity_unlockable=cloak_kingfur=1;
+--itemType_formula_unlockable=cloak_kingfur=m:locWealth(75);
+--itemType_quantity_unlockable=ghost_grub=1;
+--itemType_formula_unlockable=ghost_grub=m:locWealth(90);
+--itemType_quantity_unlockable=ironice_chunk=1;
+--itemType_formula_unlockable=ironice_chunk=m:locWealth(90);
+--itemType_quantity_unlockable=abilityCrest=1;
+--itemType_formula_unlockable=abilityCrest=m:locWealth(100);
+
+--itemType_quantity_unlockable=necklace_lifebead=1;
+--itemType_formula_unlockable=necklace_lifebead=m:locWealth(70);
+--itemType_quantity_unlockable=band_fire_elec=1;
+--itemType_formula_unlockable=band_fire_elec=m:locWealth(80);
+--itemType_quantity_unlockable=armor_shellworm=1;
+--itemType_formula_unlockable=armor_shellworm=m:locWealth(90);
+--itemType_quantity_unlockable=guideexample_armor_golden_mail=1;
+--itemType_formula_unlockable=guideexample_armor_golden_mail=m:locWealth(100);
+
+--itemType_quantity_unlockable=fullrigged=-2;
+--itemType_formula_unlockable=fullrigged=m:locWealth(100);
+
+--This tells the game which crew to spawn at the cafe. Assuming it works...
+auto_spawnDataID=hire_human;
+
+--This determines starting favor. Nothing too fancy.
+faction_favor=seartial=20;
+faction_favor=jasce=0;
+faction_favor=rumane=0;
+
+
+[Location] ID=ari_pirate_cove1; name=Blackbrow's Hideout;
+x=298; y=332;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_pirate_hideout;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_pirate_cove;
+
+[Location] ID=ari_pirate_cove2_1; name=Red-hand's Hideaway;
+x=310; y=277;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_pirate_hideout;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_pirate_cove;
+
+[Location] ID=ari_pirate_cove3_1; name=Corsair's Cove;
+discoverable_fReq=moreThan:1:g:classism_sailor_quest;
+x=274; y=284;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_pirate_hideout;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_pirate_cove;
+
+[Location] ID=ari_guardians_landing1; name=Guardian's Landing;
+x=360; y=302;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_houses4;
+
+[Location] ID=ari_guardians_keep1; name=Guardian's Keep;
+x=361; y=302;
+port=true;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_houses4;
+
+[Location] ID=ari_magic_school1; name=School of Scholars and Magicians;
+x=374; y=384;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_castle1;
+
+[Location] ID=ari_element_tower1; name=Pylonic Tower;
+x=763; y=230;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_pylon_tower;
+
+[Location] ID=ari_sweltering_hollow1; name=Sweltering Hollow;
+x=453; y=232;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_cave1;
+
+[Location] ID=ari_deepearth_delve1; name=Eraldeep Delve;
+x=443; y=245;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_cave1;
+
+[Location] ID=ari_frigid_recess1; name=Frigid Recess;
+x=702; y=152;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_cave1;
+
+[Location] ID=ari_western_front1; name=The Western Front;
+x=220; y=338;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_houses1;
+
+[Location] ID=ari_order_blades1; name=Order of the Blades;
+x=458; y=156;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=overworld_wall13b;
+
+[Location] ID=ari_kingdom_s; name=Som Kingdom;
+x=392; y=268;
+port=true;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_castle2;
+
+[Location] ID=ari_kingdom_j; name=Jom Kingdom;
+x=395; y=279;
+port=true;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_castle2;
+
+[Location] ID=ari_kingdom_r; name=Rom Kingdom;
+x=407; y=274;
+port=true;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_castle2;
+
+[Location] ID=ari_pilgrim_pass1; name=Pilgrim's Pass;
+x=450; y=346;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=False;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_mount_ignis;
+
+[Location] ID=ari_pilgrim_point1; name=Point of Pilgrimmage;
+x=450; y=341;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=False;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=ari_ep_mount_ignis;
+
+[Location] ID=ari_gnollknock_woods; name=Gnollknock Woods;
+x=423; y=298;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=location_natural2;
+
+[Location] ID=ari_beachwreck1; name=Coastal Village Ruin;
+x=436; y=378;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=location_natural2;
+
+[Location] ID=ari_tidehaven_1; name=Tidehaven Port;
+x=302; y=258;
+port=true;
+discovered=false;
+namePopup_texture=tbg_port;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+zoneDescTitle=Port;
+discoveryFameMod=1;
+externalSong=PM-Resort2;
+locationItem=port_bighouses5;
+wealthLevel=15;
+tradeGood_itemTypeID=cargo_pearls;
+cafeFood_itemTypeID=food_bread1;
+
+--These icons are what show up on the map. You'll want to change these to whatever your port offers. You can also make your own, like I did in The Sea Below.
+tooltipIcons=sign_icon_cup;
+tooltipIcons=sign_icon_bag;
+tooltipIcons=sign_icon_balance;
+
+--Here are some basic items available at the merchant.
+itemType_quantity=reviveDust=-2;
+itemType_quantity=bandage=-2;
+itemType_quantity=splint=-2;
+itemType_quantity=bottle_beer=-2;
+
+
+--Now we're getting into unlockables. Notice how there are two lines for every unlockable item.
+itemType_quantity_unlockable=mythril_chunk=1;
+itemType_formula_unlockable=mythril_chunk=m:locWealth(65);
+itemType_quantity_unlockable=xpGem=3;
+itemType_formula_unlockable=xpGem=m:locWealth(65);
+itemType_quantity_unlockable=xpGemMed=2;
+itemType_formula_unlockable=xpGemMed=m:locWealth(75);
+itemType_quantity_unlockable=ghost_grub=1;
+itemType_formula_unlockable=ghost_grub=m:locWealth(90);
+itemType_quantity_unlockable=abilityCrest=1;
+itemType_formula_unlockable=abilityCrest=m:locWealth(100);
+
+--This tells the game which crew to spawn at the cafe. Assuming it works...
+auto_spawnDataID=hire_human;
+
+--This determines starting favor. Nothing too fancy.
+faction_favor=seartial=20;
+faction_favor=jasce=0;
+faction_favor=rumane=0;
+
+
+
+
+[Location] ID=ari_jasci_scoutcave1; name=Caverns of the Lost;
+x=185; y=271;
+port=false;
+discovered=false;
+namePopup_texture=tbg;
+minimapIcon=ui_map_notable;
+showNameAsAPopupOnEntering=True;
+useWorldtimeZoneDarkness=True;
+zoneThisLocationIsIn=eral;
+externalSong=PM-Resort2;
+locationItem=port_cave1;

@@ -1,0 +1,83 @@
+[ItemType]  name=Grappling Lasso;
+ID=pt_lasso; itemCategory=tool;
+pG=pYellow3;
+description=Pulls you to notched stone poles.;
+journalID=pt_journal_lasso;
+ sprite=1505; spriteWhenHeld=0;
+ action=pt_lasso_action;
+  volume=1; value=50;
+[JournalEntry]
+ID=pt_journal_lasso;
+category=item; halfPage=true; rarity=3;
+title=Grappling Lasso;
+text=<itemBig=pt_lasso><title=Grappling Lasso><brAdj=>So much more than another pile of rope, this lasso can be used to pull you and your companions to notched stone poles you may encounter on your expeditions, even allowing you to bridge great gaps and chasms.;
+
+[Action] ID=pt_lasso_action;
+	name=Grappling Lasso;
+	casterAnimation=quickaim;
+
+	
+	
+	FXOnTarget=hitDustQuiet;
+
+	FXOnCaster=woosh;
+	FXOnCaster=sidewardLines;
+	FXOnCasterColor=White;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	FXOnCaster=delay2;
+	special=moveCasterNextToTarget;
+
+
+[ActionAoE]
+	ID=pt_lasso_action; shape=2; 
+	needsLoS = false;
+	needsLoE = true;
+	minRange = 2;
+	maxRange = 8;
+	airborne=true;
+	bypassAll=false;
+	occupyAll=true;
+	canSelectActors=false;
+	fReq=1 - m:actorInTheWayOfMoveToTarget;
+	fReq=item:pt_notchedstonepole;
+
+[AvAffecter]
+	ID=pt_lasso_action; 
+	FXOnTile=ropeToss;
+
+
+[AvAffecterAoE]
+	ID=pt_lasso_action;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=pt_lasso_action; 
+	FXOnTile=ropeToss_extend;
+	visibleEvaluations=false;
+[AvAffecterAoE]
+	ID=pt_lasso_action;
+	aoeCasterAsOrigin=true;
+	minRange = 1;
+	maxRange=0;
+	maxRangeBonus=-1;
+	maxRangeAddDistanceFromCaster=true;
+	coneAngle=1;
+
+
+[ItemType]  name=Notched Stone Pole;
+ID=pt_notchedstonepole; sprite=1813; 
+texture=items_building;
+itemCategory=tool;
+special=cannotBePickedUp; special=canHangOnWalls;
+special=canBeInsideWalls; special=canFloatOnWater;
+weight=800;
+pR=zoneStoneDark;
+pG=pGrey2;
+journalID=pt_journal_notchedstonepole;
+blockWalking=true; blockJumping=true; blockLoE=true;
+depthMod=1050;
+[JournalEntry]
+ID=pt_journal_notchedstonepole;
+category=item; halfPage=true; rarity=1;
+title=Notched Stone Pole;
+text=<itemBig=pt_notchedstonepole><title=Notched Stone Pole><brAdj=>The notches and grooves around the base of this pole suggest that, if you had the proper tools, you could grapple to it.  It seems more than sturdy enough to support your weight.;

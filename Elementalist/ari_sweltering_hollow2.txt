@@ -1,0 +1,360 @@
+[Zone]  ID=ari_sweltering_hollow2; dark=True; timeUntilNewDay=24; showFogOfWar=True; fogOfWar=True; minimapEnabled=True; allowCameraPastZoneEdges=False; cantAct=False; cantGameOver=False; alwaysKeepWeaponsUnsheathed=False; peaceful=False; overseerMode=False; rollingPinStyle=False; drawSky=False; drawSky_overrideYpos=-1; boatZone=False; wind=False; overworld=False; canDropItems=True; 
+ travelSong=; travelSongVolume=1; travelSongPitch=0; combatSong=; combatSongVolume=1; combatSongPitch=0; combatSongDelay=0; 
+darkR=125; darkG=75; darkB=75; 
+ screenWaveFreq=0; screenDarkWaveFreq=0; screenWaveAmp=0.01; screenDarkWaveAmp=0.01; screenWaveSpeed=0.2; screenWaveAmp_reflect=0.0014; 
+ bgTerrainTypeID=; bgFXID=; bgFX_sineWave=0; darkenedTileTexture=darkenedTile; bgScale=1; bgParallaxRatio=1; bgMoveSpeedX=0; bgMoveSpeedY=0; 
+paletteOverride=; zoneDirtPalette=overworld8; zoneGrassPalette=pGreen; zoneGrassDarkPalette=pGreen2; zoneStonePalette=pGreyD; zoneStoneDarkPalette=pGreyD2; zoneStoneLightPalette=pGreyD; zoneWaterPalette=pBlue; zoneDirtDarkPalette=pYellow5; zoneWoodPalette=pWood; zoneWoodDarkPalette=pWoodDark; zoneMisc1Palette=pWoodDark; zoneMisc2Palette=pWoodDark; zoneMisc3Palette=pRed; zoneMisc4Palette=pBlue; zoneMisc5Palette=pGreen; zoneMisc6Palette=pOrange; zoneMisc7Palette=pYellow; zoneMisc8Palette=pPurple; 
+
+combatMode=False; 
+
+[Item] ID=pebbles2; q=1; r=-360; x=7; y=45;
+[Item] ID=rocks1; q=6; r=-360; x=7; y=47;
+[Item] ID=cliffEdge1_S_overhang; q=1; r=-360; x=8; y=24;
+[Item] ID=pebbles1; q=1; r=360; x=8; y=27;
+[Item] ID=pebbles1; q=1; r=360; x=8; y=40;
+[Item] ID=rubble; q=1; r=-360; x=8; y=43;
+[Item] ID=pebbles1; q=1; r=360; x=9; y=20;
+[Item] ID=cliffEdge1_S; q=1; x=9; y=24;
+[Item] ID=rubble; q=1; r=-360; x=9; y=30;
+[Item] ID=pebbles1; q=1; x=9; y=36;
+[Item] ID=rubble; q=1; r=-360; x=9; y=40;
+[Item] ID=cliffEdge1_S; q=1; x=10; y=24;
+[Item] ID=pebbles2; q=1; r=360; x=10; y=48;
+[Item] ID=pebbles2; q=1; r=-360; x=11; y=17;
+[Item] ID=rocks1; q=1; r=-360; x=11; y=18;
+[Item] ID=cliffEdge1_corner; q=1; r=270; x=11; y=22;
+[Item] ID=cliffEdge1_E; q=1; x=11; y=23;
+[Item] ID=cliffEdge1_SW; q=1; r=-360; x=11; y=24;
+[Item] ID=rocks1; q=2; r=-360; x=11; y=25;
+[Item] ID=rubble; q=1; r=-360; x=11; y=27;
+[Item] ID=pebbles1; q=1; r=-360; x=11; y=44;
+[Item] ID=loot3; q=1; x=11; y=47;
+[Item] ID=pebbles1; q=1; r=-360; x=12; y=16;
+[Item] ID=cliffEdge1_S; q=1; x=12; y=22;
+[Item] ID=rubble; q=1; r=-360; x=12; y=36;
+[Item] ID=rocks1; q=1; r=360; x=12; y=45;
+[Item] ID=rubble; q=1; r=360; x=13; y=17;
+[Item] ID=cliffEdge1_S; q=1; x=13; y=22;
+[Item] ID=pebbles1; q=1; x=13; y=38;
+[Item] ID=rocks1; q=1; r=-360; x=13; y=48;
+[Item] ID=cliffEdge1_S; q=1; x=14; y=22;
+[Item] ID=rubble; q=1; r=-360; x=14; y=32;
+[Item] ID=rubble; q=1; r=360; x=14; y=46;
+[Item] ID=rocks1; q=6; r=360; x=14; y=47;
+[Item] ID=rocks1; q=2; x=15; y=15;
+[Item] ID=pebbles1; q=1; r=-360; x=15; y=21;
+[Item] ID=cliffEdge1_S; q=1; x=15; y=22;
+[Item] ID=rubble; q=1; oX=0; oY=-2; x=15; y=27;
+[Item] ID=pebbles1; q=1; r=360; x=16; y=6;
+[Item] ID=rubble; q=1; r=-360; x=16; y=7;
+[Item] ID=pebbles2; q=1; r=-360; x=16; y=8;
+[Item] ID=rocks1; q=3; x=16; y=15;
+[Item] ID=cliffEdge1_corner; q=1; r=270; x=16; y=20;
+[Item] ID=cliffEdge1_E; q=1; x=16; y=21;
+[Item] ID=cliffEdge1_SW; q=1; r=-360; x=16; y=22;
+[Item] ID=pebbles1; q=1; r=360; x=16; y=28;
+[Item] ID=rubble; q=1; r=360; x=17; y=15;
+[Item] ID=cliffEdge1_S; q=1; x=17; y=20;
+[Item] ID=rocks1; q=6; r=-360; x=17; y=27;
+[Item] ID=pebbles2; q=1; x=17; y=34;
+[Item] ID=rocks1; q=4; r=360; x=18; y=9;
+[Item] ID=rubble; q=1; r=-360; x=18; y=19;
+[Item] ID=cliffEdge1_S; q=1; x=18; y=20;
+[Item] ID=pebbles2; q=1; r=360; x=18; y=26;
+[Item] ID=rubble; q=1; r=-360; x=18; y=35;
+[Item] ID=pebbles1; q=1; r=-360; x=18; y=41;
+[Item] ID=pebbles2; q=1; r=360; x=19; y=1;
+[Item] ID=rubble; q=1; r=-360; x=19; y=2;
+[Item] ID=rocks1; q=1; r=-360; x=19; y=10;
+[Item] ID=cliffEdge1_S; q=1; x=19; y=20;
+[Item] ID=rubble; q=1; r=-360; x=19; y=22;
+[Item] ID=cliffEdge1_S; q=1; x=20; y=20;
+[Item] ID=pebbles1; q=1; r=-360; x=20; y=36;
+[Item] ID=pebbles1; q=1; r=-360; x=20; y=43;
+[Item] ID=rubble; q=1; x=20; y=45;
+[Item] ID=travelPoint_1; q=1; r=90; x=21; y=3;
+[Item] ID=cliffEdge1_S; q=1; x=21; y=20;
+[Item] ID=rocks1; q=6; x=21; y=26;
+[Item] ID=sunbeam_circle_med; q=1; x=21; y=46;
+[Item] ID=sunbeam_circle_med; q=1; x=21; y=49;
+[Item] ID=cliffEdge1_S_stairs; q=1; x=22; y=20;
+[Item] ID=pebbles2; q=1; r=-360; x=22; y=25;
+[Item] ID=rubble; q=1; r=360; x=22; y=38;
+[Item] ID=travelPoint_0; q=1; r=270; x=22; y=46;
+[Item] ID=pebbles1; q=1; r=360; x=23; y=10;
+[Item] ID=pebbles2; q=1; r=360; x=23; y=13;
+[Item] ID=cliffEdge1_S; q=1; x=23; y=20;
+[Item] ID=rubble; q=1; r=-360; x=24; y=14;
+[Item] ID=cliffEdge1_S; q=1; x=24; y=20;
+[Item] ID=pebbles1; q=1; x=24; y=44;
+[Item] ID=rubble; q=1; x=24; y=46;
+[Item] ID=pebbles2; q=1; r=-360; x=24; y=47;
+[Item] ID=sunbeam_circle_med; q=1; x=24; y=47;
+[Item] ID=sunbeam_circle_med; q=1; x=24; y=49;
+[Item] ID=rocks1; q=1; r=-360; x=25; y=8;
+[Item] ID=pebbles2; q=1; r=360; x=25; y=14;
+[Item] ID=cliffEdge1_corner; q=1; r=270; x=25; y=18;
+[Item] ID=cliffEdge1_E; q=1; x=25; y=19;
+[Item] ID=cliffEdge1_SW; q=1; r=-360; x=25; y=20;
+[Item] ID=rocks1; q=1; r=-360; x=25; y=25;
+[Item] ID=rubble; q=1; r=360; x=26; y=7;
+[Item] ID=cliffEdge1_S; q=1; x=26; y=18;
+[Item] ID=rubble; q=1; r=-360; x=26; y=37;
+[Item] ID=cliffEdge1_S; q=1; x=27; y=18;
+[Item] ID=pebbles2; q=1; r=360; x=27; y=24;
+[Item] ID=rubble; q=1; r=-360; x=27; y=33;
+[Item] ID=pebbles2; q=1; r=-360; x=27; y=34;
+[Item] ID=pebbles1; q=1; r=360; x=28; y=1;
+[Item] ID=pebbles2; q=1; r=360; x=28; y=5;
+[Item] ID=rubble; q=1; r=360; x=28; y=16;
+[Item] ID=cliffEdge1_S; q=1; x=28; y=18;
+[Item] ID=rubble; q=1; r=360; x=29; y=3;
+[Item] ID=pebbles1; q=1; r=-360; x=29; y=4;
+[Item] ID=cliffEdge1_S; q=1; x=29; y=18;
+[Item] ID=rubble; q=1; r=-360; x=29; y=24;
+[Item] ID=rocks1; q=2; r=-360; x=29; y=25;
+[Item] ID=rocks1; q=4; r=-360; x=29; y=32;
+[Item] ID=cliffEdge1_corner1b; q=1; r=-360; x=30; y=17;
+[Item] ID=cliffEdge1_SW; q=1; r=-360; x=30; y=18;
+[Item] ID=rocks1; q=1; r=360; x=30; y=25;
+[Item] ID=pebbles1; q=1; r=360; x=30; y=31;
+[Item] ID=rubble; q=1; r=-360; x=31; y=15;
+[Item] ID=cliffEdge1_S; q=1; x=31; y=17;
+[Item] ID=pebbles1; q=1; r=-360; x=32; y=16;
+[Item] ID=cliffEdge1_S; q=1; x=32; y=17;
+[Item] ID=rubble; q=1; x=32; y=33;
+[Item] ID=rubble; q=1; r=360; x=33; y=15;
+[Item] ID=rubble; q=1; r=360; x=33; y=16;
+[Item] ID=cliffEdge1_S; q=1; x=33; y=17;
+[Item] ID=rocks1; q=1; r=360; x=33; y=34;
+[Item] ID=pebbles2; q=1; r=-360; x=34; y=15;
+[Item] ID=cliffEdge1_corner; q=1; r=-360; x=34; y=16;
+[Item] ID=cliffEdge1_SW; q=1; r=-360; x=34; y=17;
+[Item] ID=rubble; q=1; x=34; y=30;
+[Item] ID=rocks1; q=2; r=360; x=34; y=32;
+[Item] ID=cliffEdge1_S; q=1; x=35; y=16;
+[Item] ID=cliffEdge1_S_overhang; q=1; x=36; y=16;
+[Item] ID=rubble; q=1; r=-360; x=36; y=21;
+[Item] ID=rubble; q=1; r=-360; x=37; y=29;
+[Item] ID=rocks1; q=2; x=38; y=18;
+[Item] ID=rocks1; q=1; r=360; x=38; y=27;
+[Item] ID=rocks1; q=2; r=-360; x=39; y=26;
+[Item] ID=pebbles2; q=1; r=-360; x=39; y=27;
+[Item] ID=pebbles1; q=1; r=360; x=40; y=24;
+[Item] ID=pebbles2; q=1; r=-360; x=40; y=25;
+[Item] ID=rubble; q=1; r=360; x=42; y=17;
+[Item] ID=pebbles2; q=1; r=360; x=44; y=16;
+[Item] ID=rocks1; q=2; r=-360; x=44; y=21;
+[Item] ID=pebbles1; q=1; r=-360; x=46; y=15;
+[Item] ID=rocks1; q=1; x=47; y=12;
+[Item] ID=rocks1; q=1; r=360; x=47; y=21;
+[Item] ID=rubble; q=1; r=-360; x=48; y=11;
+[Item] ID=travelPoint_2; q=1; r=180; x=48; y=16;
+[Item] ID=pebbles1; q=1; r=360; x=48; y=20;
+[Item] ID=pebbles2; q=1; r=-360; x=49; y=11;
+[Item] ID=pebbles1; q=1; r=360; x=49; y=12;
+[Item] ID=pebbles2; q=1; r=360; x=50; y=11;
+
+
+[Actor]ID=ari_elemental_crystal_fire_ari_sweltering_hollow2_; name=Fire Crystal;
+actorTypeID=ari_elemental_crystal; sprite=ari_elemental_crystal; actorClass=scholar; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=8,47; destination=-1,-1; facingRot=0; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=True; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=p31; armorPalette=pR; unarmoredPalette=pR; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.7; bravery=0; intelligence=0.1; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; skill_Fire=5; Sch_flame=3; 
+numRanksBought=Sch_flame=3; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_fire_slime_ari_sweltering_hollow2_0; name=Fire Slime;
+actorTypeID=ari_slime; sprite=ari_slime; actorClass=scholar; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=16,17; destination=-1,-1; facingRot=0; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=p56; armorPalette=pR; unarmoredPalette=pR; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.2; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MP=15; MPMax=15; TrueMPMax=15; PhysAtk=3; MagAtk=4; skill_Fire=2; Sch_flame=2; 
+numRanksBought=Sch_flame=2; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_fire_slime_ari_sweltering_hollow2_1; name=Fire Slime;
+actorTypeID=ari_slime; sprite=ari_slime; actorClass=scholar; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=27,23; destination=-1,-1; facingRot=180; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=p56; armorPalette=pR; unarmoredPalette=pR; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.2; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MP=15; MPMax=15; TrueMPMax=15; PhysAtk=3; MagAtk=4; skill_Fire=2; Sch_flame=2; 
+numRanksBought=Sch_flame=2; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_fire_slime_ari_sweltering_hollow2_2; name=Fire Slime;
+actorTypeID=ari_slime; sprite=ari_slime; actorClass=scholar; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=17,18; destination=-1,-1; facingRot=0; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=p56; armorPalette=pR; unarmoredPalette=pR; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.2; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MP=15; MPMax=15; TrueMPMax=15; PhysAtk=3; MagAtk=4; skill_Fire=2; Sch_flame=2; 
+numRanksBought=Sch_flame=2; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_fire_slime_ari_sweltering_hollow2_3; name=Fire Slime;
+actorTypeID=ari_slime; sprite=ari_slime; actorClass=scholar; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=28,22; destination=-1,-1; facingRot=0; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=p56; armorPalette=pR; unarmoredPalette=pR; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.2; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=True; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MP=15; MPMax=15; TrueMPMax=15; PhysAtk=3; MagAtk=4; skill_Fire=2; Sch_flame=2; 
+numRanksBought=Sch_flame=2; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+[Actor]ID=ari_fire_slime_ari_sweltering_hollow2_4; name=Fire Slime;
+actorTypeID=ari_slime; sprite=ari_slime; actorClass=scholar; secondaryClass=; actorClass3=; actorClass4=; movementSpeed=3; position=13,19; destination=-1,-1; facingRot=0; actualRot=0; incapacitated=False; canSwap=False; canAttractAttention=True; givesXP=True; canDespawn=False; canEditAppearance=True; canLootCorpse=True; canControlFullyIfControllable=True; controllable=False; playerCanOpenInv=False; alreadyKOdOnce=False; canManipCorpse=True; idleAnimOverride=; combatMusicOverride=; statementPrefix=; hostile=True; fearless=False; unkillable=False; factionBoss=False; faction=none; combatTeam=; clothPalette=pB; skinPalette=p56; armorPalette=pR; unarmoredPalette=pR; aiScript=; aiTarget=; aiVarX=0; aiVarY=0; aiVarX2=0; aiVarY2=0; canApplyDifficultyMods=True; difficultyModeSupportAbilAdded=False; favoredHand=0; incapacitated=False; dialogNodeID=; aggressiveness=0.5; bravery=0.2; intelligence=0.2; honor=0; aiRating_bonusToNotMoving=0; aiRating_priorityMult=1; ai_extraTime=0; totalXP=0; damageTaken=0; timesKOd=0; mountedOn=; mountedBy=; male=False; movementType=;
+
+ supportAbilities=;  supportAbilities=;  supportAbilities=; MP=15; MPMax=15; TrueMPMax=15; PhysAtk=3; MagAtk=4; skill_Fire=2; Sch_flame=2; 
+numRanksBought=Sch_flame=2; 
+
+[ActorState]
+canSwap=False;
+
+[ActorEffect]
+ actorValue=MagAtk; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagDef; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=MagEva; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=5; duration=-1;
+[ActorEffect]
+ actorValue=skill_Fire; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Ice; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Elec; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+[ActorEffect]
+ actorValue=skill_Wind; sourceAVAffecter=scholar; sourceType=class; hideAllEffects=False; showNoDescription=False; durationIsWorldtimeDays=False; magnitude=1; duration=-1;
+
+[ActorInventory]
+style=; maxWeight=100000; maxVolume=99; canContainAnything=False; infiniteStock=False; shopContainer=False; canOnlyContainItemsWithThisProperty=none; capacity=9; 
+ 
+
+
+
+
+[Trigger] numID=0; aliasID=leaveTo_swelteringhollow1;
+topX=20;topY=48;btmX=25;btmY=49;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=0; effectID=travel_point; sValue=ari_sweltering_hollow1; sValue2=; bValue1=False; bValue2=False; fValue=1; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=1; aliasID=leaveTo_swleteringhollow3_1;
+topX=17;topY=0;btmX=29;btmY=0;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=1; effectID=travel_point; sValue=ari_sweltering_hollow3_1; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+
+[Trigger] numID=2; aliasID=leaveTo_swelteringhollow3_2;
+topX=50;topY=10;btmX=50;btmY=19;
+triggerImmediatelyOnEnteringZone=False; triggeredByElement=none; travelModeOnly=False; triggerOnPlayerActorOnly=False; onlyExecuteOnce=False; triggerForEveryStepInArea=False; disableOnZoneEntry=False; fReq=1;
+[TriggerEffect] numID=2; effectID=travel_point; sValue=ari_sweltering_hollow3_2; sValue2=; bValue1=False; bValue2=False; fValue=0; delay=0; fReq=1; taskString=; xValue=-1; yValue=-1;
+
+
+

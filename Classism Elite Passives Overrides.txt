@@ -1,0 +1,286 @@
+--BAT HANDLER
+[SupportAbility]
+ID=prom_bathandler_winged_champion;
+cloneFrom=prom_bathandler_winged_champion;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:class_bathandler_elite_unlock><color=Gold>Elite. Summon Zoar now grants the Zoar Bat Wind Enchant and Negate for <icon=time>100.;
+
+[Action]
+ID=Bat_summonZoar;
+cloneFrom=Bat_summonZoar;
+
+[AvAffecter]
+	ID=Bat_summonZoar;
+	harmful=false;
+	actorValue=windWpn;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * is:0:g:class_bathandler_elite_unlock;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+[AvAffecter]
+	ID=Bat_summonZoar;
+	actorValue=negate;
+	harmful=false;
+	visibleEvaluations=false;
+	magnitude=-1;
+	duration=-2;
+	chance=100 * is:0:g:class_bathandler_elite_unlock;
+[AvAffecterAoE]
+	ID=Bat_summonZoar;
+	cloneFrom=oneTile;
+
+--ELEMENTALIST
+[SupportAbility]
+ID=prom_elementalist_elemental_conduit;
+cloneFrom=prom_elementalist_elemental_conduit;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:class_elementalist_elite_unlock><color=Gold>Elite. At the start of your turn, adjacent allies' elemental skills (<icon=skill_Fire><icon=skill_Ice><icon=skill_Elec><icon=skill_Wind><icon=skill_Life><icon=skill_Ruin>) increase by 25% of their current value for <icon=time>30.;
+
+[Action]
+ID=prom_elementalist_elemental_conduit_act; 
+cloneFrom=prom_elementalist_elemental_conduit_act;
+fReq=g:class_elementalist_elite_unlock;
+
+--GUARDIAN
+[SupportAbility]
+ID=prom_guardian_phalanx;
+cloneFrom=prom_guardian_phalanx;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:guardian_cl_elite_unlock><color=Gold>Elite. At the end of your turn, adjacent allies gain a quarter of your <icon=PhysDef>, <icon=skill_Shield>, and <icon=PhysEva> for <icon=time>30.;
+
+[Action]
+ID=prom_guardian_phalanx_act;
+cloneFrom=prom_guardian_phalanx_act;
+fReq=g:guardian_cl_elite_unlock;
+
+--IGNIS KNIGHT
+[SupportAbility]
+ID=prom_ignisKnight_pyroclasm;
+cloneFrom=prom_ignisKnight_pyroclasm;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:class_ignisknight_elite_unlock><color=Gold>Elite. Melee attacks against burning targets also inflict Wildfire for <icon=time>40. Afflicted units strike themselves and adjacent tiles with <thinnerIcon=skill_Fire>10 damage at the end of their turn, spreading the status.;
+
+[AvAffecter]
+    ID=prom_ignisKnight_pyroclasm_act; 
+    fReq=1 - g:class_ignisknight_elite_unlock;
+	harmful=false;
+    actorValue=prom_wildfire;
+    visibleMiss=false; visibleEvaluations=false;
+    magnitude=-1;
+    chance=100;
+    duration=-2;
+[AvAffecterAoE]
+    ID=prom_ignisKnight_pyroclasm_act;
+    cloneFrom=oneTile;
+
+--KRAKENSLAYER
+[SupportAbility]
+ID=prom_krakenslayer_vanquishers_reward;
+cloneFrom=prom_krakenslayer_vanquishers_reward;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:krakenslayer_cl_elite_unlock><color=Gold>Elite. Gain <icon=litWpnStatus> for <icon=time>40 or more when you KO a foe during your turn.;
+
+[Action]
+ID=prom_krakenslayer_vanquishers_reward_act;
+cloneFrom=prom_krakenslayer_vanquishers_reward_act;
+fReq=g:krakenslayer_cl_elite_unlock;
+
+--SAGE
+[SupportAbility]
+ID=prom_sage_return_to_me;
+cloneFrom=prom_sage_return_to_me;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:sage_cl_elite_unlock><color=Gold>Elite. Revive incapacitated allies within 2 tiles at the start of your turn.;
+
+[Action] ID=prom_prom_sage_return_to_me_act; 	
+cloneFrom=prom_prom_sage_return_to_me_act;
+fReq=g:sage_cl_elite_unlock;
+
+
+--SAILOR
+[SupportAbility]
+ID=prom_sailor_pirates_ploy;
+cloneFrom=prom_sailor_pirates_ploy;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:class_sailor_elite_unlock><color=Gold>Elite. Melee attacks demoralize and soak the target for <icon=time>40.;
+
+![Action] ID=prom_sailor_pirates_ploy_act; 
+	requiredWeaponElement=melee;
+[ActionAoE] 
+	ID=prom_sailor_pirates_ploy_act;
+	cloneFrom=oneTile;
+	maxRange=12;
+![AvAffecter]
+	ID=prom_sailor_pirates_ploy_act; 
+	fReq=g:class_sailor_elite_unlock;
+	prefixIcon=<icon_tiny=iconP_Sai_pirates_ploy>;
+	actorValue=morale;
+	visibleMiss=false;
+	magnitude=-1;
+	chance=w:chance;
+	duration=40;
+	FXOnHit=downwardLines;
+	FXOnHitColor=Black;
+	FXOnHit=sfx_debuffMild;
+[AvAffecterAoE]
+	ID=prom_sailor_pirates_ploy_act;
+	cloneFrom=oneTile;
+![AvAffecter]
+	ID=prom_sailor_pirates_ploy_act; 
+	fReq=g:class_sailor_elite_unlock;
+	prefixIcon=<icon_tiny=iconP_Sai_pirates_ploy>;
+	actorValue=wet;
+	visibleMiss=false;
+	magnitude=1;
+	chance=w:chance;
+	duration=40;
+	element=water;
+	FXOnHit=chargeBurst;
+	FXOnHitColor=SkyBlue;
+	FXOnHit=sfx_splash;
+[AvAffecterAoE]
+	ID=prom_sailor_pirates_ploy_act;
+	cloneFrom=oneTile;
+
+
+--[AvAffecter]
+--    ID=prom_sailor_pirates_ploy_act; 
+--    prefixIcon=<icon_tiny=iconP_Sai_pirates_ploy>;
+--    harmful=false;
+--    actorValue=wet;
+--    visibleMiss=true; visibleEvaluations=true;
+--    magnitude=-1;
+--    chance=100*t:wet;
+--    duration=-2;
+--[AvAffecterAoE]
+--    ID=prom_sailor_pirates_ploy_act;
+--    cloneFrom=oneTile;
+--[AvAffecter]
+--    ID=prom_sailor_pirates_ploy_act;
+--    fReq=1 - g:class_sailor_elite_unlock;
+--	harmful=false;
+--    actorValue=morale;
+--    visibleMiss=false; visibleEvaluations=false;
+--    magnitude=1;
+--	chance=100;
+--    duration=40;
+--[AvAffecterAoE]
+--    ID=prom_sailor_pirates_ploy_act;
+--    cloneFrom=oneTile;
+
+
+--SCHOLAR
+[SupportAbility]
+ID=prom_scholar_prognosis;
+cloneFrom=prom_scholar_prognosis;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:scholar_cl_elite_unlock><color=Gold>Elite. When combat begins, you and all allies gain Soothing, increasing received <icon=HP> and <icon=MP> healing effects by 25% for <icon=time>180.;
+
+[Action] ID=prom_scholar_prognosis_act; 	
+cloneFrom=prom_scholar_prognosis_act;
+fReq=g:scholar_cl_elite_unlock;
+
+
+--SCOUT
+[SupportAbility]
+ID=prom_scout_nowhere_to_hide;
+cloneFrom=prom_scout_nowhere_to_hide;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:class_scout_elite_unlock><color=Gold>Elite. Dispel all invisible enemies at the start of your turn. Then lower all enemies' <icon=PhysEva> by 10 for <icon=time>20.;
+
+![Action] ID=prom_Sc_nowhere_act; 
+	special=usableEvenWhenCantAct;
+	special=usableEvenWhenReacting;
+	special=usableEvenWhenYourTurn;
+[ActionAoE] 
+	ID=prom_Sc_nowhere_act; shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=false;
+![AvAffecter]
+	ID=prom_Sc_nowhere_act; 
+	fReq=g:class_scout_elite_unlock;
+	weaponAvAffecter=false;
+	visibleMiss=false;
+	actorValue=dispel;
+	magnitude=100;
+	chance=100 * t:invisible;
+	duration=-2;
+	element=dispel;
+	FXOnHit=darken;
+	FXOnHitColor=Red;
+	FXOnTarget=tallLight;
+	FXOnHitColor=Green;
+	FXOnHit=spiral;
+	FXOnHitColor=Gold;
+	FXOnHit=spiral2;
+	FXOnHitColor=Green;
+	FXOnHit=spiral3;
+	FXOnHitColor=Black;
+	FXOnHit=spiral4;
+	FXOnHitColor=White;
+[AvAffecterAoE]
+	ID=prom_Sc_nowhere_act; shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	aoeCasterAsOrigin=true;
+![AvAffecter]
+	ID=prom_Sc_nowhere_act; 
+	fReq=g:class_scout_elite_unlock;
+	weaponAvAffecter=false;
+	actorValue=PhysEva;
+	magnitude=-10;
+	chance=100;
+	duration=20;
+[AvAffecterAoE]
+	ID=prom_Sc_nowhere_act; shape=17;
+	cloneFrom=adjacentAndSelf;
+	maxRange=22;
+	arc=true;
+	airborne=true;
+	needsLoE=false;
+	needsLoS=false;
+	bypassAll=true;
+	canSelectAllies=false;
+	aoeCasterAsOrigin=true;
+
+
+--SORCERER
+[SupportAbility]
+ID=prom_sorcerer_magic_adept;
+cloneFrom=prom_sorcerer_magic_adept;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:sorcerer_cl_elite_unlock><color=Gold>Elite. Gain +3<icon=MagAtk> at the cost of -1<icon=PhysAtk>.;
+
+[SupportAbilityEffect]
+ID=prom_sorcerer_magic_adept;
+actorValue=MagAtk; magnitude=0; duration=-1; formulaMod=-3 * is:0:g:sorcerer_cl_elite_unlock;
+[SupportAbilityEffect]
+ID=prom_sorcerer_magic_adept;
+actorValue=PhysAtk; magnitude=0; duration=-1; formulaMod=1 * is:0:g:sorcerer_cl_elite_unlock;
+
+
+--WARRIOR
+[SupportAbility]
+ID=prom_warrior_second_wind;
+cloneFrom=prom_warrior_second_wind;
+tooltip=<color=Crimson><textIf=(Inproficient) =1 - g:warrior_cl_elite_unlock><color=Gold>Elite. Recover 10% of your max <icon=HP> whenever you make a melee attack. Can activate multiple times per round.;
+
+[AvAffecter]
+    ID=prom_warrior_second_wind_act; 
+    fReq=1 - g:warrior_cl_elite_unlock;
+    actorValue=HP;
+    harmful=true; visibleEvaluations=false;
+    visibleMiss=false;
+    magnitude=-c:HPMax * .1;
+    duration=-2;
+    chance=100;
+[AvAffecterAoE]
+    ID=prom_warrior_second_wind_act;
+    cloneFrom=oneTile;
+    aoeCasterAsOrigin=true;
+	
+	
